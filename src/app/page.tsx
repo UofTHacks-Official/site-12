@@ -1,12 +1,10 @@
 import React from "react";
-import ComputerOnDesk from "./components/home/computer_on_desk";
+import EntryPoint from "@/app/pages/entry-point";
 
 const HomePage: React.FC = () => {
-  return (
-    <div>
-      <ComputerOnDesk />
-    </div>
-  );
+    return (
+        <EntryPoint/>
+    );
 };
 
 export default HomePage;
