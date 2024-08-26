@@ -4,26 +4,116 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ac8849b-848a-4cb8-bd7b-989220871ed6" name="Changes" comment="" />
+    <list default="true" id="1ac8849b-848a-4cb8-bd7b-989220871ed6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/fonts/Manrope-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Manrope-ExtraBold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Manrope-ExtraLight.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Manrope-Light.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Manrope-Medium.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Manrope-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Manrope-SemiBold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/SpaceGrotesk-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/SpaceGrotesk-Light.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/SpaceGrotesk-Medium.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/SpaceGrotesk-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/SpaceGrotesk-SemiBold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/shared/containers/index.styles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/shared/fonts/manrope/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/shared/fonts/space-grotesk/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/hooks/useMobileDetect.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/about-us/index.styles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/about-us/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/contact-us/index.styles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/contact-us/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/faq/index.styles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/faq/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/footer/index.styles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/footer/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/hero/index.styles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/hero/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/past-hackathons/index.styles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/past-hackathons/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/sponsors/index.styles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/sponsors/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/stats/index.styles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/stats/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/testimonials/index.styles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/testimonials/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/why-join/index.styles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/why-join/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/entry-point/index.styles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/entry-point/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/main-site/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/utils/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/home/computer_on_desk.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2izaD71XdtSRHfGTHtLkOranFDs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "last_opened_file_path": "/Users/kevinle/Developer/uofthacks/site-12/public",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/kevinle/Developer/uofthacks/site-12/src/app/modules/contact-us",
+    "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external"
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "/Users/kevinle/Developer/uofthacks/site-12/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/app/modules/contact-us" />
+      <recent name="$PROJECT_DIR$/src/app/modules/faq" />
+      <recent name="$PROJECT_DIR$/src/app/modules/footer" />
+      <recent name="$PROJECT_DIR$/src/app/modules/past-hackathons" />
+      <recent name="$PROJECT_DIR$/src/app/modules/sponsors" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/components/shared" />
+      <recent name="$PROJECT_DIR$/src/app/components" />
+      <recent name="$PROJECT_DIR$/src/app" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ac8849b-848a-4cb8-bd7b-989220871ed6" name="Changes" comment="" />
+      <created>1720495738574</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720495738574</updated>
+      <workItem from="1720495740292" duration="10000" />
+      <workItem from="1724632261201" duration="6134000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
