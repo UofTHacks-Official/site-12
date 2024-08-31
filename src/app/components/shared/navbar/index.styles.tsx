@@ -15,7 +15,6 @@ type MobileMenuProps = {
   open?: boolean | null;
 };
 
-
 const NavigationContainer = styled.div<NavContainerProps>`
   transform: translateY(${(props) => (props.open ? "0" : "-100%")});
   transition: transform 0.3s ease-in-out;
@@ -25,7 +24,6 @@ const NavigationContainer = styled.div<NavContainerProps>`
   z-index: 1000;
   overflow: hidden;
 `;
-
 
 const NavigationBar = styled.nav<NavbarProps>`
   display: flex;
@@ -62,26 +60,94 @@ const NavLinks = styled.ul`
   display: flex;
 `;
 
-
 const NavLinkItem = styled.li`
-    border-radius: 16px;
-    background: rgba(34, 92, 144, 0.50);
-    backdrop-filter: blur(6px);
+  border-radius: 16px;
+  background: rgba(34, 92, 144, 0.5);
+  backdrop-filter: blur(6px);
 `;
 
 const NavLink = styled.a`
-    display: flex;
-    padding: 16px 24px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+`;
+
+const HamburgerMenu = styled.div<HamburgerProps>`
+  cursor: pointer;
+  ${(props) =>
+    props.mobile
+      ? `
+        position: absolute;
+        top: 0;
+        justify-content: center;
+        font-size: 30px;
+        z-index: 1002;
+      `
+      : `display: none;`}
+`;
+
+const MobileMenu = styled.div<MobileMenuProps>`
+  transform: translateY(${(props) => (props.open ? "0" : "-200%")});
+  transition: transform 0.3s ease-in-out;
+
+  position: fixed;
+  background-color: #f0f0f0;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  overflow: hidden;
+`;
+
+const MobileNavLinkItem = styled(NavLinkItem)`
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 100%;
+  padding: 10px 0;
+  list-style-type: none;
+`;
+
+const PrimaryButtonContainer = styled.button`
+  width: 100%;
+  padding: 0.5rem;
+  align-self: center;
+  justify-content: center;
+  margin-top: -10px;
+  margin-bottom: auto;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  border-radius: 15px;
+  border: 2px solid var(--black, #282828);
+  background: var(--black, #282828);
+  border-radius: 5px;
+  border: 2px solid var(--Black, #282828);
+  background: var(--Blue, #2850a0);
+  /* Default Shadow */
+  box-shadow: 0px 4px 0px 0px #282828;
+  &:hover {
+    transform: scale(1.05);
+  }
+`;
+
+const PrimaryButtonTextContainer = styled.div`
+  display: inline;
+  text-transform: uppercase;
+  color: var(--white, #f9f9f9);
 `;
 
 export {
-    NavigationContainer, 
-    NavigationBar, 
-    Logo, 
-    NavLinks, 
-    NavLinkItem, 
-    NavLink
-}
+  NavigationContainer,
+  NavigationBar,
+  Logo,
+  NavLinks,
+  NavLinkItem,
+  NavLink,
+  MobileMenu,
+  MobileNavLinkItem,
+  PrimaryButtonContainer,
+  PrimaryButtonTextContainer,
+  HamburgerMenu,
+};

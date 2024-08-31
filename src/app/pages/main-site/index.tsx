@@ -23,7 +23,7 @@ const Site12 = () => {
     return (
         <MainContainer id="start">
             {/*<MLHBanner />*/}
-            <NavBar />
+            <NavBar/>
             <Hero/>
             <AboutUs/>
             <Stats/>
