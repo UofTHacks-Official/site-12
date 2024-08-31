@@ -61,6 +61,7 @@ const NavLinks = styled.ul`
 `;
 
 const NavLinkItem = styled.li`
+  cursor:pointer;
   border-radius: 16px;
   background: rgba(34, 92, 144, 0.5);
   backdrop-filter: blur(6px);
