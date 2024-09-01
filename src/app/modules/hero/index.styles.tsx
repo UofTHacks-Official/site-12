@@ -1,10 +1,8 @@
 import styled from "styled-components";
-import {ModuleContainer} from "@/app/components/shared/containers/index.styles";
+import {ModuleContainer, ModuleBackground} from "@/app/components/shared/containers/index.styles";
 
-const HeroModuleContainer = styled(ModuleContainer)`
-    height: 90vh;
-    min-height: 600px;
-    max-height: 900px;
-`;
+const HeroModuleContainer = styled(ModuleContainer)``;
 
-export {HeroModuleContainer};
+const HeroBackground = styled(ModuleBackground)``;
+
+export {HeroModuleContainer, HeroBackground};

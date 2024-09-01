@@ -5,7 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ac8849b-848a-4cb8-bd7b-989220871ed6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/app/components/shared/navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/shared/navbar/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/background/about-us.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/background/contact-us.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/background/faq.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/background/footer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/background/past-hackathons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/background/sponsors.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/background/stats.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/background/why-join.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/background/hero.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/background/hero.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/shared/containers/index.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/shared/containers/index.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/about-us/index.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/about-us/index.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/about-us/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/about-us/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/contact-us/index.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/contact-us/index.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/contact-us/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/contact-us/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/faq/index.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/faq/index.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/faq/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/faq/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/footer/index.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/footer/index.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/footer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/footer/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/past-hackathons/index.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/past-hackathons/index.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/past-hackathons/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/past-hackathons/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/sponsors/index.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/sponsors/index.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/sponsors/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/sponsors/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/stats/index.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/stats/index.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/stats/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/stats/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/why-join/index.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/why-join/index.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/why-join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/why-join/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/main-site/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/main-site/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

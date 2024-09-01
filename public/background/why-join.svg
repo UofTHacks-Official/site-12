@@ -1,0 +1,62 @@
+<svg width="3035" height="3741" viewBox="0 0 3035 3741" preserveAspectRatio="none" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+    <rect width="3035" height="3741" fill="#F5F5F5"/>
+    <path d="M-7834 -4357C-7834 -4358.1 -7833.1 -4359 -7832 -4359H3241C3242.1 -4359 3243 -4358.1 3243 -4357V7812C3243 7813.1 3242.1 7814 3241 7814H-7832C-7833.1 7814 -7834 7813.1 -7834 7812V-4357Z"
+          fill="#EBEBEA"/>
+    <path d="M-7832 -4358H3241V-4360H-7832V-4358ZM3242 -4357V7812H3244V-4357H3242ZM3241 7813H-7832V7815H3241V7813ZM-7833 7812V-4357H-7835V7812H-7833ZM-7832 7813C-7832.55 7813 -7833 7812.55 -7833 7812H-7835C-7835 7813.66 -7833.66 7815 -7832 7815V7813ZM3242 7812C3242 7812.55 3241.55 7813 3241 7813V7815C3242.66 7815 3244 7813.66 3244 7812H3242ZM3241 -4358C3241.55 -4358 3242 -4357.55 3242 -4357H3244C3244 -4358.66 3242.66 -4360 3241 -4360V-4358ZM-7832 -4360C-7833.66 -4360 -7835 -4358.66 -7835 -4357H-7833C-7833 -4357.55 -7832.55 -4358 -7832 -4358V-4360Z"
+          fill="black" fill-opacity="0.1"/>
+    <g clip-path="url(#clip0_2_2)">
+        <rect width="3024" height="18846" transform="translate(6 -7946.5)" fill="white"/>
+        <rect width="3024" height="1712" transform="translate(6 -1708.5)" fill="#225C90"/>
+        <g clip-path="url(#clip1_2_2)">
+            <rect width="3024" height="10896" transform="translate(6 4)" fill="url(#paint0_linear_2_2)"/>
+            <g clip-path="url(#clip2_2_2)">
+                <g style="mix-blend-mode:hard-light" opacity="0.5">
+                    <path d="M166 -46V3180" stroke="#225C90" stroke-width="2"/>
+                    <path d="M346.273 -46V3180" stroke="#225C90" stroke-width="2"/>
+                    <path d="M526.539 -46V3180" stroke="#225C90" stroke-width="2"/>
+                    <path d="M706.805 -46V3180" stroke="#225C90" stroke-width="2"/>
+                    <path d="M887.078 -46V3180" stroke="#225C90" stroke-width="2"/>
+                    <path d="M1067.34 -46V3180" stroke="#225C90" stroke-width="2"/>
+                    <path d="M1247.6 -46V3180" stroke="#225C90" stroke-width="2"/>
+                    <path d="M1427.88 -46V3180" stroke="#225C90" stroke-width="2"/>
+                    <path d="M1608.14 -46V3180" stroke="#225C90" stroke-width="2"/>
+                    <path d="M1788.4 -46V3180" stroke="#225C90" stroke-width="2"/>
+                    <path d="M1968.68 -46V3180" stroke="#225C90" stroke-width="2"/>
+                    <path d="M2148.94 -46V3180" stroke="#225C90" stroke-width="2"/>
+                    <path d="M2329.2 -46V3180" stroke="#225C90" stroke-width="2"/>
+                    <path d="M2509.47 -46V3180" stroke="#225C90" stroke-width="2"/>
+                    <path d="M2689.73 -46V3180" stroke="#225C90" stroke-width="2"/>
+                    <path d="M2870 -46V3180" stroke="#225C90" stroke-width="2"/>
+                    <path d="M166 3180H2870" stroke="#225C90" stroke-width="2"/>
+                    <path d="M166 2886.73H2870" stroke="#225C90" stroke-width="2"/>
+                    <path d="M166 2593.45H2870" stroke="#225C90" stroke-width="2"/>
+                    <path d="M166 2300.18H2870" stroke="#225C90" stroke-width="2"/>
+                    <path d="M166 2006.91H2870" stroke="#225C90" stroke-width="2"/>
+                    <path d="M166 1713.63H2870" stroke="#225C90" stroke-width="2"/>
+                    <path d="M166 1420.36H2870" stroke="#225C90" stroke-width="2"/>
+                    <path d="M166 1127.09H2870" stroke="#225C90" stroke-width="2"/>
+                    <path d="M166 833.818H2870" stroke="#225C90" stroke-width="2"/>
+                    <path d="M166 540.544H2870" stroke="#225C90" stroke-width="2"/>
+                    <path d="M166 247.269H2870" stroke="#225C90" stroke-width="2"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="paint0_linear_2_2" x1="1512" y1="-1074.21" x2="1512" y2="4413.52"
+                        gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0796D3" stop-opacity="0.19"/>
+            <stop offset="1" stop-color="#FFCDF7" stop-opacity="0.1"/>
+        </linearGradient>
+        <clipPath id="clip0_2_2">
+            <rect width="3024" height="18846" fill="white" transform="translate(6 -7946.5)"/>
+        </clipPath>
+        <clipPath id="clip1_2_2">
+            <rect width="3024" height="10896" fill="white" transform="translate(6 4)"/>
+        </clipPath>
+        <clipPath id="clip2_2_2">
+            <rect width="3024" height="3496" fill="white" transform="translate(6 4)"/>
+        </clipPath>
+    </defs>
+</svg>
