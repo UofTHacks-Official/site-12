@@ -1,0 +1,29 @@
+<svg width="1512" height="1104" viewBox="0 0 1512 1104" fill="none" preserveAspectRatio="none"
+     xmlns="http://www.w3.org/2000/svg">
+    <rect width="1512" height="1104" fill="url(#paint0_linear_511_149)"/>
+    <path opacity="0.5"
+          d="M545.276 243L242.785 -27M629.565 243L457.188 -27M713.854 243L657.783 -27M798.146 243L854.217 -27M882.435 243L1054.81 -27M966.728 243L1269.22 -27M1512 -27L1051.02 243H460.985L0.00166936 -27M0 -27H1512M92.199 27H1419.8M184.394 81H1327.61M276.593 135H1235.41M368.786 189H1143.21"
+          stroke="#BAE8FC" stroke-width="4"/>
+    <g style="mix-blend-mode:hard-light" opacity="0.5">
+        <path d="M461 243V926" stroke="#BAE8FC" stroke-width="4"/>
+        <path d="M545.289 243V926" stroke="#BAE8FC" stroke-width="4"/>
+        <path d="M629.574 243V926" stroke="#BAE8FC" stroke-width="4"/>
+        <path d="M713.859 243V926" stroke="#BAE8FC" stroke-width="4"/>
+        <path d="M798.145 243V926" stroke="#BAE8FC" stroke-width="4"/>
+        <path d="M882.43 243V926" stroke="#BAE8FC" stroke-width="4"/>
+        <path d="M966.715 243V926" stroke="#BAE8FC" stroke-width="4"/>
+        <path d="M1051 243V926" stroke="#BAE8FC" stroke-width="4"/>
+        <path d="M461 926H1051" stroke="#BAE8FC" stroke-width="4"/>
+        <path d="M461 789.4H1051" stroke="#BAE8FC" stroke-width="4"/>
+        <path d="M461 652.8H1051" stroke="#BAE8FC" stroke-width="4"/>
+        <path d="M461 516.2H1051" stroke="#BAE8FC" stroke-width="4"/>
+        <path d="M461 379.6H1051" stroke="#BAE8FC" stroke-width="4"/>
+        <path d="M461 243H1051" stroke="#BAE8FC" stroke-width="4"/>
+    </g>
+    <defs>
+        <linearGradient id="paint0_linear_511_149" x1="756" y1="0" x2="756" y2="923.86" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#225C90"/>
+            <stop offset="1" stop-color="#BAE8FC"/>
+        </linearGradient>
+    </defs>
+</svg>
