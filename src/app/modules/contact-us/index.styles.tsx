@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import {ModuleContainer} from "@/app/components/shared/containers/index.styles";
+import {ModuleBackground, ModuleContainer} from "@/app/components/shared/containers/index.styles";
 
 const ContactUsModuleContainer = styled(ModuleContainer)`
-    height: 90vh;
+    height: 100vh;
     min-height: 600px;
-    max-height: 900px;
 `;
 
-export {ContactUsModuleContainer};
+const ContactUsModuleBackground = styled(ModuleBackground)``;
+
+export {ContactUsModuleContainer, ContactUsModuleBackground};

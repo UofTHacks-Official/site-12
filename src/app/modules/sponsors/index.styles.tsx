@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {ModuleContainer} from "@/app/components/shared/containers/index.styles";
+import {ModuleBackground, ModuleContainer} from "@/app/components/shared/containers/index.styles";
 
 const SponsorsModuleContainer = styled(ModuleContainer)`
     height: 90vh;
@@ -7,4 +7,6 @@ const SponsorsModuleContainer = styled(ModuleContainer)`
     max-height: 900px;
 `;
 
-export {SponsorsModuleContainer};
+const SponsorsModuleBackground = styled(ModuleBackground)``;
+
+export {SponsorsModuleContainer, SponsorsModuleBackground};

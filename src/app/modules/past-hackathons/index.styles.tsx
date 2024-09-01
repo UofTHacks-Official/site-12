@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {ModuleContainer} from "@/app/components/shared/containers/index.styles";
+import {ModuleBackground, ModuleContainer} from "@/app/components/shared/containers/index.styles";
 
 const PastHackathonsModuleContainer = styled(ModuleContainer)`
     height: 90vh;
@@ -7,4 +7,6 @@ const PastHackathonsModuleContainer = styled(ModuleContainer)`
     max-height: 900px;
 `;
 
-export {PastHackathonsModuleContainer};
+const PastHackathonsModuleBackground = styled(ModuleBackground)``
+
+export {PastHackathonsModuleContainer, PastHackathonsModuleBackground};

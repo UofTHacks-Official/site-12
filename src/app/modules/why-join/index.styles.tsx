@@ -1,10 +1,13 @@
 import styled from "styled-components";
-import {ModuleContainer} from "@/app/components/shared/containers/index.styles";
+import {ModuleBackground, ModuleContainer} from "@/app/components/shared/containers/index.styles";
 
 const WhyJoinModuleContainer = styled(ModuleContainer)`
-    height: 90vh;
+    height: 150vh;
     min-height: 600px;
-    max-height: 900px;
 `;
 
-export {WhyJoinModuleContainer};
+const WhyJoinModuleBackground = styled(ModuleBackground)`
+    height: 150vh;
+`;
+
+export {WhyJoinModuleContainer, WhyJoinModuleBackground};

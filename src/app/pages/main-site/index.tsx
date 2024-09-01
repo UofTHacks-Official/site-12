@@ -27,7 +27,7 @@ const Site12 = () => {
             <Stats/>
             <PastHackathons/>
             <WhyJoin/>
-            <Testimonials/>
+            {/*<Testimonials/> doesn't seem to be in final iteration... :( */}
             <Sponsors/>
             <FAQ/>
             <ContactUs/>

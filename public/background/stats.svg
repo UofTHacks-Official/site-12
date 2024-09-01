@@ -1,0 +1,21 @@
+<svg width="3017" height="1940" viewBox="0 0 3017 1940" preserveAspectRatio="none" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+    <rect width="3017" height="1940" fill="#F5F5F5"/>
+    <path d="M-7847 -708C-7847 -709.105 -7846.1 -710 -7845 -710H3228C3229.1 -710 3230 -709.105 3230 -708V11461C3230 11462.1 3229.1 11463 3228 11463H-7845C-7846.1 11463 -7847 11462.1 -7847 11461V-708Z"
+          fill="#EBEBEA"/>
+    <path d="M-7845 -709H3228V-711H-7845V-709ZM3229 -708V11461H3231V-708H3229ZM3228 11462H-7845V11464H3228V11462ZM-7846 11461V-708H-7848V11461H-7846ZM-7845 11462C-7845.55 11462 -7846 11461.6 -7846 11461H-7848C-7848 11462.7 -7846.66 11464 -7845 11464V11462ZM3229 11461C3229 11461.6 3228.55 11462 3228 11462V11464C3229.66 11464 3231 11462.7 3231 11461H3229ZM3228 -709C3228.55 -709 3229 -708.552 3229 -708H3231C3231 -709.657 3229.66 -711 3228 -711V-709ZM-7845 -711C-7846.66 -711 -7848 -709.657 -7848 -708H-7846C-7846 -708.552 -7845.55 -709 -7845 -709V-711Z"
+          fill="black" fill-opacity="0.1"/>
+    <g clip-path="url(#clip0_2_2)">
+        <rect width="3024" height="18846" transform="translate(-7 -4297.5)" fill="white"/>
+        <rect width="3024" height="4030" transform="translate(-7 -2089.5)" fill="url(#paint0_linear_2_2)"/>
+    </g>
+    <defs>
+        <linearGradient id="paint0_linear_2_2" x1="1512" y1="0" x2="1512" y2="3924.05" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#225C90"/>
+            <stop offset="0.452804" stop-color="#BAE8FC" stop-opacity="0.5"/>
+        </linearGradient>
+        <clipPath id="clip0_2_2">
+            <rect width="3024" height="18846" fill="white" transform="translate(-7 -4297.5)"/>
+        </clipPath>
+    </defs>
+</svg>
