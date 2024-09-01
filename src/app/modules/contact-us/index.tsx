@@ -3,7 +3,7 @@ import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
 
 const ContactUs = () => {
     return (
-        <ContactUsModuleContainer id="hero-module">
+        <ContactUsModuleContainer id="Contact-module">
             <SpaceGrotesk>contact us section</SpaceGrotesk>
         </ContactUsModuleContainer>
     );
