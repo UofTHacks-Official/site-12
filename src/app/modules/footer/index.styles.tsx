@@ -3,6 +3,7 @@ import {ModuleBackground, ModuleContainer} from "@/app/components/shared/contain
 
 const FooterModuleContainer = styled(ModuleContainer)`
     height: 30vh;
+    position: relative;
 `;
 
 const FooterModuleBackground = styled(ModuleBackground)`
