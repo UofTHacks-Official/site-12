@@ -11,17 +11,20 @@ import Sponsors from "@/app/modules/sponsors";
 import FAQ from "@/app/modules/faq";
 import ContactUs from "@/app/modules/contact-us";
 import Footer from "@/app/modules/footer";
+import NavBar from "@/app/components/shared/navbar";
 
 const MainContainer = styled.div`
     background-color: #f9f9f9;
     opacity: 1;
     overflow: auto;
+    transition: opacity 1s ease-in-out;
 `;
 
 const Site12 = () => {
     return (
         <MainContainer id="start">
             {/*<MLHBanner />*/}
+            <NavBar/>
             <Hero/>
             <AboutUs/>
             <Stats/>

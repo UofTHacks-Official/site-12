@@ -3,11 +3,13 @@
 import React, {useState, useEffect} from "react";
 import Site12 from "@/app/pages/main-site";
 import {BrowserWrapper, Computer, Desk, Screen} from "@/app/pages/entry-point/index.styles";
+import NavBar from "@/app/components/shared/navbar";
 
 const EntryPoint: React.FC = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [isMounted, setIsMounted] = useState(false);
-    const [fullScreen, setFullScreen] = useState(false); // Track if Site12 should be fullscreen
+    const [fullScreen, setFullScreen] = useState(false);
+    const [isolatedRender, setIsolatedRender] = useState(false);
 
     useEffect(() => {
         // Wait until the component is mounted to show anything
@@ -18,6 +20,11 @@ const EntryPoint: React.FC = () => {
 
             setTimeout(() => {
                 setFullScreen(true);
+                
+                // let the animation finish before isolated render
+                setTimeout(() => {
+                    setIsolatedRender(true)
+                }, 1000)
             }, 1000);
         }, 2000);
 
@@ -25,7 +32,11 @@ const EntryPoint: React.FC = () => {
     }, []);
 
     if (!isMounted) {
-        return null; // Prevent any content from rendering on the server or before hydration
+        return null;
+    }
+
+    if (fullScreen && isolatedRender) {
+        return <Site12/>;
     }
 
     return (
@@ -35,6 +46,7 @@ const EntryPoint: React.FC = () => {
                     {!fullScreen && isLoading ? (
                         <div>Loading...</div>
                     ) : (
+
                         <BrowserWrapper>
                             <Site12/>
                         </BrowserWrapper>
