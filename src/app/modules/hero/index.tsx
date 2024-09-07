@@ -7,7 +7,6 @@ const Hero = () => {
     return (
         <HeroModuleContainer id="hero-module">
             <HeroBackground src="/background/hero.svg"/>
-            <NavBar/>
             <SpaceGrotesk>hero section</SpaceGrotesk>
             <Manrope>UoftHacks 12</Manrope>
         </HeroModuleContainer>

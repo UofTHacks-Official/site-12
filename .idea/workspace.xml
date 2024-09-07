@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ac8849b-848a-4cb8-bd7b-989220871ed6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/public/footer-icons/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/shared/footer/footer-icons/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/footer-icons/instagram.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/shared/footer/footer-icons/instagram.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/footer-icons/linkedin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/shared/footer/footer-icons/linkedin.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/footer-icons/twitter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/shared/footer/footer-icons/twitter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/shared/footer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/shared/footer/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/entry-point/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/entry-point/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/main-site/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/main-site/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +55,7 @@
       <recent name="$PROJECT_DIR$/src/app/modules/sponsors" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets" />
       <recent name="$PROJECT_DIR$/src/app/components/shared/footer" />
       <recent name="$PROJECT_DIR$/src/app/components/shared" />
       <recent name="$PROJECT_DIR$/src/app/components" />
@@ -73,7 +72,7 @@
       <updated>1720495738574</updated>
       <workItem from="1720495740292" duration="10000" />
       <workItem from="1724632261201" duration="6134000" />
-      <workItem from="1725739230574" duration="61000" />
+      <workItem from="1725739230574" duration="2609000" />
     </task>
     <servers />
   </component>
