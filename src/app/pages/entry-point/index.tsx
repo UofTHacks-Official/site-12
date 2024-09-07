@@ -20,7 +20,7 @@ const EntryPoint: React.FC = () => {
 
             setTimeout(() => {
                 setFullScreen(true);
-                
+
                 // let the animation finish before isolated render
                 setTimeout(() => {
                     setIsolatedRender(true)
@@ -46,7 +46,6 @@ const EntryPoint: React.FC = () => {
                     {!fullScreen && isLoading ? (
                         <div>Loading...</div>
                     ) : (
-
                         <BrowserWrapper>
                             <Site12/>
                         </BrowserWrapper>

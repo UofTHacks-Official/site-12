@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ac8849b-848a-4cb8-bd7b-989220871ed6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/navbar_logo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/shared/navbar/index.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/shared/navbar/index.styles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/shared/navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/shared/navbar/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/hero/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/hero/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/entry-point/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/entry-point/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/main-site/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/main-site/index.tsx" afterDir="false" />
     </list>
@@ -76,7 +72,7 @@
       <updated>1720495738574</updated>
       <workItem from="1720495740292" duration="10000" />
       <workItem from="1724632261201" duration="6134000" />
-      <workItem from="1725739230574" duration="2497000" />
+      <workItem from="1725739230574" duration="2609000" />
     </task>
     <servers />
   </component>

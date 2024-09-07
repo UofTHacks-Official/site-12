@@ -17,7 +17,6 @@ const MainContainer = styled.div`
     background-color: #f9f9f9;
     opacity: 1;
     overflow: auto;
-    transition: opacity 1s ease-in-out;
 `;
 
 const Site12 = () => {
