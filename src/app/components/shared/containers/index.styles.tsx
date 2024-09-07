@@ -11,7 +11,7 @@ const ModuleBackground = styled.img`
     top: 0;
     left: 0;
     width: 100%;
-    min-width: 400px;
+    min-width: 350px;
     height: 100vh;
     z-index: -1;
     position: absolute;
