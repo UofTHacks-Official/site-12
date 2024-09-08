@@ -8,34 +8,34 @@ import { useMobileDetect } from "../../../../hooks/useMobileDetect";
 //     </SpaceGrotesk>
 
 export enum SpaceGroteskFontWeight {
-    Light = "Light",
-    Regular = "Regular",
-    Medium = "Medium",
-    SemiBold = "SemiBold",
-    Bold = "Bold",
+  Light = "Light",
+  Regular = "Regular",
+  Medium = "Medium",
+  SemiBold = "SemiBold",
+  Bold = "Bold",
 }
 
 type StyledSpaceGroteskTextProps = {
-    style?: any;
-    $mobile?: boolean | null;
-    fontWeight?: SpaceGroteskFontWeight;
+  style?: any;
+  $mobile?: boolean | null;
+  fontWeight?: SpaceGroteskFontWeight;
 };
 
 const getFontSrc = (fontWeight: SpaceGroteskFontWeight) => {
-    switch (fontWeight) {
-        case SpaceGroteskFontWeight.Light:
-            return "/fonts/SpaceGrotesk-Light.woff2";
-        case SpaceGroteskFontWeight.Regular:
-            return "/fonts/SpaceGrotesk-Regular.woff2";
-        case SpaceGroteskFontWeight.Medium:
-            return "/fonts/SpaceGrotesk-Medium.woff2";
-        case SpaceGroteskFontWeight.SemiBold:
-            return "/fonts/SpaceGrotesk-SemiBold.woff2";
-        case SpaceGroteskFontWeight.Bold:
-            return "/fonts/SpaceGrotesk-Bold.woff2";
-        default:
-            return "/fonts/SpaceGrotesk-Regular.woff2";
-    }
+  switch (fontWeight) {
+    case SpaceGroteskFontWeight.Light:
+      return "/fonts/SpaceGrotesk-Light.woff2";
+    case SpaceGroteskFontWeight.Regular:
+      return "/fonts/SpaceGrotesk-Regular.woff2";
+    case SpaceGroteskFontWeight.Medium:
+      return "/fonts/SpaceGrotesk-Medium.woff2";
+    case SpaceGroteskFontWeight.SemiBold:
+      return "/fonts/SpaceGrotesk-SemiBold.woff2";
+    case SpaceGroteskFontWeight.Bold:
+      return "/fonts/SpaceGrotesk-Bold.woff2";
+    default:
+      return "/fonts/SpaceGrotesk-Regular.woff2";
+  }
 };
 
 const createSpaceGroteskFont = (fontWeight: SpaceGroteskFontWeight) => css`
@@ -48,8 +48,10 @@ const createSpaceGroteskFont = (fontWeight: SpaceGroteskFontWeight) => css`
 `;
 
 const StyledSpaceGroteskText = styled.p<StyledSpaceGroteskTextProps>`
-  ${(props) => createSpaceGroteskFont(props.fontWeight || SpaceGroteskFontWeight.Regular)};
-  font-family: ${(props) => (`SpaceGrotesk-${props.fontWeight ||SpaceGroteskFontWeight.Regular}`)};
+  ${(props) =>
+    createSpaceGroteskFont(props.fontWeight || SpaceGroteskFontWeight.Regular)};
+  font-family: ${(props) =>
+    `SpaceGrotesk-${props.fontWeight || SpaceGroteskFontWeight.Regular}`};
   text-align: center;
   leading-trim: both;
   text-edge: cap;
@@ -58,30 +60,30 @@ const StyledSpaceGroteskText = styled.p<StyledSpaceGroteskTextProps>`
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.3rem;
-    color: var(--Brand-Primary-300, #225C90);
+  color: var(--Brand-Primary-300, #225c90);
 `;
 
 type SubjectivityProps = StyledSpaceGroteskTextProps & {
-    children: ReactNode;
+  children: ReactNode;
 };
 
 const SpaceGrotesk: React.FC<SubjectivityProps> = ({
-                                                             children,
-                                                             style,
-                                                             fontWeight = SpaceGroteskFontWeight.Regular,
-                                                             ...props
-                                                         }) => {
-    const $ismobile = useMobileDetect();
-    return (
-        <StyledSpaceGroteskText
-            style={style}
-            $mobile={$ismobile}
-            fontWeight={fontWeight}
-            {...props}
-        >
-            {children}
-        </StyledSpaceGroteskText>
-    );
+  children,
+  style,
+  fontWeight = SpaceGroteskFontWeight.Regular,
+  ...props
+}) => {
+  const $ismobile = useMobileDetect();
+  return (
+    <StyledSpaceGroteskText
+      style={style}
+      $mobile={$ismobile}
+      fontWeight={fontWeight}
+      {...props}
+    >
+      {children}
+    </StyledSpaceGroteskText>
+  );
 };
 
 export default SpaceGrotesk;
