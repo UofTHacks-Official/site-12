@@ -13,10 +13,4 @@ const FAQModuleBackground = styled(ModuleBackground)`
   height: 150vh;
 `;
 
-const FAQContainer = styled.div`
-  margin: 0.6rem 5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-`;
-export { FAQModuleContainer, FAQModuleBackground, FAQContainer };
+export { FAQModuleContainer, FAQModuleBackground };
