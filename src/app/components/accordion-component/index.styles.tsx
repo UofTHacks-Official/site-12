@@ -5,7 +5,6 @@ const MuiAccordionStyled = styled(MuiAccordion)(({}) => ({
         display: "none",
     },
     "&.MuiPaper-root": {
-        border: "1px solid #E0E0E0",
         borderRadius: "0.5rem",
     },
     "&.Mui-expanded": {
