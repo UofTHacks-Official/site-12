@@ -5,7 +5,7 @@ import {
 } from "@/app/components/shared/containers/index.styles";
 
 const FAQModuleContainer = styled(ModuleContainer)`
-    height: 150vh;
+    height: 100%;
     min-height: 600px;
 `;
 
