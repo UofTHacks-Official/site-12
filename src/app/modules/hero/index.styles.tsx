@@ -21,7 +21,7 @@ const HeroContentContainer = styled.div`
 `;
 
 const LedgeSVG = styled.div<MobileProps>`
-    width: ${({isMobile}) => (isMobile ? '100vw' : '80vw')};
+    width: ${({isMobile}) => (isMobile ? '100vw' : '120vw')};
     height: 220px;
     position: absolute;
     bottom: ${({isMobile}) => (isMobile ? '-80px' : '-60px')};
@@ -56,7 +56,7 @@ const HeroHeader = styled(SpaceGrotesk)<MobileProps>`
     color: #225C90;
     font-size: ${({isMobile}) => (isMobile ? '3em' : '4.5em')};
     margin-top: ${({isMobile}) => (isMobile ? '20px' : '15px')};
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     text-align: center;
 `;
 
