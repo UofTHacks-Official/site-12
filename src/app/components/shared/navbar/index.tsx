@@ -167,7 +167,7 @@ const NavBar = () => {
             </MobileNavLinkItem>
             <MobileNavLinkItem>
               <NavLink onClick={() => scrollToSection("FAQ-module")}>
-                <Manrope style={navManropeStyle()}>FAQ</Manrope>
+                <Manrope style={navManropeStyle()}>Frequenly Asked Questions</Manrope>
               </NavLink>
             </MobileNavLinkItem>
             <MobileNavLinkItem>
