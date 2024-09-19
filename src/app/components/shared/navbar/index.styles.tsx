@@ -104,9 +104,9 @@ const HamburgerMenu = styled.div<HamburgerProps>`
 const MobileMenu = styled.div<MobileMenuProps>`
   transform: translateY(${(props) => (props.open ? "0" : "-200%")});
   transition: transform 0.3s ease-in-out;
-
+  
   position: fixed;
-  background-color: #f0f0f0;
+  background-image: linear-gradient(to bottom, #225C90, #5D91C5);
   padding-top: 100px;
   left: 0;
   width: 100%;
@@ -114,9 +114,8 @@ const MobileMenu = styled.div<MobileMenuProps>`
   overflow: hidden;
 `;
 
-const MobileNavLinkItem = styled(NavLinkItem)`
-  margin-bottom: 20px;
-  margin-top: 20px;
+const MobileNavLinkItem = styled.li`
+  cursor: pointer;
   margin-left: 10%;
   margin-right: 10%;
   width: 80%;
