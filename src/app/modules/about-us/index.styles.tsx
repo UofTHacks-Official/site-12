@@ -26,7 +26,7 @@ const LeftContainer = styled.div`
     max-width: 50vw;
     padding-right: 3vw;
     padding-left: 2vw;
-    position: relative; /* Ensures the absolute positioning works for the graphic */
+    position: relative; 
 
     h1 {
         letter-spacing: 0px;
@@ -38,15 +38,13 @@ const LeftContainer = styled.div`
         line-height: 60px;
         font-style: normal;
 
-        /* Highlight the span containing "first" */
         .highlight {
             position: relative;
-            display: inline-block; /* Ensure the span only takes up the space around the word */
+            display: inline-block; 
         }
     }
 `;
 
-/* Now style the AboutGraphic with absolute positioning */
 const AboutGraphic = styled(Image)`
     position: absolute;
     top: -2vh; 
@@ -54,11 +52,6 @@ const AboutGraphic = styled(Image)`
     transform: translateY(-30%);
 `;
 
-const HeaderContainer = styled.div`
-    display: flex;
-    align-items: center; 
-    gap: 10px; 
-`;
 
 const AboutUsDescription = styled.div`
     background-color: #fff;
@@ -112,7 +105,6 @@ export {
     AboutUsModuleContainer,
     AboutUsModuleBackground,
     LeftContainer,
-    HeaderContainer,
     AboutUsDescription,
     AboutGraphic,
     ImagesContainer,

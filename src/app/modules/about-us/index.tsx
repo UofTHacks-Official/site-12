@@ -1,4 +1,4 @@
-import { AboutUsModuleBackground, AboutUsModuleContainer, LeftContainer, HeaderContainer, AboutUsDescription, AboutGraphic, ImagesContainer, StyledImage } from "@/app/modules/about-us/index.styles";
+import { AboutUsModuleBackground, AboutUsModuleContainer, LeftContainer, AboutUsDescription, AboutGraphic, ImagesContainer, StyledImage } from "@/app/modules/about-us/index.styles";
 import Manrope from "@/app/components/shared/fonts/manrope";
 import Image from "next/image";
 import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
