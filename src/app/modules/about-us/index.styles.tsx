@@ -50,8 +50,8 @@ const LeftContainer = styled.div`
 
 const AboutGraphic = styled(Image)`
   position: absolute;
-  top: -2vh;
-  left: 27vw;
+  top: -15px;
+  left: 400px;
   transform: translateY(-30%);
 `;
 
