@@ -19,7 +19,7 @@ const NavigationContainer = styled.div<NavContainerProps>`
   transform: translateY(${(props) => (props.open ? "0" : "-100%")});
   transition: transform 0.3s ease-in-out;
   width: 100%;
-  height: 100px;
+  height: 100%;
   background-color: transparent;
   position: fixed;
   z-index: 1000;
@@ -29,7 +29,6 @@ const NavigationContainer = styled.div<NavContainerProps>`
 const NavigationBar = styled.nav<NavbarProps>`
   display: flex;
   position: fixed;
-  height: 40px;
   z-index: 1001;
   justify-content: space-between;
   align-items: center;
@@ -39,7 +38,7 @@ const NavigationBar = styled.nav<NavbarProps>`
     margin: 40px 0;
   `
       : `
-      margin: 35px 8%;
+      margin: 25px 8%;
   `}
   top: 0;
   width: 84%;
@@ -50,7 +49,7 @@ const Logo = styled.div`
   font-size: 24px;
   font-weight: bold;
 
-  //   padding: 10px;
+  padding: 10px;
   background: rgba(34, 92, 144, 0.5);
   backdrop-filter: blur(6px);
   border-radius: 10px;
