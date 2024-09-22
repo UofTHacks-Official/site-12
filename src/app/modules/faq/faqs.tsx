@@ -1,7 +1,9 @@
 const email =
-  '<a href="mailto:contact@uofthacks.com"style="color: #225C90; font-weight: 700"> contact@uofTHacks.com</a>';
+  '<a href="mailto:contact@uofthacks.com" target="_blank" rel="noopener" style="color: #225C90; font-weight: 700">contact@uofTHacks.com</a>';
 const covidPolicy =
-  '<a href="https://ehs.utoronto.ca/covid-19-information/" style="color: #225C90; font-weight: 700">University of Toronto\'s</a>';
+  '<a href="https://ehs.utoronto.ca/covid-19-information/" target="_blank" rel="noopener" style="color: #225C90; font-weight: 700">University of Toronto\'s</a>';
+const instagram =
+  '<a href="https://www.instagram.com/uofthacks/" target="_blank" rel="noopener" style="color: #225C90; font-weight: 700">Instagram</a>';
 
 export const FAQItems = [
   {
@@ -82,6 +84,6 @@ export const FAQItems = [
   {
     title: "I still have a question...",
     content:
-      "No worries! You can use the Contact Us form below or reach out to us on Instagram, and we'll help with anything else you need!",
+      `No worries! You can use the Contact Us form below or reach out to us on ${instagram}, and we'll help with anything else you need!`,
   },
 ];
