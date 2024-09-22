@@ -5,14 +5,12 @@ const WhyJoinModuleContainer = styled(ModuleContainer)`
     height: 150vh;
     min-height: 600px;
     display: grid;
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: auto auto auto; 
+    grid-template-columns: 1fr;
     gap: 24px;
-    padding: 100px 290px 290px;
+    padding: 160px 290px 290px;
     position: relative;
 
     @media (max-width: 768px) {
-        grid-template-columns: 1fr;
         padding: 50px 10px; 
     }
 `;
@@ -22,7 +20,7 @@ const WhyJoinModuleBackground = styled(ModuleBackground)`
 `;
 
 const Title = styled.div`
-    grid-column: span 2; /* span title across both columns */
+    grid-column: 1/3;
     text-align: center;
     margin-top: 70px;
     margin-bottom: 5px;
@@ -32,6 +30,15 @@ const Title = styled.div`
         font-size: 20px;
     }
 `;
+const Row = styled.div<{ columns: string }>`
+    display: grid;
+    grid-template-columns: ${(props) => props.columns || "1fr 1fr"};
+    gap: 30px;
+    width: 100%; 
+    margin-bottom: 30px; 
+    grid-column: 1 / 3;
+`;
+
 
 const NoteWrapper = styled.div`
     background-color: white;
@@ -41,8 +48,8 @@ const NoteWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: ${props => props.customHeight || 'auto'}; 
-    grid-column: ${props => props.column};
+    height: ${(props) => props.customHeight || 'auto'}; 
+    grid-column: ${(props) => props.column};
 `;
 
 const ImageWrapper = styled.div`
@@ -56,13 +63,14 @@ const ImageWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-column: ${props => props.column};
+    grid-column: ${(props) => props.column};
 `;
 
 export {
     WhyJoinModuleContainer,
     WhyJoinModuleBackground,
     Title,
+    Row,
     NoteWrapper,
     ImageWrapper
 };
