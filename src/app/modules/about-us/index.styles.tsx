@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ModuleBackground, ModuleContainer } from "@/app/components/shared/containers/index.styles";
+import Image from "next/image";
 
 const AboutUsModuleContainer = styled(ModuleContainer)`
     display: flex;
@@ -25,6 +26,7 @@ const LeftContainer = styled.div`
     max-width: 50vw;
     padding-right: 3vw;
     padding-left: 2vw;
+    position: relative; /* Ensures the absolute positioning works for the graphic */
 
     h1 {
         letter-spacing: 0px;
@@ -35,7 +37,27 @@ const LeftContainer = styled.div`
         text-align: left;
         line-height: 60px;
         font-style: normal;
+
+        /* Highlight the span containing "first" */
+        .highlight {
+            position: relative;
+            display: inline-block; /* Ensure the span only takes up the space around the word */
+        }
     }
+`;
+
+/* Now style the AboutGraphic with absolute positioning */
+const AboutGraphic = styled(Image)`
+    position: absolute;
+    top: -2vh; 
+    left: 27vw; 
+    transform: translateY(-30%);
+`;
+
+const HeaderContainer = styled.div`
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
 `;
 
 const AboutUsDescription = styled.div`
@@ -49,20 +71,50 @@ const AboutUsDescription = styled.div`
 `;
 
 const ImagesContainer = styled.div`
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    position: relative;
+    padding-right: 2vw;
 
-    img {
-        border: 10px solid #fff;
-        border-radius: 4px;
-        object-fit: cover;
+    & > :nth-child(1) {
+        grid-column: 1 / 2; 
+        align-self: end;
     }
 
+    & > :nth-child(2) {
+        grid-column: 2 / 3; 
+    }
+
+    & > :nth-child(3) {
+        grid-column: 1 / 3;
+        justify-self: center; 
+        margin-left: -40px;
+    }
+    & > :nth-child(4) {
+        position: absolute; 
+        bottom: 5%;
+        left: 100%;
+        margin-left: -110px;
+        align-self: center;
+    }
+`;
+
+const StyledImage = styled(Image)`
+    display: block;
+    border: 10px solid #fff;
+    border-radius: 4px;
+    object-fit: cover;
+    margin: 8px;
 `;
 
 export {
     AboutUsModuleContainer,
     AboutUsModuleBackground,
     LeftContainer,
+    HeaderContainer,
     AboutUsDescription,
-    ImagesContainer
+    AboutGraphic,
+    ImagesContainer,
+    StyledImage
 };

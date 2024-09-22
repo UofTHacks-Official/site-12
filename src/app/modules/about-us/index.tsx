@@ -1,4 +1,4 @@
-import { AboutUsModuleBackground, AboutUsModuleContainer, LeftContainer, AboutUsDescription, RightContainer, ImagesContainer } from "@/app/modules/about-us/index.styles";
+import { AboutUsModuleBackground, AboutUsModuleContainer, LeftContainer, HeaderContainer, AboutUsDescription, AboutGraphic, ImagesContainer, StyledImage } from "@/app/modules/about-us/index.styles";
 import Manrope from "@/app/components/shared/fonts/manrope";
 import Image from "next/image";
 import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
@@ -20,18 +20,22 @@ const AboutUs = () => {
     <AboutUsModuleContainer>
         <AboutUsModuleBackground src="/background/about-us.svg" />
         <LeftContainer>
-            <SpaceGrotesk>
-                <h1>Canada's first <br></br> student-run hackathon</h1>
-            </SpaceGrotesk>
-            <Manrope>
-                <AboutUsDescription>{aboutUsDescription}</AboutUsDescription>
-            </Manrope>
+          <SpaceGrotesk>
+              <h1>
+                  Canada’s <span className="highlight">first</span> <br /> student-run hackathon
+              </h1>
+          </SpaceGrotesk>
+          <AboutGraphic src="/assets/about/Graphic.svg" alt="Gradient Graphic" width={75} height={75}/>
+          <Manrope>
+              <AboutUsDescription>{aboutUsDescription}</AboutUsDescription>
+          </Manrope>
         </LeftContainer>
 
         <ImagesContainer>
-            <Image src="/assets/about/about-1.svg" alt="UofT Hacks executive speaking to a crowd" width={160} height={160} />
-            <Image src="/assets/about/about-2.svg" alt="UofT Hacks sponsors" width={350} height={200} />
-            <Image src="/assets/about/about-3.svg" alt="UofT Hacks executive speaking to a crowd" width={400} height={200} />
+            <StyledImage src="/assets/about/about-1.svg" alt="UofT Hacks executive speaking to a crowd" width={160} height={160} />
+            <StyledImage src="/assets/about/about-2.svg" alt="UofT Hacks sponsors" width={350} height={200} />
+            <StyledImage src="/assets/about/about-3.svg" alt="UofT Hacks executive speaking to a crowd" width={400} height={200} />
+            <Image src="/assets/about/Keys.svg" alt="Keys Icon" width={75} height={170} />
         </ImagesContainer>
     </AboutUsModuleContainer>
   );
