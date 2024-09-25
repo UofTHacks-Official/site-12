@@ -39,8 +39,12 @@ const Row = styled.div<{ columns: string }>`
     grid-column: 1 / 3;
 `;
 
-
-const NoteWrapper = styled.div`
+interface NoteWrapperProps {
+    customHeight?: string;
+    column?: string;
+  }
+  
+ const NoteWrapper = styled.div<NoteWrapperProps>`
     background-color: white;
     padding: 16px;
     border-radius: 8px;
@@ -48,8 +52,8 @@ const NoteWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: ${(props) => props.customHeight || 'auto'}; 
-    grid-column: ${(props) => props.column};
+    height: ${(props) => props.customHeight || 'auto'};
+    grid-column: ${(props) => props.column || '1'}; 
 `;
 
 const ImageWrapper = styled.div`

@@ -13,7 +13,7 @@ const WhyJoin = () => {
         {/* first row */}
         <Row columns="1fr 1.5fr">
             <NoteWrapper column="1 / 2" customHeight="200px">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tristique accumsan.</p>
+                <p>Be part of a vibrant community of over 500 hackers from diverse schools, collaborating on exciting projects for 36+ hours of innovation.</p>
             </NoteWrapper>
             <ImageWrapper column="2 / 3">
                 <img src="/assets/why-join/Image.svg" alt="Group Photo" />
@@ -27,14 +27,14 @@ const WhyJoin = () => {
                 <img src="/assets/why-join/Polaroid 1.svg" alt="Polaroid 1" />
             </ImageWrapper>
             <NoteWrapper column="2 / 3" customHeight="150px">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur facilisis enim.</p>
+                <p>Boost your skills with hands-on workshops and mentorship from industry professionals, helping you bring your ideas to life.</p>
             </NoteWrapper>
         </Row>
 
         {/* third row*/}
         <Row columns="1fr 1fr">
             <NoteWrapper column="1 / 2" customHeight="180px">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur facilisis enim.</p>
+                <p>Network with top companies and industry leaders while creating something unique, all with the support of complimentary meals and snacks to keep you going.</p>
             </NoteWrapper>
             <ImageWrapper column="2 / 3">
                 <img src="/assets/why-join/Polaroid 2.svg" alt="Polaroid 2" />
