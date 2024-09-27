@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
 import {
     PastHackathonsModuleContainer,
     PastHackathonsModuleBackground,
@@ -12,15 +12,10 @@ import CardFront from "@/app/components/past-hackathons/cards-front"
 import CardBack from "@/app/components/past-hackathons/cards-back"
 import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk"
 import Carousel from 'react-material-ui-carousel'
+import { IconButton } from "@mui/material"
+import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 
-interface CarouselSlideProps {
-    item: {
-        colour: string;
-        year: string;
-        theme: string;
-        subText: string;
-    };
-}
 const spaceGroteskStyles = {
     color: "white",
     fontSize: "50px",
@@ -62,23 +57,52 @@ const items = [
         subText: 'yapyapyapyap'
     }
 ]
+interface ArrowButtonProps {
+    onClick: () => void;
+}
 const PastHackathons = () => {
+    const numSlides = useRef(items.length)
     const [activeIndex, setActiveIndex] = useState<any>(0)
-    const [flippedCard, setFlippedCard] = useState<number | boolean>(false)
-    const [shouldAnimate, setShouldAnimate] = useState<boolean>(false)
-    const handleCardClick = (cardIndex: number, targetSlide: number) => {
-        setShouldAnimate(false)
-        setFlippedCard(cardIndex)
+    const shouldAnimate = useRef(false)
+    const handleCardClick = (targetSlide: number) => {
+        shouldAnimate.current = false
         setActiveIndex(targetSlide)
-        setFlippedCard(false)
-        setShouldAnimate(false)
+    }
+
+    const ArrowBackButton: React.FC<ArrowButtonProps> = ({ onClick }) => {
+        return (
+            <IconButton size='large' sx={{
+                position: 'absolute',
+                top: '53%',
+                left: '5%',
+                fontSize: 50,
+                transform: 'translateY(-50%)',
+                zIndex: 50,
+            }}>
+                <ArrowBackIosRoundedIcon fontSize='inherit' sx={{ color: '#ffffff' }} onClick={onClick} />
+            </IconButton>
+        )
+    }
+    const ArrowForwordButton: React.FC<ArrowButtonProps> = ({ onClick }) => {
+        return (
+            <IconButton size='large' sx={{
+                position: 'absolute',
+                top: '53%',
+                right: '5%',
+                fontSize: 50,
+                transform: 'translateY(-50%)',
+                zIndex: 50,
+            }}>
+                <ArrowForwardIosRoundedIcon fontSize='inherit' sx={{ color: '#ffffff' }} onClick={onClick} />
+            </IconButton>
+        )
     }
 
     const IntroCards = () => {
         return (
             <IntroCardContainer>
                 <FlipCard
-                    onClick={() => handleCardClick(1, 1)}
+                    onClick={() => handleCardClick(1)}
                     frontContent={
                         <CardFront bgColour={items[0].colour}>
                             <SpaceGrotesk style={spaceGroteskStylesCardNumber}>{items[0].year}</SpaceGrotesk>
@@ -100,11 +124,16 @@ const PastHackathons = () => {
             </PastHackathonsModuleTitle>
             <PastHackathonsModuleCardsContainer>
                 <CarouselContainer>
+                    <ArrowBackButton onClick={() => setActiveIndex((activeIndex - 1 + numSlides.current)%numSlides.current)} />
+                    <ArrowForwordButton onClick={() => setActiveIndex((activeIndex + 1)%numSlides.current)} />
                     <Carousel
-                        navButtonsAlwaysVisible
+                        swipe={false}
+                        fullHeightHover={false}
+                        PrevIcon={<></>}
+                        NextIcon={<></>}
                         autoPlay={false}
                         animation={'slide'}
-                        duration={0}
+                        duration={shouldAnimate.current ? 500 : 0}
                         indicators={false}
                         index={activeIndex}
                         onChange={(now) => setActiveIndex(now)}
