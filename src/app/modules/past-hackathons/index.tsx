@@ -62,7 +62,7 @@ interface ArrowButtonProps {
 }
 const PastHackathons = () => {
     const numSlides = useRef(items.length)
-    const [activeIndex, setActiveIndex] = useState<any>(0)
+    const [activeIndex, setActiveIndex] = useState<number>(0)
     const shouldAnimate = useRef(false)
     const handleCardClick = (targetSlide: number) => {
         shouldAnimate.current = false
@@ -98,6 +98,16 @@ const PastHackathons = () => {
         )
     }
 
+    const handleBackArrowClick = () => {
+        shouldAnimate.current = true
+        setActiveIndex((prev)=>(prev - 1 + numSlides.current)%numSlides.current)
+    }
+
+    const handleForwardArrowClick = () => {
+        shouldAnimate.current = true
+        setActiveIndex((prev)=>(prev + 1)%numSlides.current)
+    }
+
     const IntroCards = () => {
         return (
             <IntroCardContainer>
@@ -124,19 +134,23 @@ const PastHackathons = () => {
             </PastHackathonsModuleTitle>
             <PastHackathonsModuleCardsContainer>
                 <CarouselContainer>
-                    <ArrowBackButton onClick={() => setActiveIndex((activeIndex - 1 + numSlides.current)%numSlides.current)} />
-                    <ArrowForwordButton onClick={() => setActiveIndex((activeIndex + 1)%numSlides.current)} />
+                    <ArrowBackButton onClick={handleBackArrowClick} />
+                    <ArrowForwordButton onClick={handleForwardArrowClick} />
                     <Carousel
                         swipe={false}
                         fullHeightHover={false}
                         PrevIcon={<></>}
                         NextIcon={<></>}
                         autoPlay={false}
-                        animation={'slide'}
+                        animation={'fade'}
                         duration={shouldAnimate.current ? 500 : 0}
                         indicators={false}
                         index={activeIndex}
-                        onChange={(now) => setActiveIndex(now)}
+                        onChange={(now?: number) => {
+                            if (now !== undefined) {
+                                setActiveIndex(now);
+                            }
+                        }}
                     >
                         {
                             items.map((item, i) =>
