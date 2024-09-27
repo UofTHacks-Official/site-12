@@ -26,7 +26,6 @@ const PastHackathonsModuleTitle = styled.h1`
 const PastHackathonsModuleCardsContainer = styled.div`
     width: 100%;
     height: 100vh;
-    // border: 1px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +34,6 @@ const PastHackathonsModuleCardsContainer = styled.div`
 const CarouselContainer = styled.div`
     width: 100%;
     height: 80vh;
-    // border: 1px solid blue;
 `
 
 const IntroCardContainer = styled.div`
@@ -44,7 +42,7 @@ const IntroCardContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    //border: 1px solid red;
+    border: 1px solid red;
 `
 
 export {
