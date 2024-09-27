@@ -103,7 +103,8 @@ const PastHackathons = () => {
                     <Carousel
                         navButtonsAlwaysVisible
                         autoPlay={false}
-                        animation={'none'}
+                        animation={'slide'}
+                        duration={0}
                         indicators={false}
                         index={activeIndex}
                         onChange={(now) => setActiveIndex(now)}
