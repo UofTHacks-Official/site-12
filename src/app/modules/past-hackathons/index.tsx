@@ -65,11 +65,13 @@ const items = [
 const PastHackathons = () => {
     const [activeIndex, setActiveIndex] = useState<any>(0)
     const [flippedCard, setFlippedCard] = useState<number | boolean>(false)
+    const [shouldAnimate, setShouldAnimate] = useState<boolean>(false)
     const handleCardClick = (cardIndex: number, targetSlide: number) => {
+        setShouldAnimate(false)
         setFlippedCard(cardIndex)
         setActiveIndex(targetSlide)
         setFlippedCard(false)
-        
+        setShouldAnimate(false)
     }
 
     const IntroCards = () => {
@@ -101,7 +103,7 @@ const PastHackathons = () => {
                     <Carousel
                         navButtonsAlwaysVisible
                         autoPlay={false}
-                        animation="undefined"
+                        animation={'none'}
                         indicators={false}
                         index={activeIndex}
                         onChange={(now) => setActiveIndex(now)}
