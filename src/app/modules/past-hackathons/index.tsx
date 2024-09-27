@@ -1,43 +1,34 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import {
     PastHackathonsModuleContainer,
     PastHackathonsModuleBackground,
     PastHackathonsModuleTitle,
     PastHackathonsModuleCardsContainer,
+    IntroCardContainer,
     CarouselContainer,
-    CarouselSlides,
-    CarouselCardBorders,
-    CarouselCards,
-    CarouselCardText,
-    CarouselCardTextNumber,
-    CarouselCardTextOther,
-    CarouselCardTextTheme,
-    CarouselCardTextSubText,
-    CarouselCardImages,
-    CarouselCardImage,
 } from "@/app/modules/past-hackathons/index.styles"
+import FlipCard from "@/app/components/past-hackathons/flip-cards"
+import CardFront from "@/app/components/past-hackathons/cards-front"
+import CardBack from "@/app/components/past-hackathons/cards-back"
 import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk"
 import Carousel from 'react-material-ui-carousel'
 
 const PastHackathons = () => {
-    const sliderRef = useRef(null)
     const spaceGroteskStyles = {
         color: "white",
         fontSize: "50px",
     }
-    const spaceGroteskStylesNumber = {
+    const spaceGroteskStylesCardNumber = {
         color: "#225c91",
-        fontSize: "100px",
-    }
-    const spaceGroteskStylesTheme = {
-        color: "#225c91",
-        fontSize: "45px",
-    }
-    const spaceGroteskStylesSubText = {
-        color: "#225c91",
-        fontSize: "24px",
+        fontSize: "30px",
     }
     const items = [
+        {
+            colour: '#ffcbfa',
+            year: '11',
+            theme: 'Nostalgia',
+            subText: 'yapyapyapyap'
+        },
         {
             colour: '#ffcbfa',
             year: '11',
@@ -74,32 +65,37 @@ const PastHackathons = () => {
         };
     }
 
+    const [activeIndex, setActiveIndex] = useState<any>(0)
+    const [flippedCard, setFlippedCard] = useState<number | boolean>(false)
+    const handleCardClick = (cardIndex: number, targetSlide: number) => {
+        // setFlippedCard(cardIndex)
+
+        // setTimeout(() => {
+        //     setActiveIndex(targetSlide)
+        //     setFlippedCard(false)
+        // }, 600)
+    }
+
+    const IntroCards = () => {
+        return (
+            <IntroCardContainer>
+                <FlipCard
+                    onClick={() => handleCardClick(1, 1)}
+                    frontContent={
+                        <CardFront bgColour={items[0].colour}>
+                            <SpaceGrotesk style={spaceGroteskStylesCardNumber}>{items[0].year}</SpaceGrotesk>
+                        </CardFront>
+                    }
+                    backContent={<CarouselSlide item={items[0]} />}
+                >
+                </FlipCard>
+            </IntroCardContainer>
+        )
+    }
+
     const CarouselSlide: React.FC<CarouselSlideProps> = (props) => {
         return (
-            <CarouselSlides>
-                <CarouselCardBorders item={props.item}>
-                    <CarouselCards>
-                        <CarouselCardText>
-                            <CarouselCardTextNumber>
-                                <SpaceGrotesk style={spaceGroteskStylesNumber}>{props.item.year}</SpaceGrotesk>
-                            </CarouselCardTextNumber>
-                            <CarouselCardTextOther>
-                                <CarouselCardTextTheme>
-                                    <SpaceGrotesk style={spaceGroteskStylesTheme}>{props.item.theme}</SpaceGrotesk>
-                                </CarouselCardTextTheme>
-                                <CarouselCardTextSubText>
-                                    <SpaceGrotesk style={spaceGroteskStylesSubText}>{props.item.subText}</SpaceGrotesk>
-                                </CarouselCardTextSubText>
-                            </CarouselCardTextOther>
-                        </CarouselCardText>
-                        <CarouselCardImages>
-                            <CarouselCardImage/>
-                            <CarouselCardImage/>
-                            <CarouselCardImage/>
-                        </CarouselCardImages>
-                    </CarouselCards>
-                </CarouselCardBorders>
-            </CarouselSlides>
+            <CardBack item={props.item} />
         )
     }
 
@@ -115,9 +111,16 @@ const PastHackathons = () => {
                         autoPlay={false}
                         animation="slide"
                         indicators={false}
+                        index={activeIndex}
+                        onChange={(now) => setActiveIndex(now)}
                     >
                         {
-                            items.map((item, i) => <CarouselSlide key={i} item={item} />)
+                            items.map((item, i) =>
+                                i === 0 ? (
+                                    <IntroCards key={i} />
+                                ) : (
+                                    <CarouselSlide key={i} item={item} />)
+                            )
                         }
                     </Carousel>
                     {/* <CarouselSlide item={items[0]}></CarouselSlide> */}
