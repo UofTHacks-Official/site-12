@@ -11,7 +11,6 @@ interface MobileProps {
 const StatsModuleContainer = styled(ModuleContainer)<MobileProps>`
     position: relative;
     overflow: hidden;
-    height: ${(props) => (props.isMobile ? '100vh' : '140vh')};
     display: flex;
     align-items: ${(props) => (props.isMobile ? 'flex-start' : 'center')};
     padding-top: ${(props) => (props.isMobile ? '2rem' : '0')};
