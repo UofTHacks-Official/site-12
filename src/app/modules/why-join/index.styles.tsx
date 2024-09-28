@@ -1,35 +1,32 @@
-import { styled } from "@mui/material/styles";
+import {styled} from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
 
-export const ImageBackgroundContainer = styled(Box)`
+interface MobileProps {
+    isMobile?: boolean | null
+}
+
+export const ImageBackgroundContainer = styled(Box)<MobileProps>`
     width: 100%;
-    min-height: 100vh; 
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('/background/why-join.svg');
+    background-color: ${(props) => (props.isMobile ? 'white' : 'transparent')};
+    background-image: ${(props) => (props.isMobile ? 'none' : "url('/background/why-join.svg')")};
     background-position: center center;
     background-repeat: no-repeat;
-    padding: 40px;
+    padding: ${(props) => (props.isMobile ? '20px' : '40px')};
+    background-size: ${(props) => (props.isMobile ? 'contain' : 'cover')};
     box-sizing: border-box;
-
-    @media (max-width: 768px) {
-        padding: 20px;
-        background-size: contain;
-    }
 `;
 
-export const Title = styled(SpaceGrotesk)`
-    font-size: 50px;
+export const Title = styled(SpaceGrotesk)<MobileProps>`
+    font-size: ${(props) => (props.isMobile ? '36px' : '50px')};
     color: white;
     text-align: center;
     margin-bottom: 40px;
-
-    @media (max-width: 768px) {
-        font-size: 36px;
-    }
 `;
 
 export const NoteWrapper = styled(Box)<{ customHeight?: string }>`
