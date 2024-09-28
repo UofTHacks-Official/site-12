@@ -1,42 +1,32 @@
 import styled from "styled-components";
 import {
-  ModuleBackground,
-  ModuleContainer,
+    ModuleBackground,
+    ModuleContainer,
 } from "@/app/components/shared/containers/index.styles";
 
-const StatsModuleContainer = styled(ModuleContainer)`
-  position: relative;
-  overflow: hidden;
-  height: 140vh;
-  display: flex;
-  align-items: center;
+interface MobileProps {
+    isMobile?: boolean | null;
+}
 
-  @media (max-width: 768px) {
-    height: 100vh; // Reduce height on mobile
-    align-items: flex-start; // Align content to top on mobile
-    padding-top: 2rem; // Add some top padding on mobile
-  }
+const StatsModuleContainer = styled(ModuleContainer)<MobileProps>`
+    position: relative;
+    overflow: hidden;
+    height: ${(props) => (props.isMobile ? '100vh' : '140vh')};
+    display: flex;
+    align-items: ${(props) => (props.isMobile ? 'flex-start' : 'center')};
+    padding-top: ${(props) => (props.isMobile ? '2rem' : '0')};
 `;
 
 const StatsModuleBackground = styled(ModuleBackground)`
-  height: 140vh;
-
-  @media (max-width: 768px) {
-    height: 100vh; // Match container height on mobile
-  }
+    height: 100vh;
 `;
 
-const StatsImageWrapper = styled.div`
-  position: relative;
-  width: 90vw;
-  height: 100%;
-  margin-left: 0;
-
-  @media (max-width: 768px) {
-    width: 150vw; // mobile width
-    height: 80%; // Reduce height to prevent overflow
-    overflow: hidden;
-  }
+const StatsImageWrapper = styled.div<MobileProps>`
+    position: relative;
+    width: ${(props) => (props.isMobile ? '150vw' : '90vw')};
+    height: ${(props) => (props.isMobile ? '80%' : '100%')};
+    margin-left: 0;
+    overflow: ${(props) => (props.isMobile ? 'hidden' : 'visible')};
 `;
 
-export { StatsModuleContainer, StatsModuleBackground, StatsImageWrapper };
+export {StatsModuleContainer, StatsModuleBackground, StatsImageWrapper};

@@ -1,27 +1,28 @@
 import {
-  StatsModuleContainer,
-  StatsModuleBackground,
-  StatsImageWrapper,
+    StatsModuleContainer,
+    StatsModuleBackground,
+    StatsImageWrapper,
 } from "@/app/modules/stats/index.styles";
-import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
-import BooksSVG from "./Main Books.svg";
+import BooksSVG from "../../../../public/assets/main-books.svg";
 import Image from "next/image";
+import {useMobileDetect} from "@/app/hooks/useMobileDetect";
 
 const Stats = () => {
-  return (
-    <StatsModuleContainer id="Stats-module">
-      <StatsModuleBackground src="/background/stats.svg" />
-      <StatsImageWrapper>
-        <Image
-          src={BooksSVG}
-          alt="My Design"
-          layout="fill"
-          objectFit="contain"
-          objectPosition="left center"
-        />
-      </StatsImageWrapper>
-    </StatsModuleContainer>
-  );
+    const isMobile = useMobileDetect()
+    return (
+        <StatsModuleContainer isMobile={isMobile} id="Stats-module">
+            <StatsModuleBackground src="/background/stats.svg"/>
+            <StatsImageWrapper isMobile={isMobile}>
+                <Image
+                    src={BooksSVG}
+                    alt="books"
+                    layout="fill"
+                    objectFit="contain"
+                    objectPosition="left center"
+                />
+            </StatsImageWrapper>
+        </StatsModuleContainer>
+    );
 };
 
 export default Stats;
