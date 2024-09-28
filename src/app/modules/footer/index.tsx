@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <FooterModuleContainer id="Footer-module">
             <FooterModuleBackground src="/background/footer.svg"/>
-            <SocialsContainer></SocialsContainer>
+            <SocialsContainer/>
         </FooterModuleContainer>
     );
 };
