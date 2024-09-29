@@ -1,14 +1,20 @@
-import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
-import {AboutUsModuleBackground, AboutUsModuleContainer} from "@/app/modules/about-us/index.styles";
-import Manrope from "@/app/components/shared/fonts/manrope";
+import AboutUsDesktop from "@/app/components/about-us/desktop/index";
+import AboutUsMobile from "@/app/components/about-us/mobile/index";
+import {
+  AboutUsModuleBackground,
+  AboutUsModuleContainer,
+} from "@/app/modules/about-us/index.styles";
+import { useMobileDetect } from "@/app/hooks/useMobileDetect";
 
 const AboutUs = () => {
-    return (
-        <AboutUsModuleContainer>
-            <AboutUsModuleBackground src="/background/about-us.svg"/>
-            <Manrope>about us section</Manrope>
-        </AboutUsModuleContainer>
-    );
+  const isMobile = useMobileDetect();
+
+  return (
+    <AboutUsModuleContainer mobile={isMobile}>
+      <AboutUsModuleBackground src="/background/about-us.svg" />
+      {isMobile ? <AboutUsMobile /> : <AboutUsDesktop />}
+    </AboutUsModuleContainer>
+  );
 };
 
 export default AboutUs;
