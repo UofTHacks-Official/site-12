@@ -14,7 +14,8 @@ const AboutUsModuleContainer = styled(ModuleContainer)<MobileProps>`
   align-items: center;
   padding: ${(props) => (props.mobile ? "0.5rem" : "2rem")};
   position: relative;
-  margin: 0 auto; 
+  margin: 0 auto;
+  height: auto;
 `;
 
 const AboutUsModuleBackground = styled(ModuleBackground)`
@@ -28,4 +29,4 @@ const AboutUsModuleBackground = styled(ModuleBackground)`
   background-position: center;
 `;
 
-export {AboutUsModuleBackground, AboutUsModuleContainer};
+export { AboutUsModuleBackground, AboutUsModuleContainer };

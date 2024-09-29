@@ -1,19 +1,17 @@
 import {
-  AboutUsModuleContainer,
+  AboutUsMobileContainer,
   LeftContainer,
   AboutUsDescription,
   AboutGraphic,
   ImagesContainer,
   StyledImage,
   Keys,
-  KeyHolder
+  KeyHolder,
 } from "@/app/components/about-us/mobile/index.styles";
 import Manrope from "@/app/components/shared/fonts/manrope";
-import Image from "next/image";
 import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
 
 const AboutUsMobile = () => {
-
   const aboutUsDescription = (
     <>
       <p>
@@ -31,12 +29,12 @@ const AboutUsMobile = () => {
   );
 
   return (
-    <AboutUsModuleContainer>
+    <AboutUsMobileContainer>
       <LeftContainer>
         <SpaceGrotesk>
           <h1>
-            Canada’s first<br /> student-run
-            hackathon
+            Canada’s first
+            <br /> student-run hackathon
           </h1>
         </SpaceGrotesk>
         <AboutGraphic
@@ -84,7 +82,7 @@ const AboutUsMobile = () => {
           height={200}
         />
       </ImagesContainer>
-    </AboutUsModuleContainer>
+    </AboutUsMobileContainer>
   );
 };
 

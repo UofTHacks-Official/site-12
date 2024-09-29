@@ -1,14 +1,15 @@
 import styled from "styled-components";
-import { ModuleBackground, ModuleContainer } from "@/app/components/shared/containers/index.styles";
+import { ModuleContainer } from "@/app/components/shared/containers/index.styles";
 import Image from "next/image";
 
-const AboutUsModuleContainer = styled(ModuleContainer)`
+const AboutUsMobileContainer = styled(ModuleContainer)`
   display: block;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
   position: relative;
-  margin: 0 auto; 
+  margin: 0 auto;
+  height: auto;
 `;
 
 const LeftContainer = styled.div`
@@ -49,11 +50,12 @@ const AboutUsDescription = styled.div`
   text-align: left;
   letter-spacing: 0px;
   position: relative;
+  color: #000;
 `;
 
 const Keys = styled(Image)`
   position: absolute;
-  bottom: -120px; 
+  bottom: -120px;
   left: 24%;
   transform: translateX(-50%);
   z-index: 1;
@@ -61,7 +63,7 @@ const Keys = styled(Image)`
 
 const KeyHolder = styled(Image)`
   position: absolute;
-  bottom: -45px; 
+  bottom: -45px;
   left: 25%;
   transform: translateX(-50%);
   z-index: -1;
@@ -72,12 +74,12 @@ const ImagesContainer = styled.div`
   flex-wrap: wrap;
   gap: 0px;
   justify-content: center;
-  align-items: flex-start; 
+  align-items: flex-start;
   padding-right: 1rem;
 
   & > :nth-child(1) {
-    flex: 0 1 45%; 
-    max-width: 45%; 
+    flex: 0 1 45%;
+    max-width: 45%;
     align-self: flex-end;
   }
 
@@ -88,7 +90,7 @@ const ImagesContainer = styled.div`
 
   & > :nth-child(3) {
     flex: 1 1 100%;
-    max-width: 100%; 
+    max-width: 100%;
     margin-top: 10px;
   }
 `;
@@ -102,12 +104,12 @@ const StyledImage = styled(Image)`
 `;
 
 export {
-  AboutUsModuleContainer,
+  AboutUsMobileContainer,
   LeftContainer,
   AboutUsDescription,
   AboutGraphic,
   ImagesContainer,
   StyledImage,
   Keys,
-  KeyHolder
+  KeyHolder,
 };

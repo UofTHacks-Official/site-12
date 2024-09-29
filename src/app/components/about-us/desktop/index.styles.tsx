@@ -1,18 +1,14 @@
 import styled from "styled-components";
-import {
-  ModuleBackground,
-  ModuleContainer,
-} from "@/app/components/shared/containers/index.styles";
+import { ModuleContainer } from "@/app/components/shared/containers/index.styles";
 import Image from "next/image";
 
-
-const AboutUsModuleContainer = styled(ModuleContainer)`
+const AboutUsDesktopContainer = styled(ModuleContainer)`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
   position: relative;
-  margin: 0 auto; 
+  margin: 0 auto;
 `;
 
 const LeftContainer = styled.div`
@@ -52,6 +48,7 @@ const AboutUsDescription = styled.div`
   font-size: 16px;
   text-align: left;
   letter-spacing: 0px;
+  color: #000;
 `;
 
 const ImagesContainer = styled.div`
@@ -83,7 +80,7 @@ const ImagesContainer = styled.div`
     margin-left: -110px;
     align-self: center;
   }
-  
+
   & > :nth-child(5) {
     visibility: hidden;
     position: absolute;
@@ -101,7 +98,7 @@ const StyledImage = styled(Image)`
 `;
 
 export {
-  AboutUsModuleContainer,
+  AboutUsDesktopContainer,
   LeftContainer,
   AboutUsDescription,
   AboutGraphic,
