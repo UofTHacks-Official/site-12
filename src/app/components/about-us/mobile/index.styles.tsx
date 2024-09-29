@@ -55,7 +55,7 @@ const AboutUsDescription = styled.div`
 
 const Keys = styled(Image)`
   position: absolute;
-  bottom: -120px;
+  bottom: -115px;
   left: 24%;
   transform: translateX(-50%);
   z-index: 1;
@@ -63,7 +63,7 @@ const Keys = styled(Image)`
 
 const KeyHolder = styled(Image)`
   position: absolute;
-  bottom: -45px;
+  bottom: -40px;
   left: 25%;
   transform: translateX(-50%);
   z-index: -1;
@@ -76,6 +76,7 @@ const ImagesContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
   padding-right: 1rem;
+  margin-top: -20px;
 
   & > :nth-child(1) {
     flex: 0 1 45%;
