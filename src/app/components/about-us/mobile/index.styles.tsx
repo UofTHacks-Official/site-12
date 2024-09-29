@@ -1,12 +1,9 @@
 import styled from "styled-components";
-import {
-  ModuleBackground,
-  ModuleContainer,
-} from "@/app/components/shared/containers/index.styles";
+import { ModuleBackground, ModuleContainer } from "@/app/components/shared/containers/index.styles";
 import Image from "next/image";
 
 const AboutUsModuleContainer = styled(ModuleContainer)`
-  display:  "block";
+  display: block;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
@@ -16,18 +13,17 @@ const AboutUsModuleContainer = styled(ModuleContainer)`
 
 const LeftContainer = styled.div`
   max-width: auto;
-  padding-right: 2vw;
-  padding-left: 2vw;
+  padding-right: 1rem;
   position: relative;
 
   h1 {
     letter-spacing: 0px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 700;
     margin-bottom: 1.5rem;
     color: #fff;
     text-align: left;
-    line-height: 20px;
+    line-height: 30px;
 
     .highlight {
       position: relative;
@@ -52,47 +48,48 @@ const AboutUsDescription = styled.div`
   font-size: 16px;
   text-align: left;
   letter-spacing: 0px;
+  position: relative;
+`;
+
+const Keys = styled(Image)`
+  position: absolute;
+  bottom: -120px; 
+  left: 24%;
+  transform: translateX(-50%);
+  z-index: 1;
+`;
+
+const KeyHolder = styled(Image)`
+  position: absolute;
+  bottom: -45px; 
+  left: 25%;
+  transform: translateX(-50%);
+  z-index: -1;
 `;
 
 const ImagesContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  position: relative;
-  padding-right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px;
+  justify-content: center;
+  align-items: flex-start; 
+  padding-right: 1rem;
 
   & > :nth-child(1) {
-    grid-column: 2 / 3;
-    align-self: end;
+    flex: 0 1 45%; 
+    max-width: 45%; 
+    align-self: flex-end;
   }
 
   & > :nth-child(2) {
-    grid-column: 1 / 3;
+    flex: 0 1 45%;
+    max-width: 45%;
   }
 
   & > :nth-child(3) {
-    border: 2px soli red;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    justify-self: start;
-    align-self: end;
-    margin-left: 0px;
-  }
-
-  & > :nth-child(4) {
-    position: absolute;
-    bottom: 70%;
-    left: 50%;
-    margin-left: -110px;
-    align-self: center;
-  }
-  
-  & > :nth-child(5) {
-    position: absolute;
-    bottom: 85%;
-    left: 50%;
-    margin-left: -110px;
-    align-self: center;
+    flex: 1 1 100%;
+    max-width: 100%; 
+    margin-top: 10px;
   }
 `;
 
@@ -111,4 +108,6 @@ export {
   AboutGraphic,
   ImagesContainer,
   StyledImage,
+  Keys,
+  KeyHolder
 };

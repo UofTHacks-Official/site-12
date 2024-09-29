@@ -6,13 +6,11 @@ import {
     ImagesContainer,
     StyledImage,
   } from "@/app/components/about-us/desktop/index.styles";
-  import { useMobileDetect } from "@/app/hooks/useMobileDetect";
   import Manrope from "@/app/components/shared/fonts/manrope";
   import Image from "next/image";
   import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
   
   const AboutUsDesktop = () => {
-    const isMobile = useMobileDetect();
   
     const aboutUsDescription = (
       <>
@@ -54,20 +52,20 @@ import {
           <StyledImage
             src="/assets/about/about-1.svg"
             alt="UofT Hacks executive speaking to a crowd"
-            width={isMobile ? 150 : 160}
-            height={isMobile ? 200 : 160}
+            width={160}
+            height={160}
           />
           <StyledImage
             src="/assets/about/about-2.svg"
             alt="UofT Hacks sponsors"
-            width={isMobile ? 340 : 350}
-            height={isMobile ? 200 : 200}
+            width={350}
+            height={200}
           />
           <StyledImage
             src="/assets/about/about-3.svg"
             alt="UofT Hacks executive speaking to a crowd"
-            width={isMobile ? 160 : 400}
-            height={isMobile ? 100 : 200}
+            width={400}
+            height={200}
           />
           <Image
             src="/assets/about/Keys.svg"
