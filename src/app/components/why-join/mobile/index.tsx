@@ -14,7 +14,7 @@ const WhyJoinMobile = () => (
             {/* first row */}
             <Grid container spacing={2} justifyContent="center" alignItems="center">
                 <Grid item xs={12}>
-                    <ImageWrapper>
+                    <ImageWrapper isMobile={true}>
                         <img src="/assets/why-join/Image.svg" alt="Group Photo"/>
                     </ImageWrapper>
                 </Grid>
@@ -29,7 +29,7 @@ const WhyJoinMobile = () => (
             {/* second row */}
             <Grid container spacing={2} mt={1} justifyContent="center" alignItems="center">
                 <Grid item xs={12}>
-                    <ImageWrapper>
+                    <ImageWrapper isMobile={true}>
                         <img src="/assets/why-join/Polaroid 1.svg" alt="Polaroid 1"/>
                     </ImageWrapper>
                 </Grid>
@@ -44,7 +44,7 @@ const WhyJoinMobile = () => (
             {/* third row */}
             <Grid container spacing={2} mt={1} justifyContent="center" alignItems="center">
                 <Grid item xs={12}>
-                    <ImageWrapper>
+                    <ImageWrapper isMobile={true}>
                         <img src="/assets/why-join/Polaroid 2.svg" alt="Polaroid 2"/>
                     </ImageWrapper>
                 </Grid>

@@ -41,12 +41,19 @@ export const NoteWrapper = styled(Box)<{ customHeight?: string }>`
     text-align: center;
 `;
 
-export const ImageWrapper = styled(Box)`
+export const ImageWrapper = styled(Box)<{ isMobile?: boolean | null }>`
     img {
         width: 100%;
         height: auto;
         border-radius: 8px;
         object-fit: cover;
+
+        ${({isMobile}) =>
+                isMobile &&
+                `
+                  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add drop shadow for mobile view */
+                  border-radius: 8px; /* Optional, if you want to give rounded corners */
+                `}
     }
 
     display: flex;
