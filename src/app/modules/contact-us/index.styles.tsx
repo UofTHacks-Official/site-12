@@ -15,6 +15,16 @@ export const ContactUsModuleContainer = styled(ModuleContainer)`
 
 export const ContactUsModuleBackground = styled(ModuleBackground)``;
 
+export const ContentWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 50px;
+`;
+
 export const InputWrapper = styled.div`
   display: flex;
   gap: 20px;
@@ -25,14 +35,12 @@ export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 500px;
   width: 100%;
 `;
 
 export const Container = styled.div`
-  width: 100%; /* Adjust the width as needed */
+  width: 55%;
   text-align: left;
-  margin-left: -300px;
 `;
 
 export const StyledHeader = styled.h3`
@@ -41,20 +49,17 @@ export const StyledHeader = styled.h3`
   font-size: var(--Heading2-size, 45px);
   font-style: normal;
   font-weight: var(--Heading2-weight, 700);
-  line-height: var(--Heading2-lineHeight, 72px); /* 120% */
+  line-height: var(--Heading2-lineHeight, 72px);
   letter-spacing: var(--Heading3-spacing, 0px);
 `;
 
 export const StyledParagraph = styled.p`
-  width: 549px;
-  height: 63px;
-  flex-shrink: 0;
   color: var(--Neutral-600, #191a1b);
   font-family: var(--Subtitle1-fontFamily, Manrope);
   font-size: var(--Subtitle1-lineHeight, 24px);
   font-style: normal;
   font-weight: var(--Subtitle1-weight, 600);
-  line-height: var(--Subtitle1-lineHeight, 36px); /* 100% */
+  line-height: var(--Subtitle1-lineHeight, 36px);
   letter-spacing: var(--Subtitle1-spacing, 0px);
 `;
 
@@ -64,20 +69,18 @@ export const Input = styled.input`
   background: #fff;
   box-shadow: 0px 0px 50px 0px rgba(182, 255, 246, 0.5);
   display: flex;
-  width: 260px;
+  width: 48%;
   height: 55px;
   padding: 10px 20px;
   align-items: flex-start;
-  flex-shrink: 0;
 `;
 
 export const TextArea = styled.textarea`
   display: flex;
-  width: 550px;
+  width: 100%;
   height: 110px;
   padding: 8px 18px;
   align-items: flex-start;
-  flex-shrink: 0;
   border-radius: 10px;
   border: 1px solid #8edeff;
   background: #fff;
@@ -90,10 +93,29 @@ export const SubmitButton = styled.button`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  flex-shrink: 0;
   border-radius: 16px;
   background: #225c90;
   backdrop-filter: blur(6px);
   width: 150px;
   height: 45px;
+  color: white;
+  border: none;
+  cursor: pointer;
+`;
+
+export const IsometricRoomWrapper = styled.div`
+  width: 45%;
+  aspect-ratio: 1 / 1;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+`;
+
+export const IsometricRoomImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 `;
