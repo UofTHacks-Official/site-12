@@ -96,7 +96,8 @@ const MobileMenu = styled.div<MobileMenuProps>`
     transition: transform 0.3s ease-in-out;
 
     position: fixed;
-    background-color: #f0f0f0;
+    background: rgba(34, 92, 144, 0.50);
+    backdrop-filter: blur(6px);
     padding-top: 100px;
     left: 0;
     width: 100%;

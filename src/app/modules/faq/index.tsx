@@ -1,11 +1,25 @@
-import {FAQModuleContainer, FAQModuleBackground} from "@/app/modules/faq/index.styles";
-import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
+import {
+    FAQModuleContainer,
+    FAQModuleBackground, StyledContentContainer, StyledAccordionContainer,
+} from "@/app/modules/faq/index.styles";
+import {SpaceGroteskSectionTitle} from "@/app/components/shared/fonts/space-grotesk";
+import {useMobileDetect} from "@/app/hooks/useMobileDetect";
+import AccordianComponent from "@/app/components/accordion-component";
+import {FAQItems} from "@/app/modules/faq/faqs";
 
 const FAQ = () => {
+    const $isMobile = useMobileDetect();
     return (
         <FAQModuleContainer id="FAQ-module">
             <FAQModuleBackground src="/background/faq.svg"/>
-            <SpaceGrotesk>FAQ section</SpaceGrotesk>
+            <StyledContentContainer isMobile={$isMobile}>
+                <SpaceGroteskSectionTitle>FAQs</SpaceGroteskSectionTitle>
+                <StyledAccordionContainer>
+                    {FAQItems.map((item, index) => (
+                        <AccordianComponent key={index} title={item.title} content={item.content}/>
+                    ))}
+                </StyledAccordionContainer>
+            </StyledContentContainer>
         </FAQModuleContainer>
     );
 };
