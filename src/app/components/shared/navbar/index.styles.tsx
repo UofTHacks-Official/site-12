@@ -50,7 +50,7 @@ const Logo = styled.div`
   font-size: 24px;
   font-weight: bold;
 
-  //   padding: 10px;
+  padding: 10px;
   background: rgba(34, 92, 144, 0.5);
   backdrop-filter: blur(6px);
   border-radius: 10px;
@@ -80,6 +80,11 @@ const NavLink = styled.a`
   padding: 16px 24px;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    text-decoration: underline;
+    color: white;
+  }
 `;
 
 const HamburgerMenu = styled.div<HamburgerProps>`

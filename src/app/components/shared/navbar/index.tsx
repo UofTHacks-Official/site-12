@@ -125,8 +125,8 @@ const NavBar = () => {
                         <Image
                             src={NavBarLogo}
                             alt="UofTHacks Logo"
-                            width={isMobile ? 75 : 120}
-                            height={isMobile ? 50 : 80}
+                            width={isMobile ? 70 : 100}
+                            height={isMobile ? 35 : 50}
                         />
                     </Logo>
                     <NavLinks>
@@ -167,7 +167,7 @@ const NavBar = () => {
             </MobileNavLinkItem>
             <MobileNavLinkItem>
               <NavLink onClick={() => scrollToSection("FAQ-module")}>
-                <Manrope style={navManropeStyle()}>Frequenly Asked Questions</Manrope>
+                <Manrope style={navManropeStyle()}>Frequently Asked Questions</Manrope>
               </NavLink>
             </MobileNavLinkItem>
             <MobileNavLinkItem>

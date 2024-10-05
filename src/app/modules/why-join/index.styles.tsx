@@ -13,7 +13,7 @@ export const ImageBackgroundContainer = styled(Box)<MobileProps>`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: ${(props) => (props.isMobile ? 'white' : 'transparent')};
+    background-color: ${(props) => (props.isMobile ? 'rgb(211, 236, 252)' : 'transparent')};
     background-image: ${(props) => (props.isMobile ? 'none' : "url('/background/why-join.svg')")};
     background-position: center center;
     background-repeat: no-repeat;
@@ -48,12 +48,6 @@ export const ImageWrapper = styled(Box)<{ isMobile?: boolean | null }>`
         border-radius: 8px;
         object-fit: cover;
 
-        ${({isMobile}) =>
-                isMobile &&
-                `
-                  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add drop shadow for mobile view */
-                  border-radius: 8px; /* Optional, if you want to give rounded corners */
-                `}
     }
 
     display: flex;
