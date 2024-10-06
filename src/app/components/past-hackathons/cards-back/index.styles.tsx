@@ -16,6 +16,7 @@ export const CarouselSlides = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
 `
 
 export const CarouselCardBorders: React.FC<CarouselCardBordersProps> = styled.div<CarouselCardBordersProps>`
@@ -46,6 +47,7 @@ export const CarouselCards = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 `
 
 export const CarouselCardText = styled.h1`

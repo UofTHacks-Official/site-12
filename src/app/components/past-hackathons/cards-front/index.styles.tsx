@@ -9,8 +9,8 @@ interface StyledCardProps {
 export const StyledCard: React.FC<StyledCardProps> = styled(Card) <StyledCardProps>`
     background: ${(props) => props.bgColour} !important;
     border-radius: 15px !important; 
-    width: 250px;
-    height: 160px;
+    width: 300px;
+    height: 185px;
     display: flex;
     justify-content: center;
     align-items: center;

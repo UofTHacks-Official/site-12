@@ -1,8 +1,37 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components";
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.div<{
+  hide: boolean;
+  flipped: boolean;
+  marginLeft: string;
+  marginTop: string;
+  r: string;
+  z: string;
+}>`
   perspective: 1000px;
   cursor: pointer;
+  position: absolute;
+  margin-left: ${({ marginLeft }) => marginLeft};
+  margin-top: ${({ marginTop }) => marginTop};
+  z-index: ${({ z }) => z};
+  transform: rotate(${({ r }) => r});
+  transition: margin-left 0.6s ease, margin-top 0.6s ease, transform 0.6s ease,
+    width 0.6s ease, height 0.6s ease;
+
+  ${({ flipped }) =>
+    flipped &&
+    css`
+      margin-left: 0;
+      margin-top: 0;
+      transform: rotate(0deg);
+      z-index: 50;
+    `}
+  ${({ hide }) =>
+    hide &&
+    css`
+      margin-left: 0;
+      margin-top: 0;
+    `}
 `;
 
 export const CardInner = styled.div<{ flipped: boolean }>`
@@ -16,9 +45,9 @@ export const CardInner = styled.div<{ flipped: boolean }>`
   height: 100%;
 
   ${({ flipped }) =>
-        flipped &&
-        css`
-            transform: rotateY(180deg);
+    flipped &&
+    css`
+      transform: rotateY(180deg);
     `}
 `;
 
@@ -28,15 +57,13 @@ export const CardFace = styled.div<{ front?: boolean }>`
   width: 100%; /* Ensures the face takes full width */
   height: 100%; /* Ensures the face takes full height */
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
   ${({ front }) =>
-        front
-            ? css`
-                
-        `
-            : css`
-                transform: rotateY(180deg);
+    front
+      ? css``
+      : css`
+          transform: rotateY(180deg);
         `}
 `;
