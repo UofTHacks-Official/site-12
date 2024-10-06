@@ -6,6 +6,10 @@ interface StyledCardProps {
     children?: React.ReactNode;
 }
 
+interface StyledStripeProps {
+    colour: string;
+}
+
 export const StyledCard: React.FC<StyledCardProps> = styled(Card) <StyledCardProps>`
     background: ${(props) => props.bgColour} !important;
     border-radius: 15px !important; 
@@ -34,9 +38,9 @@ justify-content: center;
 align-items: center;
 `;
 
-export const CardStripe = styled.div`
+export const CardStripe = styled.div<StyledStripeProps>`
     border-radius: 10px;
     height: 100%;
     width: 100%;
-    border: 2px solid #BD90D8; // TODO change to variable
+    border: 2px solid ${(props) => props.colour};
 `

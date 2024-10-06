@@ -15,6 +15,7 @@ import Carousel from "react-material-ui-carousel";
 import { IconButton } from "@mui/material";
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 
 const spaceGroteskStyles = {
   color: "white",
@@ -59,6 +60,9 @@ const items = [
 interface ArrowButtonProps {
   onClick: () => void;
 }
+interface CloseButtonProps {
+  onClick: () => void;
+}
 const PastHackathons = () => {
   const numSlides = useRef(items.length);
   const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -68,6 +72,27 @@ const PastHackathons = () => {
     shouldAnimate.current = false;
     setHide(false);
     setActiveIndex(targetSlide);
+  };
+
+  const CloseButton: React.FC<CloseButtonProps> = ({ onClick }) => {
+    return (
+      <IconButton
+        size="large"
+        sx={{
+          position: "absolute",
+          top: "15%",
+          right: "15%",
+          fontSize: 50,
+          zIndex: 50,
+        }}
+      >
+        <CloseRoundedIcon
+          fontSize="inherit"
+          sx={{ color: "#ffffff" }}
+          onClick={onClick}
+        />
+      </IconButton>
+    );
   };
 
   const ArrowBackButton: React.FC<ArrowButtonProps> = ({ onClick }) => {
@@ -124,6 +149,10 @@ const PastHackathons = () => {
   const handleForwardArrowClick = () => {
     shouldAnimate.current = true;
     const nextIndex = (activeIndex + 1) % numSlides.current || 1;
+    setActiveIndex(nextIndex);
+  };
+
+  const handleCloseCard = () => {
     setActiveIndex(0);
   };
 
@@ -134,7 +163,7 @@ const PastHackathons = () => {
           hide={hide}
           onClick={() => handleCardClick(1)}
           frontContent={
-            <CardFront bgColour={items[0].colour}>
+            <CardFront bgColour={items[0].colour} borderColour={"#bd90d8"}>
               <SpaceGrotesk style={spaceGroteskStylesCardNumber}>
                 {items[0].year}
               </SpaceGrotesk>
@@ -150,7 +179,7 @@ const PastHackathons = () => {
           hide={hide}
           onClick={() => handleCardClick(2)}
           frontContent={
-            <CardFront bgColour={items[2].colour}>
+            <CardFront bgColour={items[2].colour} borderColour={"#8ccbe5"}>
               <SpaceGrotesk style={spaceGroteskStylesCardNumber}>
                 {items[2].year}
               </SpaceGrotesk>
@@ -166,7 +195,7 @@ const PastHackathons = () => {
           hide={hide}
           onClick={() => handleCardClick(3)}
           frontContent={
-            <CardFront bgColour={items[3].colour}>
+            <CardFront bgColour={items[3].colour} borderColour={"#8ccbe5"}>
               <SpaceGrotesk style={spaceGroteskStylesCardNumber}>
                 {items[3].year}
               </SpaceGrotesk>
@@ -182,7 +211,7 @@ const PastHackathons = () => {
           hide={hide}
           onClick={() => handleCardClick(4)}
           frontContent={
-            <CardFront bgColour={items[4].colour}>
+            <CardFront bgColour={items[4].colour} borderColour={"#bd90d8"}>
               <SpaceGrotesk style={spaceGroteskStylesCardNumber}>
                 {items[4].year}
               </SpaceGrotesk>
@@ -205,6 +234,7 @@ const PastHackathons = () => {
       </PastHackathonsModuleTitle>
       <PastHackathonsModuleCardsContainer>
         <CarouselContainer>
+          {activeIndex !== 0 && <CloseButton onClick={handleCloseCard} />}
           {activeIndex !== 0 && (
             <ArrowBackButton onClick={handleBackArrowClick} />
           )}{" "}

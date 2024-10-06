@@ -7,14 +7,15 @@ import {
 
 interface StyledCardProps {
     bgColour: string;
+    borderColour: string;
     children?: React.ReactNode;
 }
 
-const CardFront: React.FC<StyledCardProps> = ({ bgColour, children }) => {
+const CardFront: React.FC<StyledCardProps> = ({ bgColour, borderColour, children }) => {
     return (
         <StyledCard bgColour={bgColour}>
             <StyledCardActionArea>
-                <CardStripe>
+                <CardStripe colour={borderColour}>
                     <StyledTypography>
                         {children}
                     </StyledTypography>
