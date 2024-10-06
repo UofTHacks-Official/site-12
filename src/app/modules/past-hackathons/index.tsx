@@ -67,12 +67,8 @@ const PastHackathons = () => {
   const numSlides = useRef(items.length);
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [hide, setHide] = useState<boolean>(false);
+  const hideRef = useRef(false);
   const shouldAnimate = useRef(false);
-  const handleCardClick = (targetSlide: number) => {
-    shouldAnimate.current = false;
-    setHide(false);
-    setActiveIndex(targetSlide);
-  };
 
   const CloseButton: React.FC<CloseButtonProps> = ({ onClick }) => {
     return (
@@ -153,7 +149,16 @@ const PastHackathons = () => {
   };
 
   const handleCloseCard = () => {
+    setHide(false);
+    hideRef.current = false;
     setActiveIndex(0);
+  };
+
+  const handleCardClick: (targetSlide: number) => void = (
+    targetSlide: number
+  ) => {
+    shouldAnimate.current = false;
+    setActiveIndex(targetSlide);
   };
 
   const IntroCards = () => {
@@ -174,6 +179,8 @@ const PastHackathons = () => {
           mTop="10%"
           z="0"
           r="-6.19deg"
+          setHide={setHide}
+          hideRef={hideRef}
         />
         <FlipCard
           hide={hide}
@@ -190,6 +197,8 @@ const PastHackathons = () => {
           mTop="-12%"
           z="1"
           r="-17.55deg"
+          setHide={setHide}
+          hideRef={hideRef}
         />
         <FlipCard
           hide={hide}
@@ -206,6 +215,8 @@ const PastHackathons = () => {
           mTop="13%"
           z="2"
           r="9.27deg"
+          setHide={setHide}
+          hideRef={hideRef}
         />
         <FlipCard
           hide={hide}
@@ -222,6 +233,8 @@ const PastHackathons = () => {
           mTop="-10%"
           z="3"
           r="-8.12deg"
+          setHide={setHide}
+          hideRef={hideRef}
         />
       </IntroCardContainer>
     );
@@ -267,7 +280,6 @@ const PastHackathons = () => {
               )
             )}
           </Carousel>
-          {/* <CarouselSlide item={items[0]}></CarouselSlide> */}
         </CarouselContainer>
       </PastHackathonsModuleCardsContainer>
       <PastHackathonsModuleBackground src="/background/past-hackathons.svg" />

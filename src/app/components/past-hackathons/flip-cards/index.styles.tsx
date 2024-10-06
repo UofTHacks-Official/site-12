@@ -15,6 +15,7 @@ export const CardContainer = styled.div<{
   margin-top: ${({ marginTop }) => marginTop};
   z-index: ${({ z }) => z};
   transform: rotate(${({ r }) => r});
+  opacity: 1;
   transition: margin-left 0.6s ease, margin-top 0.6s ease, transform 0.6s ease,
     width 0.6s ease, height 0.6s ease;
 
@@ -39,7 +40,7 @@ export const CardInner = styled.div<{ flipped: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.6s, width 0.6s, height 0.6s;
+  transition: transform 0.6s ease, width 0.6s, height 0.6s;
   transform-style: preserve-3d;
   width: 100%;
   height: 100%;

@@ -10,6 +10,8 @@ interface FlipCardProps {
   z: string;
   r: string;
   hide: boolean;
+  setHide: (hide: boolean) => void;
+  hideRef: React.MutableRefObject<boolean>;
 }
 
 const FlipCard: React.FC<FlipCardProps> = ({
@@ -21,20 +23,14 @@ const FlipCard: React.FC<FlipCardProps> = ({
   z,
   r,
   hide,
+  setHide,
+  hideRef,
 }) => {
   const [flipped, setFlipped] = useState(false);
   const [cardSize, setCardSize] = useState({ width: "0", height: "0" });
   const frontRef = useRef<HTMLDivElement>(null);
   const backRef = useRef<HTMLDivElement>(null);
 
-  // const updateCardSize = (ref: React.RefObject<HTMLDivElement>) => {
-  //     if (ref.current) {
-  //         console.log(ref.current);
-  //         const { offsetWidth, offsetHeight } = ref.current;
-  //         console.log(offsetWidth, offsetHeight);
-  //         setCardSize({ width: offsetWidth, height: offsetHeight });
-  //     }
-  // }
   useEffect(() => {
     // set initial card size based on front content
     setCardSize({ width: "300px", height: "185" });
@@ -48,11 +44,15 @@ const FlipCard: React.FC<FlipCardProps> = ({
 
     setFlipped(true);
     setTimeout(() => {
-      onClick();
+      setHide(true);
+    }, 600);
+    setTimeout(() => {
+      // onClick();
       // After the flip, reset back to front content size
       setCardSize({ width: "300px", height: "185" });
+      setHide(false);
       setFlipped(false);
-    }, 600); // match this with the duration of the css transition
+    }, 1200); // match this with the duration of the css transition
   };
 
   return (
