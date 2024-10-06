@@ -21,10 +21,11 @@ const HeroContentContainer = styled.div`
 `;
 
 const LedgeSVG = styled.div<MobileProps>`
+    display: ${({isMobile}) => (isMobile ? 'none' : 'block')};
     width: ${({isMobile}) => (isMobile ? '100vw' : '120vw')};
     height: 220px;
     position: absolute;
-    bottom: ${({isMobile}) => (isMobile ? '-80px' : '-60px')};
+    bottom: -60px;
     left: 50%;
     transform: translateX(-50%);
     background-image: url('/assets/flower-ledge.svg');
@@ -37,8 +38,8 @@ const LedgeSVG = styled.div<MobileProps>`
 
 const HeroContent = styled.div<MobileProps>`
     position: relative;
-    width: ${({isMobile}) => (isMobile ? '100%' : '55%')};
-    height: ${({isMobile}) => (isMobile ? '65%' : '60%')};
+    width: ${({isMobile}) => (isMobile ? '90%' : 'min(800px, max(55%, 600px))')};
+    height: ${({isMobile}) => (isMobile ? '65%' : 'min(500px, max(60%, 400px))')};
     border-width: 30px;
     border-style: solid;
     border-color: #5ACDFF #0DAEF1;
