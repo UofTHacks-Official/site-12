@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { CardContainer, CardInner, CardFace } from "./index.styles";
 
 interface FlipCardProps {
+  flippedStates: boolean[];
   onClick: () => void;
   frontContent: React.ReactNode;
   backContent: React.ReactNode;
@@ -9,9 +10,7 @@ interface FlipCardProps {
   mTop: string;
   z: string;
   r: string;
-  hide: boolean;
-  setHide: (hide: boolean) => void;
-  hideRef: React.MutableRefObject<boolean>;
+  id: number;
 }
 
 const FlipCard: React.FC<FlipCardProps> = ({
@@ -22,42 +21,46 @@ const FlipCard: React.FC<FlipCardProps> = ({
   mTop,
   z,
   r,
-  hide,
-  setHide,
-  hideRef,
+  id,
+  flippedStates,
 }) => {
   const [flipped, setFlipped] = useState(false);
-  const [cardSize, setCardSize] = useState({ width: "0", height: "0" });
+  const [cardSize, setCardSize] = useState({ width: "300px", height: "185" });
   const frontRef = useRef<HTMLDivElement>(null);
   const backRef = useRef<HTMLDivElement>(null);
+  const hideRef = useRef(false);
 
   useEffect(() => {
     // set initial card size based on front content
-    setCardSize({ width: "300px", height: "185" });
+    //setCardSize({ width: "300px", height: "185" });
   }, [frontContent]);
 
-  const handleCardClick = () => {
+  useEffect(() => {
+    hideRef.current = flippedStates.some(state => state);
+    setFlipped(flippedStates[id]);
     if (!flipped && backRef.current) {
-      // Get back content size before flipping
       setCardSize({ width: "100%", height: "4000" });
     }
 
-    setFlipped(true);
-    setTimeout(() => {
-      setHide(true);
-    }, 600);
-    setTimeout(() => {
-      // onClick();
-      // After the flip, reset back to front content size
+
+    if (!flippedStates[id]) {
       setCardSize({ width: "300px", height: "185" });
-      setHide(false);
       setFlipped(false);
-    }, 1200); // match this with the duration of the css transition
+    } else {
+      setTimeout(() => {
+        setCardSize({ width: "300px", height: "185" });
+        setFlipped(false);
+      }, 600);
+    }
+  }, [flippedStates, id, flipped]);
+
+  const handleCardClick = () => {
+    onClick();
   };
 
   return (
     <CardContainer
-      hide={hide}
+      hide={hideRef.current}
       onClick={handleCardClick}
       style={{
         width: `${cardSize.width}`,

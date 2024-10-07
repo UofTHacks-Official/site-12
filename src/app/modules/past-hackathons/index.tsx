@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   PastHackathonsModuleContainer,
   PastHackathonsModuleBackground,
@@ -16,6 +16,7 @@ import { IconButton } from "@mui/material";
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
+import { useMobileDetect } from "@/app/hooks/useMobileDetect";
 
 const spaceGroteskStyles = {
   color: "white",
@@ -66,9 +67,14 @@ interface CloseButtonProps {
 const PastHackathons = () => {
   const numSlides = useRef(items.length);
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [hide, setHide] = useState<boolean>(false);
-  const hideRef = useRef(false);
+  const [flippedStates, setFlippedStates] = useState<boolean[]>([
+    false,
+    false,
+    false,
+    false,
+  ]);
   const shouldAnimate = useRef(false);
+  const isMobile = useMobileDetect();
 
   const CloseButton: React.FC<CloseButtonProps> = ({ onClick }) => {
     return (
@@ -149,8 +155,7 @@ const PastHackathons = () => {
   };
 
   const handleCloseCard = () => {
-    setHide(false);
-    hideRef.current = false;
+    setFlippedStates((prevStates) => prevStates.map(() => false));
     setActiveIndex(0);
   };
 
@@ -158,14 +163,25 @@ const PastHackathons = () => {
     targetSlide: number
   ) => {
     shouldAnimate.current = false;
-    setActiveIndex(targetSlide);
+    setFlippedStates((prevStates) =>
+      prevStates.map((state, index) => index === targetSlide - 1)
+    );
+    setTimeout(() => {
+      setActiveIndex(targetSlide);
+    }, 600);
   };
+
+  useEffect(() => {
+    if (isMobile) {
+      setActiveIndex(1);
+    }
+  }, [isMobile]);
 
   const IntroCards = () => {
     return (
       <IntroCardContainer>
         <FlipCard
-          hide={hide}
+          flippedStates={flippedStates}
           onClick={() => handleCardClick(1)}
           frontContent={
             <CardFront bgColour={items[0].colour} borderColour={"#bd90d8"}>
@@ -179,11 +195,10 @@ const PastHackathons = () => {
           mTop="10%"
           z="0"
           r="-6.19deg"
-          setHide={setHide}
-          hideRef={hideRef}
+          id={0}
         />
         <FlipCard
-          hide={hide}
+          flippedStates={flippedStates}
           onClick={() => handleCardClick(2)}
           frontContent={
             <CardFront bgColour={items[2].colour} borderColour={"#8ccbe5"}>
@@ -197,11 +212,10 @@ const PastHackathons = () => {
           mTop="-12%"
           z="1"
           r="-17.55deg"
-          setHide={setHide}
-          hideRef={hideRef}
+          id={1}
         />
         <FlipCard
-          hide={hide}
+          flippedStates={flippedStates}
           onClick={() => handleCardClick(3)}
           frontContent={
             <CardFront bgColour={items[3].colour} borderColour={"#8ccbe5"}>
@@ -215,11 +229,10 @@ const PastHackathons = () => {
           mTop="13%"
           z="2"
           r="9.27deg"
-          setHide={setHide}
-          hideRef={hideRef}
+          id={2}
         />
         <FlipCard
-          hide={hide}
+          flippedStates={flippedStates}
           onClick={() => handleCardClick(4)}
           frontContent={
             <CardFront bgColour={items[4].colour} borderColour={"#bd90d8"}>
@@ -233,8 +246,7 @@ const PastHackathons = () => {
           mTop="-10%"
           z="3"
           r="-8.12deg"
-          setHide={setHide}
-          hideRef={hideRef}
+          id={3}
         />
       </IntroCardContainer>
     );
@@ -247,7 +259,9 @@ const PastHackathons = () => {
       </PastHackathonsModuleTitle>
       <PastHackathonsModuleCardsContainer>
         <CarouselContainer>
-          {activeIndex !== 0 && <CloseButton onClick={handleCloseCard} />}
+          {!isMobile && activeIndex !== 0 && (
+            <CloseButton onClick={handleCloseCard} />
+          )}
           {activeIndex !== 0 && (
             <ArrowBackButton onClick={handleBackArrowClick} />
           )}{" "}
