@@ -12,11 +12,13 @@ import FAQ from "@/app/modules/faq";
 import ContactUs from "@/app/modules/contact-us";
 import Footer from "@/app/modules/footer";
 import {ReactNode} from "react";
+import Testimonials from "@/app/modules/testimonials";
 
 const MainContainer = styled.div`
     background-color: #f9f9f9;
     opacity: 1;
     overflow: auto;
+    overflow-x: hidden;
 `;
 
 interface Site12Props {
@@ -35,6 +37,7 @@ const Site12 = ({children}: Site12Props) => {
             <WhyJoin/>
             <Subscribe/>
             {/*<Sponsors/>*/}
+            <Testimonials/>
             <FAQ/>
             <ContactUs/>
             <Footer/>

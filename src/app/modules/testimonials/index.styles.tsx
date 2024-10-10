@@ -7,4 +7,11 @@ const TestimonialsModuleContainer = styled(ModuleContainer)`
     max-height: 900px;
 `;
 
-export {TestimonialsModuleContainer};
+const StyledContentContainer = styled.div<{ isMobile: boolean | null }>`
+    padding: ${(props) => (props.isMobile ? "0.6rem 1rem" : "0.6rem 5rem")};
+    display: flex;
+    flex-direction: column;
+    gap: ${(props) => (props.isMobile ? "1rem" : "2.5rem")};
+`;
+
+export {StyledContentContainer, TestimonialsModuleContainer};
