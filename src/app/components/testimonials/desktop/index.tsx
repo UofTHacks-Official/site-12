@@ -9,9 +9,14 @@ import {
 } from "@mui/material";
 import Slider from "react-slick";
 import { PrevArrow, NextArrow } from "@/app/components/shared/carousel/arrows";
-import { CarouselContainer } from "@/app/components/testimonials/index.styles";
+import {
+    CarouselContainer,
+    CarouselDescription,
+    CarouselHeader,
+    CarouselSubHeader
+} from "@/app/components/testimonials/index.styles";
 
-const TestimonialsDesktop: React.FC = () => {
+const TestimonialsDesktop = () => {
     const settings = {
         dots: false,
         infinite: true,
@@ -25,8 +30,10 @@ const TestimonialsDesktop: React.FC = () => {
     return (
         <Box
             sx={{
-                maxWidth: "800px",
-                margin: "0 auto",
+                position: "absolute",
+                bottom: 0,
+                right: "5%",
+                maxWidth: "780px",
                 padding: 2,
             }}
         >
@@ -48,20 +55,20 @@ const TestimonialsDesktop: React.FC = () => {
                                             sx={{ width: 150, height: 150, marginRight: 2 }}
                                         />
                                         <Box sx={{ flexGrow: 1 }}>
-                                            <Typography variant="h6" fontWeight="bold" noWrap={false}>
+                                            <CarouselHeader>
                                                 {testimonial.name}
-                                            </Typography>
-                                            <Typography variant="subtitle1" color="textSecondary" noWrap={false}>
+                                            </CarouselHeader>
+                                            <CarouselSubHeader>
                                                 {testimonial.yearProgram}
-                                            </Typography>
+                                            </CarouselSubHeader>
                                         </Box>
                                     </Box>
                                 </Grid>
                                 <Grid item xs={12} md={12}>
                                     <Box mt={2}>
-                                        <Typography variant="body1" mt={1}>
+                                        <CarouselDescription>
                                             {testimonial.message}
-                                        </Typography>
+                                        </CarouselDescription>
                                     </Box>
                                 </Grid>
                             </Grid>

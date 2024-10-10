@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
+import Manrope from "@/app/components/shared/fonts/manrope";
 
 const CarouselContainer = styled.div`
   .slick-slide {
@@ -28,6 +30,40 @@ const CarouselContainer = styled.div`
   }
 `;
 
+interface MobileProps {
+    isMobile?: boolean | null;
+}
+
+
+const CarouselHeader = styled(SpaceGrotesk)<MobileProps>`
+    color: black;
+    font-size: ${({isMobile}) => (isMobile ? '1.8em' : '2.5em')};
+    margin-top: ${({isMobile}) => (isMobile ? '20px' : '15px')};
+    margin-bottom: 0px;
+    text-align: left;
+    letter-spacing: 0rem;
+`;
+
+const CarouselSubHeader = styled(Manrope)<MobileProps>`
+    color: #225C90;
+    font-size: ${({isMobile}) => (isMobile ? '1.0em' : '1.2em')};
+    margin-top: ${({isMobile}) => (isMobile ? '10px' : '5px')};
+    margin-bottom: 0px;
+    text-align: left;
+`;
+
+const CarouselDescription = styled(Manrope)<MobileProps>`
+    color: black;
+    font-size: ${({isMobile}) => (isMobile ? '0.6em' : '1.0em')};
+    margin-top: ${({isMobile}) => (isMobile ? '10px' : '5px')};
+    margin-bottom: 0px;
+    text-align: left;
+    
+`;
+
 export {
-    CarouselContainer
+    CarouselContainer,
+    CarouselHeader,
+    CarouselSubHeader,
+    CarouselDescription
 }
