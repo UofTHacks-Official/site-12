@@ -17,7 +17,8 @@ type MobileMenuProps = {
 
 const NavigationContainer = styled.div<NavContainerProps>`
   transform: translateY(${(props) => (props.open ? "0" : "-100%")});
-  transition: transform 0.3s ease-in-out;
+  opacity: ${(props) => (props.open ? "1" : "0")};
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   width: 100%;
   height: 100px;
   background-color: transparent;
@@ -25,7 +26,6 @@ const NavigationContainer = styled.div<NavContainerProps>`
   z-index: 1000;
   overflow: hidden;
 `;
-
 const NavigationBar = styled.nav<NavbarProps>`
   display: flex;
   position: fixed;

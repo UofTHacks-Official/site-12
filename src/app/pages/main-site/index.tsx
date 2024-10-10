@@ -11,7 +11,7 @@ import Sponsors from "@/app/modules/sponsors";
 import FAQ from "@/app/modules/faq";
 import ContactUs from "@/app/modules/contact-us";
 import Footer from "@/app/modules/footer";
-import NavBar from "@/app/components/shared/navbar";
+import {ReactNode} from "react";
 
 const MainContainer = styled.div`
     background-color: #f9f9f9;
@@ -19,18 +19,22 @@ const MainContainer = styled.div`
     overflow: auto;
 `;
 
-const Site12 = () => {
+interface Site12Props {
+    children?: ReactNode
+}
+
+const Site12 = ({children}: Site12Props) => {
     return (
         <MainContainer id="start">
             {/*<MLHBanner />*/}
-            <NavBar/>
+            {children}
             <Hero/>
             <AboutUs/>
             <Stats/>
-            <PastHackathons/>
+            {/*<PastHackathons/>*/}
             <WhyJoin/>
             <Subscribe/>
-            <Sponsors/>
+            {/*<Sponsors/>*/}
             <FAQ/>
             <ContactUs/>
             <Footer/>

@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import styled from "styled-components";
 import {useMobileDetect} from "@/app/hooks/useMobileDetect";
 import Image from "next/image";
 import {
@@ -18,7 +17,7 @@ import Manrope from "../fonts/manrope";
 const NavBarLogo = "/assets/navbar-logo.svg";
 
 const NavBar = () => {
-    const [isNavBarVisible, setNavBarVisible] = useState(true);
+    const [isNavBarVisible, setNavBarVisible] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const isMobile = useMobileDetect();
@@ -29,6 +28,16 @@ const NavBar = () => {
     const [hamburgerNode, setHamburgerNode] = useState<HTMLDivElement | null>(
         null
     );
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setNavBarVisible(true);
+        }, 100);
+
+        return () => {
+            clearTimeout(timeout);
+        };
+    }, []);
 
     const scrollToSection = (sectionId: string) => {
         const section = document.getElementById(sectionId);
