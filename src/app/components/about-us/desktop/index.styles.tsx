@@ -61,11 +61,41 @@ const AboutUsDescription = styled.div`
   color: #191A1B;
 `;
 
+const StyledLeftImage = styled(Image)`
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  z-index: 5;
+  top: 50%;
+  left: -30%;
+`;
+
+const StyledRightImage = styled(Image)`
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  z-index: 5;
+  top: -40%;
+  right: -33%;
+`;
+
+const StyledKeys = styled(Image)`
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  z-index: 5;
+  top: 100%;
+  left: 0%;
+`;
+
 export {
   AboutUsDesktopContainer,
   CenterContainer,
   AboutUsDescription,
   StyledIcon,
   AboutHeader,
-  SvgBackgroundContainer
+  SvgBackgroundContainer,
+  StyledLeftImage,
+  StyledRightImage,
+  StyledKeys
 };

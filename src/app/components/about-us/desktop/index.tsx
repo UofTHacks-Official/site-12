@@ -5,6 +5,9 @@ import {
   AboutHeader,
   SvgBackgroundContainer,
   StyledIcon,
+  StyledLeftImage,
+  StyledRightImage,
+  StyledKeys
 } from "@/app/components/about-us/desktop/index.styles";
 import Manrope from "@/app/components/shared/fonts/manrope";
 import Image from "next/image";
@@ -46,7 +49,24 @@ const AboutUsDesktop = () => {
         <Manrope>
           <AboutUsDescription>{aboutUsDescription}</AboutUsDescription>
         </Manrope>
-      
+      <StyledLeftImage
+          src="/assets/about/left-image.svg"
+          alt="Left img"
+          width={100}
+          height={100}
+      />
+      <StyledRightImage
+        src="/assets/about/right-image.svg"
+        alt="Right img"
+        width={100}
+        height={100}
+      />
+      <StyledKeys
+        src="/assets/about/new-keys.svg"
+        alt="Keys graphic"
+        width={100}
+        height={100}
+      />
       </CenterContainer>
     </AboutUsDesktopContainer>
   );
