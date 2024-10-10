@@ -8,11 +8,16 @@ import {
 } from "@mui/material";
 import Slider from "react-slick";
 import {NextArrow, PrevArrow} from "@/app/components/shared/carousel/arrows";
-import {CarouselContainer} from "@/app/components/testimonials/index.styles";
+import {
+    CarouselContainer,
+    CarouselDescription,
+    CarouselHeader,
+    CarouselSubHeader
+} from "@/app/components/testimonials/index.styles";
 
 const TestimonialsMobile: React.FC = () => {
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -24,14 +29,15 @@ const TestimonialsMobile: React.FC = () => {
     return (
         <Box
             sx={{
+                position: "absolute",
+                bottom: 0,
+                left: "50%",
+                transform: "translateX(-50%)",
                 maxWidth: "300px",
-                margin: "0 auto",
                 padding: 2,
             }}
         >
             <CarouselContainer>
-
-
                 <Slider {...settings}>
                     {testimonies.map((testimonial, index) => (
                         <Container
@@ -46,23 +52,24 @@ const TestimonialsMobile: React.FC = () => {
                             <Avatar
                                 src={testimonial.imagePath}
                                 alt={testimonial.name}
-                                sx={{width: 100, height: 100, marginBottom: 1}}
+                                sx={{ width: 100, height: 100, marginBottom: 1 }}
                             />
-                            <Typography variant="h6" fontWeight="bold" textAlign="left">
+                            <CarouselHeader isMobile>
                                 {testimonial.name}
-                            </Typography>
-                            <Typography variant="subtitle1" color="textSecondary" textAlign="left">
+                            </CarouselHeader>
+                            <CarouselSubHeader isMobile>
                                 {testimonial.yearProgram}
-                            </Typography>
-                            <Typography variant="body1" mt={1} textAlign="center">
+                            </CarouselSubHeader>
+                            <CarouselDescription isMobile>
                                 {testimonial.message}
-                            </Typography>
+                            </CarouselDescription>
                         </Container>
                     ))}
                 </Slider>
             </CarouselContainer>
         </Box>
     );
+
 };
 
 export default TestimonialsMobile;
