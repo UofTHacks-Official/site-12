@@ -46,7 +46,6 @@ const AboutHeader = styled.div`
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 50px;
-  margin-bottom: 1.5rem;
   background: linear-gradient(90deg, #225C90, #EC6D7F);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -54,7 +53,6 @@ const AboutHeader = styled.div`
 `;
 
 const AboutUsDescription = styled.div`
-  border-radius: 8px;
   font-size: 15px;
   text-align: left;
   letter-spacing: 0px;

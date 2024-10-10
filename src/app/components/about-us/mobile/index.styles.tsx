@@ -3,114 +3,108 @@ import { ModuleContainer } from "@/app/components/shared/containers/index.styles
 import Image from "next/image";
 
 const AboutUsMobileContainer = styled(ModuleContainer)`
-  display: block;
-  justify-content: space-between;
+  display: flex;
+  justify-content: center;
   align-items: center;
   padding: 0.5rem;
   position: relative;
   margin: 0 auto;
-  height: auto;
+  height: 100vh;
+  overflow: visible;
 `;
 
-const LeftContainer = styled.div`
-  max-width: auto;
-  padding-right: 1rem;
-  position: relative;
-
-  h1 {
-    letter-spacing: 0px;
-    font-size: 25px;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: #fff;
-    text-align: left;
-    line-height: 30px;
-
-    .highlight {
-      position: relative;
-      display: inline-block;
-    }
-  }
-`;
-
-const AboutGraphic = styled(Image)`
+const SvgBackgroundContainer = styled.div`
+  top: 0;
+  left: 0;
   position: absolute;
-  visibility: hidden;
-  top: -15px;
-  left: 400px;
-  transform: translateY(-30%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: visible;
+`;
+
+const StyledIcon = styled(Image)`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: visible;
+`;
+
+const CenterContainer = styled.div`
+  border: 15px solid #225C90;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 30px 20px 30px 20px;
+  margin-right: 15px;
+  margin-bottom: 110px;
+  align-items: center;
+  justify-content: center;
+`;
+
+const AboutHeader = styled.div`
+  letter-spacing: 0px;
+  font-size: 20px;
+  font-weight: 700px;
+  line-height: 20px;
+  padding-bottom: 1rem;
+  background: linear-gradient(90deg, #225C90, #EC6D7F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
 `;
 
 const AboutUsDescription = styled.div`
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  font-size: 16px;
+  font-size: 15px;
   text-align: left;
   letter-spacing: 0px;
-  position: relative;
-  color: #000;
+  color: #191A1B;
 `;
 
-const Keys = styled(Image)`
+const StyledTopRightImage = styled(Image)`
   position: absolute;
-  bottom: -115px;
-  left: 24%;
-  transform: translateX(-50%);
-  z-index: 1;
+  width: 400px;
+  height: 200px;
+  z-index: 5;
+  top: 6%;
+  left: 20%;
 `;
 
-const KeyHolder = styled(Image)`
+const StyledBottomRightImage = styled(Image)`
   position: absolute;
-  bottom: -40px;
-  left: 25%;
-  transform: translateX(-50%);
-  z-index: -1;
+  width: 250px;
+  height: 250px;
+  z-index: 5;
+  bottom: 13%;
+  right: -5%;
 `;
 
-const ImagesContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0px;
-  justify-content: center;
-  align-items: flex-start;
-  padding-right: 1rem;
-  margin-top: -20px;
-
-  & > :nth-child(1) {
-    flex: 0 1 45%;
-    max-width: 45%;
-    align-self: flex-end;
-  }
-
-  & > :nth-child(2) {
-    flex: 0 1 45%;
-    max-width: 45%;
-  }
-
-  & > :nth-child(3) {
-    flex: 1 1 100%;
-    max-width: 100%;
-    margin-top: 10px;
-  }
+const StyledBottomLeftImage = styled(Image)`
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  z-index: 5;
+  top: 75%;
+  left: 0%;
 `;
 
-const StyledImage = styled(Image)`
-  display: block;
-  border: 10px solid #fff;
-  border-radius: 4px;
-  object-fit: cover;
-  margin: 8px;
+const StyledKeys = styled(Image)`
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  z-index: 5;
+  top: 63.5%;
+  left: 0%;
 `;
 
 export {
   AboutUsMobileContainer,
-  LeftContainer,
+  CenterContainer,
   AboutUsDescription,
-  AboutGraphic,
-  ImagesContainer,
-  StyledImage,
-  Keys,
-  KeyHolder,
+  StyledIcon,
+  AboutHeader,
+  SvgBackgroundContainer,
+  StyledTopRightImage,
+  StyledBottomRightImage,
+  StyledBottomLeftImage,
+  StyledKeys
 };
