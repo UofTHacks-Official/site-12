@@ -1,10 +1,13 @@
 import {
   AboutUsDesktopContainer,
-  LeftContainer,
+  CenterContainer,
   AboutUsDescription,
-  AboutGraphic,
-  ImagesContainer,
-  StyledImage,
+  AboutHeader,
+  SvgBackgroundContainer,
+  StyledIcon,
+  StyledLeftImage,
+  StyledRightImage,
+  StyledKeys
 } from "@/app/components/about-us/desktop/index.styles";
 import Manrope from "@/app/components/shared/fonts/manrope";
 import Image from "next/image";
@@ -29,56 +32,42 @@ const AboutUsDesktop = () => {
 
   return (
     <AboutUsDesktopContainer>
-      <LeftContainer>
+      <SvgBackgroundContainer>
+        <StyledIcon
+            src="/assets/about/about-icons-bkg.svg"
+            alt="Background Graphics"
+            width={100}
+            height={100}
+          />
+      </SvgBackgroundContainer>
+      <CenterContainer>
         <SpaceGrotesk>
-          <h1>
-            Canada’s first
-            <br /> student-run hackathon
-          </h1>
+          <AboutHeader>
+            Canada’s 1st student-run hackathon
+          </AboutHeader>
         </SpaceGrotesk>
-        <AboutGraphic
-          src="/assets/about/Graphic.svg"
-          alt="Gradient Graphic"
-          width={75}
-          height={75}
-        />
         <Manrope>
           <AboutUsDescription>{aboutUsDescription}</AboutUsDescription>
         </Manrope>
-      </LeftContainer>
-
-      <ImagesContainer>
-        <StyledImage
-          src="/assets/about/about-1.svg"
-          alt="UofT Hacks executive speaking to a crowd"
-          width={160}
-          height={160}
-        />
-        <StyledImage
-          src="/assets/about/about-2.svg"
-          alt="UofT Hacks sponsors"
-          width={350}
-          height={200}
-        />
-        <StyledImage
-          src="/assets/about/about-3.svg"
-          alt="UofT Hacks executive speaking to a crowd"
-          width={400}
-          height={200}
-        />
-        <Image
-          src="/assets/about/Keys.svg"
-          alt="Keys Icon"
-          width={75}
-          height={170}
-        />
-        <Image
-          src="/assets/about/KeyHolder.svg"
-          alt="Keys Icon"
-          width={160}
-          height={55}
-        />
-      </ImagesContainer>
+      <StyledLeftImage
+          src="/assets/about/left-image.svg"
+          alt="Left img"
+          width={100}
+          height={100}
+      />
+      <StyledRightImage
+        src="/assets/about/right-image.svg"
+        alt="Right img"
+        width={100}
+        height={100}
+      />
+      <StyledKeys
+        src="/assets/about/new-keys.svg"
+        alt="Keys graphic"
+        width={100}
+        height={100}
+      />
+      </CenterContainer>
     </AboutUsDesktopContainer>
   );
 };
