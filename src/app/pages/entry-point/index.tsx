@@ -36,7 +36,10 @@ const EntryPoint: React.FC = () => {
     }
 
     if (fullScreen && isolatedRender) {
-        return <Site12/>;
+        // main render here
+        return <Site12>
+            <NavBar/>
+        </Site12>;
     }
 
     return (

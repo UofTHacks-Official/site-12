@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import styled from "styled-components";
 import {useMobileDetect} from "@/app/hooks/useMobileDetect";
 import Image from "next/image";
 import {
@@ -9,14 +8,16 @@ import {
     NavLinkItem,
     NavLinks,
     NavigationBar,
-    NavigationContainer, HamburgerMenu, MobileNavLinkItem,
-} from "./index.styles"
+    NavigationContainer,
+    HamburgerMenu,
+    MobileNavLinkItem,
+} from "./index.styles";
 import Manrope from "../fonts/manrope";
 
-const NavBarLogo = "/assets/navbar_logo.svg"
+const NavBarLogo = "/assets/navbar-logo.svg";
 
 const NavBar = () => {
-    const [isNavBarVisible, setNavBarVisible] = useState(true);
+    const [isNavBarVisible, setNavBarVisible] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const isMobile = useMobileDetect();
@@ -28,17 +29,28 @@ const NavBar = () => {
         null
     );
 
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setNavBarVisible(true);
+        }, 100);
+
+        return () => {
+            clearTimeout(timeout);
+        };
+    }, []);
+
     const scrollToSection = (sectionId: string) => {
         const section = document.getElementById(sectionId);
         if (section) {
             section.scrollIntoView({behavior: "smooth"});
+            setIsMenuOpen(false);
         }
     };
 
-    const hackerPortalLink = "https://portal.uofthacks.com"
+    const hackerPortalLink = "https://portal.uofthacks.com";
     const onHackerPortalClick = () => {
         window.open(hackerPortalLink);
-    }
+    };
 
     const [prevScrollY, setPrevScrollY] = useState(0); // Track previous scroll position
     useEffect(() => {
@@ -119,23 +131,28 @@ const NavBar = () => {
             <NavigationContainer open={isNavBarVisible}>
                 <NavigationBar>
                     <Logo onClick={() => scrollToSection("start")}>
-                        <Image src={NavBarLogo} alt="UofTHacks Logo" width={80} height={80}/>
+                        <Image
+                            src={NavBarLogo}
+                            alt="UofTHacks Logo"
+                            width={isMobile ? 70 : 100}
+                            height={isMobile ? 35 : 50}
+                        />
                     </Logo>
                     <NavLinks>
                         <div style={{display: isMobile ? "none" : "flex", gap: 10}}>
                             <NavLinkItem>
                                 <NavLink onClick={() => scrollToSection("Sponsors-module")}>
-                                    <Manrope style={navManropeStyle()}>sponsors</Manrope>
+                                    <Manrope style={navManropeStyle()}>Sponsors</Manrope>
                                 </NavLink>
                             </NavLinkItem>
                             <NavLinkItem>
                                 <NavLink onClick={() => scrollToSection("FAQ-module")}>
-                                    <Manrope style={navManropeStyle()}>faq</Manrope>
+                                    <Manrope style={navManropeStyle()}>FAQ</Manrope>
                                 </NavLink>
                             </NavLinkItem>
                             <NavLinkItem>
                                 <NavLink onClick={() => scrollToSection("Contact-module")}>
-                                    <Manrope style={navManropeStyle()}>contact</Manrope>
+                                    <Manrope style={navManropeStyle()}>Contact Us</Manrope>
                                 </NavLink>
                             </NavLinkItem>
                         </div>
@@ -144,7 +161,7 @@ const NavBar = () => {
                             mobile={isMobile}
                             onClick={toggleMenu}
                         >
-                            <Manrope>☰</Manrope>
+                            <Manrope style={navManropeStyle()}>☰</Manrope>
                         </HamburgerMenu>
                     </NavLinks>
                 </NavigationBar>
@@ -152,20 +169,19 @@ const NavBar = () => {
             {isMobile && (
                 <span ref={(node) => setMobileMenuNode(node)}>
           <MobileMenu open={isMenuOpen}>
-              <MobileNavLinkItem>
+            <MobileNavLinkItem>
               <NavLink onClick={() => scrollToSection("Sponsors-module")}>
-                <Manrope style={navManropeStyle()}>sponsors</Manrope>
+                <Manrope style={navManropeStyle()}>Sponsors</Manrope>
               </NavLink>
-
-                  </MobileNavLinkItem>
+            </MobileNavLinkItem>
             <MobileNavLinkItem>
               <NavLink onClick={() => scrollToSection("FAQ-module")}>
-                <Manrope style={navManropeStyle()}>faq</Manrope>
+                <Manrope style={navManropeStyle()}>Frequently Asked Questions</Manrope>
               </NavLink>
             </MobileNavLinkItem>
             <MobileNavLinkItem>
               <NavLink onClick={() => scrollToSection("Contact-module")}>
-                <Manrope style={navManropeStyle()}>contact</Manrope>
+                <Manrope style={navManropeStyle()}>Contact Us</Manrope>
               </NavLink>
             </MobileNavLinkItem>
           </MobileMenu>

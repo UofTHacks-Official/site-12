@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react";
-import styled, { css } from "styled-components";
-import { useMobileDetect } from "../../../../hooks/useMobileDetect";
+import React, {ReactNode} from "react";
+import styled, {css} from "styled-components";
+import {useMobileDetect} from "../../../../hooks/useMobileDetect";
 
 // EXAMPLE USAGE:
 //     <SpaceGrotesk fontWeight={SpaceGroteskFontWeight.Bold} style={{ ...fontSize, marginBottom: "5%" }}>
@@ -39,38 +39,41 @@ const getFontSrc = (fontWeight: SpaceGroteskFontWeight) => {
 };
 
 const createSpaceGroteskFont = (fontWeight: SpaceGroteskFontWeight) => css`
-  @font-face {
-    font-family: "SpaceGrotesk-${fontWeight}";
-    src: url(${getFontSrc(fontWeight)}) format("woff2");
-    font-weight: normal;
-    font-style: normal;
-  }
+    @font-face {
+        font-family: "SpaceGrotesk-${fontWeight}";
+        src: url(${getFontSrc(fontWeight)}) format("woff2");
+        font-weight: normal;
+        font-style: normal;
+    }
 `;
 
 const StyledSpaceGroteskText = styled.p<StyledSpaceGroteskTextProps>`
-  ${(props) => createSpaceGroteskFont(props.fontWeight || SpaceGroteskFontWeight.Regular)};
-  font-family: ${(props) => (`SpaceGrotesk-${props.fontWeight ||SpaceGroteskFontWeight.Regular}`)};
-  text-align: center;
-  leading-trim: both;
-  text-edge: cap;
-  font-size: ${(props) => (props.$mobile ? "48px" : "96px")};
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -0.3rem;
-    color: var(--Brand-Primary-300, #225C90);
+    ${(props) =>
+            createSpaceGroteskFont(props.fontWeight || SpaceGroteskFontWeight.Regular)};
+    font-family: ${(props) =>
+            `SpaceGrotesk-${props.fontWeight || SpaceGroteskFontWeight.Regular}`};
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: ${(props) => (props.$mobile ? "48px" : "96px")};
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.3rem;
+    color: var(--Brand-Primary-300, #225c90);
 `;
 
 type SubjectivityProps = StyledSpaceGroteskTextProps & {
     children: ReactNode;
 };
 
+
 const SpaceGrotesk: React.FC<SubjectivityProps> = ({
-                                                             children,
-                                                             style,
-                                                             fontWeight = SpaceGroteskFontWeight.Regular,
-                                                             ...props
-                                                         }) => {
+                                                       children,
+                                                       style,
+                                                       fontWeight = SpaceGroteskFontWeight.Regular,
+                                                       ...props
+                                                   }) => {
     const $ismobile = useMobileDetect();
     return (
         <StyledSpaceGroteskText
@@ -83,5 +86,16 @@ const SpaceGrotesk: React.FC<SubjectivityProps> = ({
         </StyledSpaceGroteskText>
     );
 };
+
+interface SpaceGroteskSectionTitleProps {
+    isMobile?: boolean | null
+
+}
+
+export const SpaceGroteskSectionTitle = styled(SpaceGrotesk)<SpaceGroteskSectionTitleProps>`
+    text-align: start;
+    font-size: ${({ isMobile }) => (isMobile ? '2rem' : '3.75rem')};
+    letter-spacing: 0rem;
+`;
 
 export default SpaceGrotesk;
