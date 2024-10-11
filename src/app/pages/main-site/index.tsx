@@ -7,7 +7,6 @@ import Stats from "@/app/modules/stats";
 import PastHackathons from "@/app/modules/past-hackathons";
 import WhyJoin from "@/app/modules/why-join";
 import Subscribe from "@/app/modules/subscribe";
-import Sponsors from "@/app/modules/sponsors";
 import FAQ from "@/app/modules/faq";
 import ContactUs from "@/app/modules/contact-us";
 import Footer from "@/app/modules/footer";
@@ -33,7 +32,7 @@ const Site12 = ({children}: Site12Props) => {
             <Hero/>
             <AboutUs/>
             <Stats/>
-            {/*<PastHackathons/>*/}
+            <PastHackathons/>
             <WhyJoin/>
             <Subscribe/>
             {/*<Sponsors/>*/}
