@@ -54,7 +54,7 @@ export const StyledHeader = styled(Manrope)<MobileProps>`
 `;
 
 export const StyledParagraph = styled(Manrope)<MobileProps>`
-    width: ${({isMobile}) => (isMobile ? "100%" : "549px")};
+    width: ${({isMobile}) => (isMobile ? "100%" : "650px")};
     color: var(--Neutral-600, #191a1b);
     font-size: ${({isMobile}) => (isMobile ? "15px" : "18px")};
     font-weight: var(--Subtitle1-weight, 600);
