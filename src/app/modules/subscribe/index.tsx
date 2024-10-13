@@ -65,7 +65,7 @@ const Subscribe = () => {
 
     return (
         <SubscribeModuleContainer id="Subscribe-module">
-            <SubscribeModuleBackground src="/background/sponsors.svg" />
+            <SubscribeModuleBackground src="/background/subscribe.svg" />
             <Container isMobile={isMobile}>
                 <StyledHeader isMobile={isMobile}>
                     Be the first to find out when applications are out!

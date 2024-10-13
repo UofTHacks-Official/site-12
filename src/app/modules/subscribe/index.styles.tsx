@@ -8,12 +8,13 @@ type MobileProps = {
 }
 
 export const SubscribeModuleContainer = styled(ModuleContainer)`
-    height: 100vh;
+    height: 50vh;
     min-height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 80px;
 `;
 
 export const SubscribeModuleBackground = styled(ModuleBackground)``;
@@ -36,13 +37,16 @@ export const FormContainer = styled.form<MobileProps>`
 
 export const Container = styled.div<MobileProps>`
     text-align: left;
-    padding: ${({isMobile}) => (isMobile ? "20px" : "0")};
+    padding: ${({isMobile}) => (isMobile ? "20px 40px" : "35px 80px")};
+    background-image: linear-gradient(to right, rgba(255, 205, 247, 0.2), rgba(13, 174, 241, 0.2));
+    border: 1px solid #0DAEF1;
+    border-radius: 10px;
 `;
 
 export const StyledHeader = styled(Manrope)<MobileProps>`
-    width: ${({isMobile}) => (isMobile ? "100%" : "549px")};
+    width: ${({isMobile}) => (isMobile ? "100%" : "650px")};
     color: var(--Neutral-600, #191a1b);
-    font-size: ${({isMobile}) => (isMobile ? "20px" : "24px")};
+    font-size: ${({isMobile}) => (isMobile ? "20px" : "28px")};
     font-weight: var(--Subtitle1-weight, 600);
     line-height: ${({isMobile}) => (isMobile ? "28px" : "36px")};
     text-align: center;
@@ -50,7 +54,7 @@ export const StyledHeader = styled(Manrope)<MobileProps>`
 `;
 
 export const StyledParagraph = styled(Manrope)<MobileProps>`
-    width: ${({isMobile}) => (isMobile ? "100%" : "549px")};
+    width: ${({isMobile}) => (isMobile ? "100%" : "650px")};
     color: var(--Neutral-600, #191a1b);
     font-size: ${({isMobile}) => (isMobile ? "15px" : "18px")};
     font-weight: var(--Subtitle1-weight, 600);
