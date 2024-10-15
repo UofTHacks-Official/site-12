@@ -87,9 +87,14 @@ const SpaceGrotesk: React.FC<SubjectivityProps> = ({
     );
 };
 
-export const SpaceGroteskSectionTitle = styled(SpaceGrotesk)`
+interface SpaceGroteskSectionTitleProps {
+    isMobile?: boolean | null
+
+}
+
+export const SpaceGroteskSectionTitle = styled(SpaceGrotesk)<SpaceGroteskSectionTitleProps>`
     text-align: start;
-    font-size: 3.75rem;
+    font-size: ${({ isMobile }) => (isMobile ? '2rem' : '3.75rem')};
     letter-spacing: 0rem;
 `;
 

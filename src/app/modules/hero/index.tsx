@@ -1,14 +1,40 @@
-import {HeroBackground, HeroModuleContainer} from "@/app/modules/hero/index.styles";
-import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
-import Manrope from "@/app/components/shared/fonts/manrope";
-import NavBar from "@/app/components/shared/navbar";
+import {
+    DescriptionContainer,
+    HeroBackground,
+    HeroContent,
+    HeroContentContainer,
+    HeroHeader,
+    HeroModuleContainer, LedgeSVG,
+    LeftDescription,
+    RightDescription
+} from "@/app/modules/hero/index.styles";
+import {useMobileDetect} from "@/app/hooks/useMobileDetect";
 
 const Hero = () => {
+    const isMobile = useMobileDetect()
+
     return (
         <HeroModuleContainer id="hero-module">
             <HeroBackground src="/background/hero.svg"/>
-            <SpaceGrotesk>hero section</SpaceGrotesk>
-            <Manrope>UoftHacks 12</Manrope>
+            <HeroContentContainer>
+                <HeroContent isMobile={isMobile}>
+                    <HeroHeader isMobile={isMobile}>
+                        UoftHacks 12
+                    </HeroHeader>
+                    <DescriptionContainer isMobile={isMobile}>
+                        <LeftDescription isMobile={isMobile}>
+                            At UofTHacks, we strive to provide a space where everyone feels supported, empowered, and
+                            encouraged to transform their dreams into reality!
+                        </LeftDescription>
+                        <RightDescription isMobile={isMobile}>
+                            At UofTHacks, we strive to provide a space where everyone feels supported, empowered, and
+                            encouraged to transform their dreams into reality!
+                        </RightDescription>
+
+                    </DescriptionContainer>
+                    <LedgeSVG isMobile={isMobile}/>
+                </HeroContent>
+            </HeroContentContainer>
         </HeroModuleContainer>
     );
 };

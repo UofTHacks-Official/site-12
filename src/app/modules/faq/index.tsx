@@ -13,7 +13,7 @@ const FAQ = () => {
         <FAQModuleContainer id="FAQ-module">
             <FAQModuleBackground src="/background/faq.svg"/>
             <StyledContentContainer isMobile={$isMobile}>
-                <SpaceGroteskSectionTitle>FAQs</SpaceGroteskSectionTitle>
+                <SpaceGroteskSectionTitle isMobile={$isMobile}>FAQs</SpaceGroteskSectionTitle>
                 <StyledAccordionContainer>
                     {FAQItems.map((item, index) => (
                         <AccordianComponent key={index} title={item.title} content={item.content}/>

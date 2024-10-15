@@ -1,13 +1,11 @@
-import {WhyJoinModuleBackground, WhyJoinModuleContainer} from "@/app/modules/why-join/index.styles";
-import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
+import React from "react";
+import {useMobileDetect} from "@/app/hooks/useMobileDetect";
+import WhyJoinMobile from "@/app/components/why-join/mobile"
+import WhyJoinDesktop from "@/app/components/why-join/desktop"
 
 const WhyJoin = () => {
-    return (
-        <WhyJoinModuleContainer id="WhyJoin-module">
-            <WhyJoinModuleBackground src="/background/why-join.svg"/>
-            <SpaceGrotesk>WhyJoin section</SpaceGrotesk>
-        </WhyJoinModuleContainer>
-    );
+    const isMobile = useMobileDetect()
+    return isMobile ? <WhyJoinMobile/> : <WhyJoinDesktop/>
 };
 
 export default WhyJoin;
