@@ -11,6 +11,12 @@ export const ContactUsModuleContainer = styled(ModuleContainer)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 20px; // Add padding for small screen margins
+
+  @media (max-width: 768px) {
+    padding: 20px; // More padding on mobile to prevent zooming effect
+    height: auto; // Prevent full height on mobile to avoid stretching
+  }
 `;
 
 export const ContactUsModuleBackground = styled(ModuleBackground)``;
@@ -18,16 +24,30 @@ export const ContactUsModuleBackground = styled(ModuleBackground)``;
 export const ContentWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
   gap: 40px;
+  position: relative;
+
+  // Media query for mobile devices
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; // This centers the content on mobile, and we revert the flex-direction on larger screens
+  }
 `;
 
 export const InputWrapper = styled.div`
   display: flex;
   gap: 20px;
+
+  // Adjust layout on mobile
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 export const FormContainer = styled.form`
@@ -36,11 +56,21 @@ export const FormContainer = styled.form`
   flex-direction: column;
   gap: 20px;
   width: 100%;
+  max-width: 600px; // Prevent form from stretching too much on large screens
+
+  @media (max-width: 768px) {
+    max-width: 100%; // Keep it within screen bounds
+  }
 `;
 
 export const Container = styled.div`
   width: 55%;
   text-align: left;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 export const StyledHeader = styled.h3`
@@ -51,6 +81,13 @@ export const StyledHeader = styled.h3`
   font-weight: var(--Heading2-weight, 700);
   line-height: var(--Heading2-lineHeight, 72px);
   letter-spacing: var(--Heading3-spacing, 0px);
+
+  // Make the text responsive on mobile
+  @media (max-width: 768px) {
+    font-size: 32px; // Reduce font size on mobile for readability
+    line-height: 48px;
+    text-align: center; // Center the text on smaller screens
+  }
 `;
 
 export const StyledParagraph = styled.p`
@@ -61,61 +98,60 @@ export const StyledParagraph = styled.p`
   font-weight: var(--Subtitle1-weight, 600);
   line-height: var(--Subtitle1-lineHeight, 36px);
   letter-spacing: var(--Subtitle1-spacing, 0px);
+  @media (max-width: 768px) {
+    text-align: center; // Revert this to center-align only on mobile if necessary
+  }
 `;
 
 export const Input = styled.input`
+  color: var(--Neutral-600, #191a1b);
   border-radius: 10px;
   border: 1px solid #8edeff;
   background: #fff;
   box-shadow: 0px 0px 50px 0px rgba(182, 255, 246, 0.5);
-  display: flex;
   width: 48%;
   height: 55px;
   padding: 10px 20px;
-  align-items: flex-start;
+
+  // Make input take full width on mobile
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const TextArea = styled.textarea`
-  display: flex;
-  width: 100%;
-  height: 110px;
-  padding: 8px 18px;
-  align-items: flex-start;
+  color: var(--Neutral-600, #191a1b);
   border-radius: 10px;
   border: 1px solid #8edeff;
   background: #fff;
   box-shadow: 0px 0px 50px 0px rgba(182, 255, 246, 0.5);
+  padding: 10px 20px;
+  width: 100%;
+  height: 150px;
 `;
 
 export const SubmitButton = styled.button`
-  display: inline-flex;
-  padding: 16px 60px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 16px;
-  background: #225c90;
-  backdrop-filter: blur(6px);
-  width: 150px;
-  height: 45px;
-  color: white;
+  padding: 10px 20px;
+  background-color: #007bff;
   border: none;
+  color: white;
+  border-radius: 10px;
   cursor: pointer;
 `;
 
 export const IsometricRoomWrapper = styled.div`
-  width: 45%;
-  aspect-ratio: 1 / 1;
-  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
-  overflow: hidden;
+  width: 45%;
+
+  // Move IsometricRoomWrapper below the form on mobile
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const IsometricRoomImage = styled.img`
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
 `;
