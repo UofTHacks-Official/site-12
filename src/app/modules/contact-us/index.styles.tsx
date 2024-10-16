@@ -1,103 +1,157 @@
 import styled from "styled-components";
-import {ModuleBackground, ModuleContainer} from "@/app/components/shared/containers/index.styles";
-import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
-import Manrope from "@/app/components/shared/fonts/manrope";
-
-type MobileProps = {
-    isMobile?: boolean | null;
-}
+import {
+  ModuleBackground,
+  ModuleContainer,
+} from "@/app/components/shared/containers/index.styles";
 
 export const ContactUsModuleContainer = styled(ModuleContainer)`
-    height: 100vh;
-    min-height: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px; // Add padding for small screen margins
+
+  @media (max-width: 768px) {
+    padding: 20px; // More padding on mobile to prevent zooming effect
+    height: auto; // Prevent full height on mobile to avoid stretching
+  }
 `;
 
 export const ContactUsModuleBackground = styled(ModuleBackground)``;
 
-export const InputWrapper = styled.div<MobileProps>`
-    display: flex;
-    flex-direction: ${(props) => (props.isMobile ? "column" : "row")};
-    gap: 20px;
-`;
+export const ContentWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 40px;
+  position: relative;
 
-export const FormContainer = styled.form<MobileProps>`
-    display: flex;
+  // Media query for mobile devices
+  @media (max-width: 768px) {
     flex-direction: column;
     gap: 20px;
-    max-width: ${(props) => (props.isMobile ? "100%" : "500px")};
+    align-items: center; // This centers the content on mobile, and we revert the flex-direction on larger screens
+  }
+`;
+
+export const InputWrapper = styled.div`
+  display: flex;
+  gap: 20px;
+
+  // Adjust layout on mobile
+  @media (max-width: 768px) {
+    flex-direction: column;
     width: 100%;
+  }
 `;
 
-export const Container = styled.div<MobileProps>`
-    text-align: left;
-    padding: ${({isMobile}) => (isMobile ? "20px" : "0")};
+export const FormContainer = styled.form`
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px; // Prevent form from stretching too much on large screens
+
+  @media (max-width: 768px) {
+    max-width: 100%; // Keep it within screen bounds
+  }
 `;
 
-export const StyledHeader = styled(SpaceGrotesk)<MobileProps>`
-    color: var(--Neutral-600, #191a1b);
-    font-size: ${({isMobile}) => (isMobile ? "32px" : "45px")};
-    font-weight: var(--Heading2-weight, 700);
-    line-height: ${({isMobile}) => (isMobile ? "48px" : "72px")};
-    margin-bottom: ${({isMobile}) => (isMobile ? "10px" : "20px")};
-    text-align: left;
-    letter-spacing: 0rem;
-`;
+export const Container = styled.div`
+  width: 55%;
+  text-align: left;
 
-export const StyledParagraph = styled(Manrope)<MobileProps>`
-    width: ${({isMobile}) => (isMobile ? "100%" : "549px")};
-    color: var(--Neutral-600, #191a1b);
-    font-size: ${({isMobile}) => (isMobile ? "18px" : "24px")};
-    font-weight: var(--Subtitle1-weight, 600);
-    line-height: ${({isMobile}) => (isMobile ? "28px" : "36px")};
-    text-align: left;
-    margin-bottom: 20px;
-`;
-
-export const Input = styled.input<MobileProps>`
-    border-radius: 10px;
-    border: 1px solid #8edeff;
-    background: #fff;
-    box-shadow: 0px 0px 50px 0px rgba(182, 255, 246, 0.5);
-    width: ${({isMobile}) => (isMobile ? "100%" : "260px")};
-    height: 55px;
-    font-family: 'Manrope', sans-serif;
-    padding: 10px 20px;
-`;
-
-export const TextArea = styled.textarea<MobileProps>`
+  @media (max-width: 768px) {
     width: 100%;
-    height: 110px;
-    padding: 18px;
-    border-radius: 10px;
-    border: 1px solid #8edeff;
-    background: #fff;
-    font-family: 'Manrope', sans-serif;
-    box-shadow: 0px 0px 50px 0px rgba(182, 255, 246, 0.5);
+    text-align: center;
+  }
 `;
 
-export const ManropeSubmitButtonText = styled(Manrope)`
-    color: var(--Neutral-100, #FFF);
-    font-size: var(--Subtitle2-size, 15px);
-    font-weight: var(--Subtitle2-weight, 600);
-    line-height: var(--Subtitle2-lineHeight, 32px);
+export const StyledHeader = styled.h3`
+  color: var(--Neutral-600, #191a1b);
+  font-family: var(--Heading2-fontFamily, "Space Grotesk");
+  font-size: var(--Heading2-size, 45px);
+  font-style: normal;
+  font-weight: var(--Heading2-weight, 700);
+  line-height: var(--Heading2-lineHeight, 72px);
+  letter-spacing: var(--Heading3-spacing, 0px);
+
+  // Make the text responsive on mobile
+  @media (max-width: 768px) {
+    font-size: 32px; // Reduce font size on mobile for readability
+    line-height: 48px;
+    text-align: center; // Center the text on smaller screens
+  }
 `;
 
-export const SubmitButton = styled.button<MobileProps>`
-    border-radius: 16px;
-    border: 0px;
-    color: white;
-    background: #225c90;
-    width: ${({isMobile}) => (isMobile ? "100%" : "150px")};
-    height: 45px;
-    transition: background 0.3s ease;
+export const StyledParagraph = styled.p`
+  color: var(--Neutral-600, #191a1b);
+  font-family: var(--Subtitle1-fontFamily, Manrope);
+  font-size: var(--Subtitle1-lineHeight, 24px);
+  font-style: normal;
+  font-weight: var(--Subtitle1-weight, 600);
+  line-height: var(--Subtitle1-lineHeight, 36px);
+  letter-spacing: var(--Subtitle1-spacing, 0px);
+  @media (max-width: 768px) {
+    text-align: center; // Revert this to center-align only on mobile if necessary
+  }
+`;
 
-    &:hover {
-        background: #1a4871;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-        cursor: pointer;
-    }
+export const Input = styled.input`
+  color: var(--Neutral-600, #191a1b);
+  border-radius: 10px;
+  border: 1px solid #8edeff;
+  background: #fff;
+  box-shadow: 0px 0px 50px 0px rgba(182, 255, 246, 0.5);
+  width: 48%;
+  height: 55px;
+  padding: 10px 20px;
+
+  // Make input take full width on mobile
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+export const TextArea = styled.textarea`
+  color: var(--Neutral-600, #191a1b);
+  border-radius: 10px;
+  border: 1px solid #8edeff;
+  background: #fff;
+  box-shadow: 0px 0px 50px 0px rgba(182, 255, 246, 0.5);
+  padding: 10px 20px;
+  width: 100%;
+  height: 150px;
+`;
+
+export const SubmitButton = styled.button`
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+`;
+
+export const IsometricRoomWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+
+  // Move IsometricRoomWrapper below the form on mobile
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+export const IsometricRoomImage = styled.img`
+  width: 100%;
+  height: auto;
 `;
