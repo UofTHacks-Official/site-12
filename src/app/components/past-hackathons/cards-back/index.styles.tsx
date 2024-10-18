@@ -6,28 +6,35 @@ interface CarouselCardBordersProps {
         year: string;
         theme: string;
         subText: string;
+        padding: string;
+        borderRadius: string;
     };
+    height: string;
+    width: string;
     children?: React.ReactNode;
 }
 
-export const CarouselSlides = styled.div`
+interface CarouselSlidesProps {
+    height: string;
+}
+
+export const CarouselSlides = styled.div<CarouselSlidesProps>`
     width: 100%;
-    height: 80vh;
+    height: ${(props) => props.height};
     display: flex;
     justify-content: center;
     align-items: center;
-
 `
 
 export const CarouselCardBorders: React.FC<CarouselCardBordersProps> = styled.div<CarouselCardBordersProps>`
-border-radius: 45px;
+border-radius: ${(props) => props.item.borderRadius};
 background: ${(props) => props.item.colour};
-height: 70%;
-width: 50%;
+height: ${(props) => props.height};
+width: ${(props) => props.width};
 display: flex;
 justify-content: center;
 align-items: center;
-padding: 20px;
+padding: ${(props) => props.item.padding};
 
 box-shadow: 0 0 20px ${(props) => props.item.colour};
 transition: box-shadow 0.3s ease-in-out;
@@ -38,16 +45,19 @@ transition: box-shadow 0.3s ease-in-out;
   }
 `
 
-export const CarouselCards = styled.div`
+interface CarouselCardsProps {
+    borderRadius: string;
+}
+
+export const CarouselCards = styled.div<CarouselCardsProps>`
     width: 100%;
     height: 100%;
-    border-radius: 25px;
+    border-radius: ${(props) => props.borderRadius};
     background: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 `
 
 export const CarouselCardText = styled.h1`
@@ -61,10 +71,14 @@ export const CarouselCardText = styled.h1`
 
 export const CarouselCardTextNumber = styled.h1``
 
-export const CarouselCardTextOther = styled.div`
+interface CarouselCardTextOtherProps {
+    marginLeft: string;
+}
+
+export const CarouselCardTextOther = styled.div<CarouselCardTextOtherProps>`
     display: flex;
     flex-direction: column;
-    margin-left: 60px;
+    margin-left: ${(props) => props.marginLeft};
     padding-top: 15px;
 `
 
