@@ -2,7 +2,7 @@ export const testimonies = [
     {
         name: "Ishwak Sharda",
         yearProgram: "2nd Year Computer Science",
-        message: "Lorem ipsum dolor sit amet consefg Aenean tristique accumsan fames egestas  an fames Lorem ipsum dolor sit amet consectetur. Aenean tristique accumsan fames egestas  an fames Lorem ipsum dolor sit amet consectetur. Aenean tristique accumsan fames egestas  an fames",
+        message: "UofTHacks is an incredible opportunity to create lasting connections, just like I have. Most importantly, focus on connecting with others and having fun!",
         imagePath: "/assets/testimonies/ishwak-sharda.svg",
     },
     {

@@ -7,6 +7,7 @@ import {
 const FAQModuleContainer = styled(ModuleContainer)`
     height: 100%;
     min-height: 600px;
+    padding-top: 80px;
 `;
 
 const FAQModuleBackground = styled(ModuleBackground)`

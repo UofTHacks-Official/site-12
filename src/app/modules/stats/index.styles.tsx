@@ -6,7 +6,6 @@ import {
 
 interface MobileProps {
   isMobile?: boolean | null;
-  isLargeScreen?: boolean; // Add this prop for large screen detection
 }
 
 const StatsModuleContainer = styled(ModuleContainer)<MobileProps>`
@@ -23,13 +22,11 @@ const StatsModuleBackground = styled(ModuleBackground)`
 
 const StatsImageWrapper = styled.div<MobileProps>`
   position: relative;
+  left: ${(props) =>
+    props.isMobile ? "0" : "-50px"};
   width: ${(props) =>
-    props.isMobile ? "150vw" : props.isLargeScreen ? "100vw" : "90vw"};
-  height: ${(props) => (props.isMobile ? "80%" : "100%")};
-  margin-left: ${(props) =>
-    props.isLargeScreen ? "auto" : "0"}; // Center on large screens
-  margin-right: ${(props) =>
-    props.isLargeScreen ? "auto" : "0"}; // Center on large screens
+    props.isMobile ? "100%" : "110vw"};
+  height: ${(props) => (props.isMobile ? "90%" : "100%")};
   overflow: ${(props) => (props.isMobile ? "hidden" : "visible")};
 `;
 
