@@ -33,8 +33,9 @@ const StyledIcon = styled(Image)`
 
 const CenterContainer = styled.div`
   max-width: 50vw;
+  min-width: 750px;
   position: absolute;
-  border: 20px solid #225C90;
+  border: 20px solid #225c90;
   border-radius: 10px;
   background-color: #fff;
   padding: 50px 40px 40px 40px;
@@ -46,7 +47,7 @@ const AboutHeader = styled.div`
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 50px;
-  background: linear-gradient(90deg, #225C90, #EC6D7F);
+  background: linear-gradient(90deg, #225c90, #ec6d7f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: left;
@@ -56,7 +57,7 @@ const AboutUsDescription = styled.div`
   font-size: 15px;
   text-align: left;
   letter-spacing: 0px;
-  color: #191A1B;
+  color: #191a1b;
 `;
 
 const StyledLeftImage = styled(Image)`
@@ -95,5 +96,5 @@ export {
   SvgBackgroundContainer,
   StyledLeftImage,
   StyledRightImage,
-  StyledKeys
+  StyledKeys,
 };
