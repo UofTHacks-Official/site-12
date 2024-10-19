@@ -15,9 +15,19 @@ const PastHackathonsModuleContainer = styled(ModuleContainer)`
     justify-content: center;
     padding-top: 5vh;
     padding-bottom: 5vh;
+    background-color: #225C90;
+    overflow: visible;
 `;
 
-const PastHackathonsModuleBackground = styled(ModuleBackground)``
+const PastHackathonsModuleBackground = styled(ModuleBackground)`
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 160%; 
+    height: auto;
+    z-index: 0; 
+    pointer-events: none; 
+`
 
 const PastHackathonsModuleTitle = styled.h1`
     color: white;

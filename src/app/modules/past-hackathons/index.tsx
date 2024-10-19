@@ -296,7 +296,7 @@ const PastHackathons = () => {
           </Carousel>
         </CarouselContainer>
       </PastHackathonsModuleCardsContainer>
-      <PastHackathonsModuleBackground src="/background/past-hackathons.svg" />
+      <PastHackathonsModuleBackground src="/background/book-overlay.svg" />
     </PastHackathonsModuleContainer>
   );
 };
