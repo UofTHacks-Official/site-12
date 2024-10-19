@@ -1,11 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import {
-  PastHackathonsModuleContainer,
-  PastHackathonsModuleBackground,
-  PastHackathonsModuleTitle,
-  PastHackathonsModuleCardsContainer,
-  IntroCardContainer,
-  CarouselContainer,
+    PastHackathonsModuleContainer,
+    PastHackathonsModuleTitle,
+    PastHackathonsModuleCardsContainer,
+    IntroCardContainer,
+    CarouselContainer, TopRightImage, BottomLeftImage,
 } from "@/app/modules/past-hackathons/index.styles";
 import FlipCard from "@/app/components/past-hackathons/flip-cards";
 import CardFront from "@/app/components/past-hackathons/cards-front";
@@ -17,6 +16,7 @@ import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { useMobileDetect } from "@/app/hooks/useMobileDetect";
+import {SvgBackgroundContainer} from "@/app/components/about-us/desktop/index.styles";
 
 
 interface ArrowButtonProps {
@@ -266,6 +266,22 @@ const PastHackathons = () => {
 
   return (
     <PastHackathonsModuleContainer id="PastHackathons-module">
+        <SvgBackgroundContainer>
+            <TopRightImage
+                src="/background/right-book.svg"
+                width={100}
+                height={100}
+                alt="top right"
+                isMobile={isMobile}
+            />
+            <BottomLeftImage
+                src="/background/left-book.svg"
+                width={100}
+                height={100}
+                alt="bottom right"
+                isMobile={isMobile}
+            />
+        </SvgBackgroundContainer>
       <PastHackathonsModuleTitle>
         <SpaceGrotesk style={spaceGroteskStyles}>Past Hackathons</SpaceGrotesk>
       </PastHackathonsModuleTitle>
@@ -308,7 +324,6 @@ const PastHackathons = () => {
           </Carousel>
         </CarouselContainer>
       </PastHackathonsModuleCardsContainer>
-      <PastHackathonsModuleBackground src="/background/past-hackathons.svg" />
     </PastHackathonsModuleContainer>
   );
 };

@@ -3,6 +3,7 @@ import { ModuleBackground, ModuleContainer } from "@/app/components/shared/conta
 import { IconButton } from "@mui/material"
 import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+import {StyledIcon} from "@/app/components/about-us/mobile/index.styles";
 
 const PastHackathonsModuleContainer = styled(ModuleContainer)`
     height: 100vh;
@@ -15,9 +16,20 @@ const PastHackathonsModuleContainer = styled(ModuleContainer)`
     justify-content: center;
     padding-top: 5vh;
     padding-bottom: 5vh;
+    background-color: #225C90;
+    overflow: visible;
+    position: relative;
 `;
 
-const PastHackathonsModuleBackground = styled(ModuleBackground)``
+const PastHackathonsModuleBackground = styled(ModuleBackground)`
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 160%; 
+    height: auto;
+    z-index: 0; 
+    pointer-events: none; 
+`
 
 const PastHackathonsModuleTitle = styled.h1`
     color: white;
@@ -47,13 +59,21 @@ const IntroCardContainer = styled.div`
     align-items: center;
 `
 
-const ArrowBackButton = styled(IconButton)`
+const TopRightImage = styled(StyledIcon)<{ isMobile?: boolean | null }>`
     position: absolute;
-`
+    top: 0;
+    right: 0;
+    width: ${({ isMobile }) => (isMobile ? '100px' : '200px')};
+    height: ${({ isMobile }) => (isMobile ? '100px' : '200px')};
+`;
 
-const ArrowForwardButton = styled(IconButton)`
+const BottomLeftImage = styled(StyledIcon)<{ isMobile?: boolean | null }>`
     position: absolute;
-`
+    bottom: 0;
+    left: 0;
+    width: ${({ isMobile }) => (isMobile ? '100px' : '200px')};
+    height: ${({ isMobile }) => (isMobile ? '100px' : '200px')};
+`;
 
 export {
     PastHackathonsModuleContainer,
@@ -62,4 +82,6 @@ export {
     PastHackathonsModuleCardsContainer,
     IntroCardContainer,
     CarouselContainer,
+    TopRightImage,
+    BottomLeftImage,
 };

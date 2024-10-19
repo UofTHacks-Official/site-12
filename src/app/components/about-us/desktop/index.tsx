@@ -10,7 +10,6 @@ import {
   StyledKeys
 } from "@/app/components/about-us/desktop/index.styles";
 import Manrope from "@/app/components/shared/fonts/manrope";
-import Image from "next/image";
 import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
 
 const AboutUsDesktop = () => {
