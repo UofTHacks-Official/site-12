@@ -18,46 +18,7 @@ import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRound
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { useMobileDetect } from "@/app/hooks/useMobileDetect";
 
-const spaceGroteskStyles = {
-  color: "white",
-  fontSize: "50px",
-};
-const spaceGroteskStylesCardNumber = {
-  color: "#225c91",
-  fontSize: "30px",
-};
-const items = [
-  {
-    colour: "#ffcbfa",
-    year: "11",
-    theme: "Nostalgia",
-    subText: "yapyapyapyap",
-  },
-  {
-    colour: "#ffcbfa",
-    year: "11",
-    theme: "Nostalgia",
-    subText: "yapyapyapyap",
-  },
-  {
-    colour: "#b5fff7",
-    year: "X",
-    theme: "Exploration",
-    subText: "yapyapyapyap",
-  },
-  {
-    colour: "#bae9fd",
-    year: "9",
-    theme: "Restoration",
-    subText: "yapyapyapyap",
-  },
-  {
-    colour: "#ffcdf8",
-    year: "8",
-    theme: "Connectivity",
-    subText: "yapyapyapyap",
-  },
-];
+
 interface ArrowButtonProps {
   onClick: () => void;
 }
@@ -65,7 +26,7 @@ interface CloseButtonProps {
   onClick: () => void;
 }
 const PastHackathons = () => {
-  const numSlides = useRef(items.length);
+  const isMobile = useMobileDetect();
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [flippedStates, setFlippedStates] = useState<boolean[]>([
     false,
@@ -73,8 +34,59 @@ const PastHackathons = () => {
     false,
     false,
   ]);
+  const items = [
+    {
+      colour: "#ffcbfa",
+      year: "11",
+      theme: "Nostalgia",
+      subText: "yapyapyapyap",
+      padding: isMobile ? "10px" : "20px",
+      borderRadius: isMobile ? "25px" : "45px",
+    },
+    {
+      colour: "#ffcbfa",
+      year: "11",
+      theme: "Nostalgia",
+      subText: "yapyapyapyap",
+      padding: isMobile ? "10px" : "20px",
+      borderRadius: isMobile ? "25px" : "45px",
+    },
+    {
+      colour: "#b5fff7",
+      year: "X",
+      theme: "Exploration",
+      subText: "yapyapyapyap",
+      padding: isMobile ? "10px" : "20px",
+      borderRadius: isMobile ? "25px" : "45px",
+    },
+    {
+      colour: "#bae9fd",
+      year: "9",
+      theme: "Restoration",
+      subText: "yapyapyapyap",
+      padding: isMobile ? "10px" : "20px",
+      borderRadius: isMobile ? "25px" : "45px",
+    },
+    {
+      colour: "#ffcdf8",
+      year: "8",
+      theme: "Connectivity",
+      subText: "yapyapyapyap",
+      padding: isMobile ? "10px" : "20px",
+      borderRadius: isMobile ? "25px" : "45px",
+    },
+  ];
+  const numSlides = useRef(items.length);
+
   const shouldAnimate = useRef(false);
-  const isMobile = useMobileDetect();
+  const spaceGroteskStyles = {
+    color: "white",
+    fontSize: isMobile ? "40px" : "50px",
+  };
+  const spaceGroteskStylesCardNumber = {
+    color: "#225c91",
+    fontSize: isMobile? "20px" : "30px",
+  };
 
   const CloseButton: React.FC<CloseButtonProps> = ({ onClick }) => {
     return (

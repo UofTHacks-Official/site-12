@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 // Custom hook to detect mobile devices
 export const useMobileDetect = (
-  widthThreshold: number = 875
+  widthThreshold: number = 900
 ): boolean | null => {
   const [isMobile, setIsMobile] = useState<boolean | null>(null);
   useEffect(() => {

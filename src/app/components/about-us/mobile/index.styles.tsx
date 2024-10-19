@@ -9,15 +9,15 @@ const AboutUsMobileContainer = styled(ModuleContainer)`
   padding: 0.5rem;
   position: relative;
   margin: 0 auto;
-  height: 100vh;
+  height: 1200px;
   overflow: visible;
 `;
 
 const SvgBackgroundContainer = styled.div`
-  top: 0;
-  left: 0;
+  top: -8px;
   position: absolute;
   width: 100%;
+  max-width: 500px;
   height: 100%;
   z-index: -1;
   overflow: visible;
@@ -31,14 +31,12 @@ const StyledIcon = styled(Image)`
 `;
 
 const CenterContainer = styled.div`
-  border: 15px solid #225C90;
+  width: 350px;
+  position: absolute;
+  border: 15px solid #225c90;
   border-radius: 10px;
   background-color: #fff;
   padding: 30px 20px 30px 20px;
-  margin-right: 15px;
-  margin-bottom: 110px;
-  align-items: center;
-  justify-content: center;
 `;
 
 const AboutHeader = styled.div`
@@ -47,7 +45,7 @@ const AboutHeader = styled.div`
   font-weight: 700px;
   line-height: 20px;
   padding-bottom: 1rem;
-  background: linear-gradient(90deg, #225C90, #EC6D7F);
+  background: linear-gradient(90deg, #225c90, #ec6d7f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: left;
@@ -57,7 +55,7 @@ const AboutUsDescription = styled.div`
   font-size: 15px;
   text-align: left;
   letter-spacing: 0px;
-  color: #191A1B;
+  color: #191a1b;
 `;
 
 const StyledTopRightImage = styled(Image)`
@@ -65,8 +63,8 @@ const StyledTopRightImage = styled(Image)`
   width: 400px;
   height: 200px;
   z-index: 5;
-  top: 6%;
-  left: 20%;
+  top: -40%;
+  right: -40%;
 `;
 
 const StyledBottomRightImage = styled(Image)`
@@ -74,8 +72,8 @@ const StyledBottomRightImage = styled(Image)`
   width: 250px;
   height: 250px;
   z-index: 5;
-  bottom: 13%;
-  right: -5%;
+  bottom: -55%;
+  right: -25%;
 `;
 
 const StyledBottomLeftImage = styled(Image)`
@@ -83,8 +81,8 @@ const StyledBottomLeftImage = styled(Image)`
   width: 250px;
   height: 250px;
   z-index: 5;
-  top: 75%;
-  left: 0%;
+  bottom: -105%;
+  left: -20%;
 `;
 
 const StyledKeys = styled(Image)`
@@ -92,8 +90,8 @@ const StyledKeys = styled(Image)`
   width: 150px;
   height: 150px;
   z-index: 5;
-  top: 63.5%;
-  left: 0%;
+  bottom: -43.5%;
+  left: -10%;
 `;
 
 export {
@@ -106,5 +104,5 @@ export {
   StyledTopRightImage,
   StyledBottomRightImage,
   StyledBottomLeftImage,
-  StyledKeys
+  StyledKeys,
 };
