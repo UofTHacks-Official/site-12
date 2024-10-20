@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {ModuleBackground, ModuleContainer} from "@/app/components/shared/containers/index.styles";
 import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
 import Manrope from "@/app/components/shared/fonts/manrope";
+import {StyledIcon} from "@/app/components/about-us/mobile/index.styles";
 
 type MobileProps = {
     isMobile?: boolean | null;
@@ -33,8 +34,15 @@ export const FormContainer = styled.form<MobileProps>`
 `;
 
 export const Container = styled.div<MobileProps>`
-    text-align: left;
-    padding: ${({isMobile}) => (isMobile ? "20px" : "0")};
+    display: flex;
+    flex-direction: ${({ isMobile }) => (isMobile ? "column" : "row")};
+    justify-content: ${({ isMobile }) => (isMobile ? "center" : "center")};
+    align-items: ${({ isMobile }) => (isMobile ? "center" : "center")};
+    gap: ${({ isMobile }) => (isMobile ? "20px" : "30px")};
+    width: 100%;
+    padding: ${({ isMobile }) => (isMobile ? "20px" : "40px")};
+    max-width: 1200px;
+    margin: 0 auto;
 `;
 
 export const StyledHeader = styled(SpaceGrotesk)<MobileProps>`
@@ -56,6 +64,11 @@ export const StyledParagraph = styled(Manrope)<MobileProps>`
     text-align: left;
     margin-bottom: 20px;
 `;
+
+export const StyledFormResponsePrompt = styled(StyledParagraph)<MobileProps>`
+    font-size: ${({isMobile}) => (isMobile ? "12px" : "18px")};
+`;
+
 
 export const Input = styled.input<MobileProps>`
     border-radius: 10px;
@@ -100,4 +113,9 @@ export const SubmitButton = styled.button<MobileProps>`
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
         cursor: pointer;
     }
+`;
+
+export const ContactUsRenderIcon = styled(StyledIcon)<{ isMobile?: boolean | null }>`
+    width: ${({ isMobile }) => (isMobile ? '200px' : '400px')};
+    height: ${({ isMobile }) => (isMobile ? '200px' : '400px')};
 `;
