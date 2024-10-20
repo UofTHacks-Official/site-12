@@ -15,6 +15,7 @@ const AccordianComponent = ({ title, content }: AccordionProps) => {
     fontSize: "1.25rem",
     letterSpacing: "0.0rem",
     fontWeight: 600,
+    textAlign: "left",
   };
 
   const manRopeContentStyles = {

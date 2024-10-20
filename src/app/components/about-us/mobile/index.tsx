@@ -17,15 +17,17 @@ const AboutUsMobile = () => {
   const aboutUsDescription = (
     <>
       <p>
-        At UofTHacks, we strive to provide a space where everyone feels
-        supported, empowered, and encouraged to transform their dreams into
-        reality!
+        At UofTHacks, we&apos;re all about turning dreams into reality in a
+        space where everyone feels supported, empowered, and inspired. Whether
+        you&apos;re a seasoned developer or a first-time hacker, we&apos;re here
+        to help you unlock your potential and bring your vision to life!
       </p>
       <br />
       <p>
-        Our event brings together over 500 innovators, developers, designers,
-        and entrepreneurs for a memorable 36-hour in-person hackathon, where
-        they collaboratively craft unique and meaningful projects.
+        Join a dynamic community of over 500 developers, designers, innovators,
+        and entrepreneurs for an unforgettable 36-hour in-person hackathon. From
+        brainstorming wild ideas to crafting projects that make a difference,
+        UofTHacks is where passion meets purpose and dreams become reality.
       </p>
     </>
   );

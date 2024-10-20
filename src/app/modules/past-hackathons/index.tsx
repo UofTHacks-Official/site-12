@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import {
-    PastHackathonsModuleContainer,
-    PastHackathonsModuleTitle,
-    PastHackathonsModuleCardsContainer,
-    IntroCardContainer,
-    CarouselContainer, TopRightImage, BottomLeftImage,
+  PastHackathonsModuleContainer,
+  PastHackathonsModuleTitle,
+  PastHackathonsModuleCardsContainer,
+  IntroCardContainer,
+  CarouselContainer,
+  TopBook,
 } from "@/app/modules/past-hackathons/index.styles";
 import FlipCard from "@/app/components/past-hackathons/flip-cards";
 import CardFront from "@/app/components/past-hackathons/cards-front";
@@ -18,9 +19,9 @@ import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { useMobileDetect } from "@/app/hooks/useMobileDetect";
 import {SvgBackgroundContainer} from "@/app/components/about-us/desktop/index.styles";
 
-
 interface ArrowButtonProps {
   onClick: () => void;
+  isMobile: boolean | null;
 }
 interface CloseButtonProps {
   onClick: () => void;
@@ -36,36 +37,15 @@ const PastHackathons = () => {
   ]);
   const items = [
     {
-      colour: "#ffcbfa",
-      year: "11",
-      theme: "Nostalgia",
-      subText: "yapyapyapyap",
+      colour: "#ffffff",
+      year: "ALL",
+      theme: "ALL",
+      subText: "ALL",
       padding: isMobile ? "10px" : "20px",
       borderRadius: isMobile ? "25px" : "45px",
-    },
-    {
-      colour: "#ffcbfa",
-      year: "11",
-      theme: "Nostalgia",
-      subText: "yapyapyapyap",
-      padding: isMobile ? "10px" : "20px",
-      borderRadius: isMobile ? "25px" : "45px",
-    },
-    {
-      colour: "#b5fff7",
-      year: "X",
-      theme: "Exploration",
-      subText: "yapyapyapyap",
-      padding: isMobile ? "10px" : "20px",
-      borderRadius: isMobile ? "25px" : "45px",
-    },
-    {
-      colour: "#bae9fd",
-      year: "9",
-      theme: "Restoration",
-      subText: "yapyapyapyap",
-      padding: isMobile ? "10px" : "20px",
-      borderRadius: isMobile ? "25px" : "45px",
+      img1: "11-1.jpg",
+      img2: "11-2.jpg",
+      img3: "11-3.jpg",
     },
     {
       colour: "#ffcdf8",
@@ -74,6 +54,44 @@ const PastHackathons = () => {
       subText: "yapyapyapyap",
       padding: isMobile ? "10px" : "20px",
       borderRadius: isMobile ? "25px" : "45px",
+      img1: "11-1.jpg",
+      img2: "11-2.jpg",
+      img3: "11-3.jpg",
+    },
+    {
+      colour: "#bae9fd",
+      year: "9",
+      theme: "Restoration",
+      subText: "yapyapyapyap",
+      padding: isMobile ? "10px" : "20px",
+      borderRadius: isMobile ? "25px" : "45px",
+      img1: "11-1.jpg",
+      img2: "11-2.jpg",
+      img3: "11-3.jpg",
+    },
+    {
+      colour: "#b5fff7",
+      year: "X",
+      theme: "Exploration",
+      subText:
+        "UofTHacks launched us into outer space on a journey of exploration, where hackers pushed boundaries and brought bold, innovative ideas to life in an unforgettable experience!",
+      padding: isMobile ? "10px" : "20px",
+      borderRadius: isMobile ? "25px" : "45px",
+      img1: "10-1.JPG",
+      img2: "10-2.JPG",
+      img3: "10-3.JPG",
+    },
+    {
+      colour: "#ffcbfa",
+      year: "11",
+      theme: "Nostalgia",
+      subText:
+        "UofTHacks took us on a nostalgic trip down memory lane, where for 36 hours, hackers channeled the past to inspire their creations of the future.",
+      padding: isMobile ? "10px" : "20px",
+      borderRadius: isMobile ? "25px" : "45px",
+      img1: "11-1.jpg",
+      img2: "11-2.jpg",
+      img3: "11-3.jpg",
     },
   ];
   const numSlides = useRef(items.length);
@@ -82,10 +100,11 @@ const PastHackathons = () => {
   const spaceGroteskStyles = {
     color: "white",
     fontSize: isMobile ? "40px" : "50px",
+    letterSpacing: "1px",
   };
   const spaceGroteskStylesCardNumber = {
     color: "#225c91",
-    fontSize: isMobile? "20px" : "30px",
+    fontSize: isMobile ? "20px" : "30px",
   };
 
   const CloseButton: React.FC<CloseButtonProps> = ({ onClick }) => {
@@ -109,7 +128,10 @@ const PastHackathons = () => {
     );
   };
 
-  const ArrowBackButton: React.FC<ArrowButtonProps> = ({ onClick }) => {
+  const ArrowBackButton: React.FC<ArrowButtonProps> = ({
+    onClick,
+    isMobile,
+  }) => {
     return (
       <IconButton
         size="large"
@@ -117,20 +139,23 @@ const PastHackathons = () => {
           position: "absolute",
           top: "53%",
           left: "5%",
-          fontSize: 50,
+          fontSize: isMobile ? 30 : 50,
           transform: "translateY(-50%)",
           zIndex: 50,
         }}
       >
         <ArrowBackIosRoundedIcon
           fontSize="inherit"
-          sx={{ color: "#ffffff" }}
+          sx={{ color: isMobile ? "#000000" : "#ffffff" }}
           onClick={onClick}
         />
       </IconButton>
     );
   };
-  const ArrowForwordButton: React.FC<ArrowButtonProps> = ({ onClick }) => {
+  const ArrowForwordButton: React.FC<ArrowButtonProps> = ({
+    onClick,
+    isMobile,
+  }) => {
     return (
       <IconButton
         size="large"
@@ -138,14 +163,14 @@ const PastHackathons = () => {
           position: "absolute",
           top: "53%",
           right: "5%",
-          fontSize: 50,
+          fontSize: isMobile ? 30 : 50,
           transform: "translateY(-50%)",
           zIndex: 50,
         }}
       >
         <ArrowForwardIosRoundedIcon
           fontSize="inherit"
-          sx={{ color: "#ffffff" }}
+          sx={{ color: isMobile ? "#000000" : "#ffffff" }}
           onClick={onClick}
         />
       </IconButton>
@@ -180,7 +205,7 @@ const PastHackathons = () => {
     );
     setTimeout(() => {
       setActiveIndex(targetSlide);
-    }, 600);
+    }, 400);
   };
 
   useEffect(() => {
@@ -192,23 +217,25 @@ const PastHackathons = () => {
   const IntroCards = () => {
     return (
       <IntroCardContainer>
+        {/* bottom right */}
         <FlipCard
           flippedStates={flippedStates}
-          onClick={() => handleCardClick(1)}
+          onClick={() => handleCardClick(4)}
           frontContent={
-            <CardFront bgColour={items[0].colour} borderColour={"#bd90d8"}>
+            <CardFront bgColour={items[4].colour} borderColour={"#bd90d8"}>
               <SpaceGrotesk style={spaceGroteskStylesCardNumber}>
-                {items[0].year}
+                {items[4].year}
               </SpaceGrotesk>
             </CardFront>
           }
-          backContent={<CardBack item={items[0]} />}
+          backContent={<CardBack item={items[4]} />}
           mLeft="28%"
           mTop="10%"
           z="0"
           r="-6.19deg"
-          id={0}
+          id={3}
         />
+        {/* top right */}
         <FlipCard
           flippedStates={flippedStates}
           onClick={() => handleCardClick(2)}
@@ -226,6 +253,7 @@ const PastHackathons = () => {
           r="-17.55deg"
           id={1}
         />
+        {/* bottom left */}
         <FlipCard
           flippedStates={flippedStates}
           onClick={() => handleCardClick(3)}
@@ -243,22 +271,23 @@ const PastHackathons = () => {
           r="9.27deg"
           id={2}
         />
+        {/* top left */}
         <FlipCard
           flippedStates={flippedStates}
-          onClick={() => handleCardClick(4)}
+          onClick={() => handleCardClick(1)}
           frontContent={
-            <CardFront bgColour={items[4].colour} borderColour={"#bd90d8"}>
+            <CardFront bgColour={items[1].colour} borderColour={"#bd90d8"}>
               <SpaceGrotesk style={spaceGroteskStylesCardNumber}>
-                {items[4].year}
+                {items[1].year}
               </SpaceGrotesk>
             </CardFront>
           }
-          backContent={<CardBack item={items[4]} />}
+          backContent={<CardBack item={items[1]} />}
           mLeft="-40%"
           mTop="-10%"
           z="3"
           r="-8.12deg"
-          id={3}
+          id={0}
         />
       </IntroCardContainer>
     );
@@ -266,22 +295,9 @@ const PastHackathons = () => {
 
   return (
     <PastHackathonsModuleContainer id="PastHackathons-module">
-        <SvgBackgroundContainer>
-            <TopRightImage
-                src="/background/right-book.svg"
-                width={100}
-                height={100}
-                alt="top right"
-                isMobile={isMobile}
-            />
-            <BottomLeftImage
-                src="/background/left-book.svg"
-                width={100}
-                height={100}
-                alt="bottom right"
-                isMobile={isMobile}
-            />
-        </SvgBackgroundContainer>
+      {!isMobile && (
+        <TopBook src="/assets/past-hackathons/book-top-right.svg" />
+      )}
       <PastHackathonsModuleTitle>
         <SpaceGrotesk style={spaceGroteskStyles}>Past Hackathons</SpaceGrotesk>
       </PastHackathonsModuleTitle>
@@ -291,11 +307,17 @@ const PastHackathons = () => {
             <CloseButton onClick={handleCloseCard} />
           )}
           {activeIndex !== 0 && (
-            <ArrowBackButton onClick={handleBackArrowClick} />
+            <ArrowBackButton
+              onClick={handleBackArrowClick}
+              isMobile={isMobile}
+            />
           )}{" "}
           {/* todo animate this*/}
           {activeIndex !== 0 && (
-            <ArrowForwordButton onClick={handleForwardArrowClick} />
+            <ArrowForwordButton
+              onClick={handleForwardArrowClick}
+              isMobile={isMobile}
+            />
           )}
           <Carousel
             navButtonsAlwaysInvisible={true}

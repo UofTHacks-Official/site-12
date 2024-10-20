@@ -16,6 +16,20 @@ export const Board = styled("img")<MobileProps>`
   max-width: 1500px;
 `;
 
+export const BackgroundGrid = styled("img")<MobileProps>`
+  position: absolute;
+  top: -10px;
+  height: 90%;
+  z-index: 0;
+`;
+
+export const BottomBook = styled("img")`
+  position: absolute;
+  left: 0;
+  top: -20%;
+  width: 20%;
+`;
+
 export const WhyJoinModuleContainer = styled(ModuleContainer)`
   height: 100%;
   min-height: 600px;
@@ -42,7 +56,7 @@ export const Title = styled(SpaceGrotesk)<MobileProps>`
   text-align: center;
   margin-top: ${(props) =>
     props.isMobile ? "12%" : "min(calc(10% - 30px), 110px)"};
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   z-index: 10;
 `;
 
