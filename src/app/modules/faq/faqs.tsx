@@ -1,5 +1,5 @@
 const email =
-  '<a href="mailto:contact@uofthacks.com" target="_blank" rel="noopener" style="color: #225C90; font-weight: 700">contact@uofTHacks.com</a>';
+  '<a href="mailto:official@uofthacks.com" target="_blank" rel="noopener" style="color: #225C90; font-weight: 700">official@uofthacks.com</a>';
 const covidPolicy =
   '<a href="https://ehs.utoronto.ca/covid-19-information/" target="_blank" rel="noopener" style="color: #225C90; font-weight: 700">University of Toronto\'s</a>';
 const instagram =
@@ -14,12 +14,12 @@ export const FAQItems = [
   {
     title: "When and where is UofTHacks held?",
     content:
-      "UofTHacks happens every January at the University of Toronto. Keep an eye on our website for the exact date and location—you won't want to miss it!",
+      "UofTHacks 12 is set to take place from January 17th to January 19th, 2025! This year’s event will be hosted entirely in-person in the Myhal Centre! The exact schedule of all the ceremonies, activities, and workshops will be released in the week leading up to the event!",
   },
   {
     title: "Who can participate?",
     content:
-      "High school and university students can join, no matter their experience. Whether you're a coding expert or a beginner, everyone's welcome. We will provide workshops and mentorship to help you build your project!",
+      "High school and university students can join, no matter their experience. Whether you're a coding expert or a beginner, everyone's welcome. We will provide workshops and Mentorship to help you build your project!",
   },
   {
     title: "Can I attend if I live far away?",
@@ -30,7 +30,7 @@ export const FAQItems = [
   {
     title: "Can I join virtually?",
     content:
-      "Unfortunately, we will not have any virtual aspects to this year's event. All members of the team must be in-person to be considered for judging.",
+      "Unfortunately, we will not have any virtual aspects to this year's event. All members of the your team must be in-person to be considered for judging.",
   },
   {
     title: "How many hackers per team?",
@@ -50,16 +50,16 @@ export const FAQItems = [
   {
     title: "Do I have to know how to code beforehand?",
     content:
-      "Nope! Coding is great, but the design and business side of your project is just as important. UofTHacks is a great place to learn something new, with workshops and mentors available to help you out. We’ll also have mentors floating around to help out whenever you need it!",
+      "Nope! Coding is great, but the design and business side of your project is just as important. UofTHacks is a great place to learn something new, with workshops and Mentors available to help you out. We’ll also have Mentors floating around to help out whenever you need it!",
   },
   {
     title: "Can I work on my project before the event?",
     content:
-      "No. To ensure fairness, and integrity, all work on your project must be done during the event. All submitted projects must link their repository and will be verified manually. Any projects that violate our rules will be disqualified from judging.",
+      "No. To ensure fairness, and integrity, all work on your project must be done during the event. All submitted projects must include a public GitHub repository. Any projects that violate our rules will be disqualified from judging.",
   },
   {
     title: "What are your COVID-19 and other respiratory illness regulations?",
-    content: `Our policy will reflect the ${covidPolicy} protocols. The focus will be to ensure the event is a safe environment for all participants. We will have hand sanitizer stations, masks and disinfectant wipes throughout the venue.`,
+    content: `Our policy will reflect the ${covidPolicy} protocols. The focus will be to ensure the event is a safe environment for all participants. We will have hand sanitizer stations and disinfectant wipes throughout the venue.`,
   },
   {
     title: "What do Mentors do?",
@@ -67,9 +67,9 @@ export const FAQItems = [
       "Mentors are your key resources for guidance. They provide valuable industry knowledge, offer professional career advice, and assist with the technical challenges you may face during your project. Their role is to support and enhance your experience with both expertise and insight.",
   },
   {
-    title: "What are the requirements to be a mentor?",
+    title: "What are the requirements to be a Mentor?",
     content:
-      "To be a mentor, you must be at least 18 years old and have relevant experience in the tech industry. While previous internship experience is not required, it is considered an advantage. Mentors should possess strong technical knowledge and a commitment to supporting participants throughout the event.",
+      "To be a Mentor, you must be at least 18 years old and have relevant experience in the tech industry. While previous internship experience is not required, it is considered an advantage. Mentors should possess strong technical knowledge and a commitment to supporting participants throughout the event.",
   },
   {
     title: "What do Volunteers do?",
@@ -77,7 +77,7 @@ export const FAQItems = [
       "Volunteers help make sure the event runs smoothly! They assist with setup, logistics, and anything else that needs to be done to keep the event awesome.",
   },
   {
-    title: "What are the requirements to be a volunteer?",
+    title: "What are the requirements to be a Volunteer?",
     content:
       "You just need to be enthusiastic and ready to help! No specific skills are needed, just a good attitude and a willingness to pitch in.",
   },

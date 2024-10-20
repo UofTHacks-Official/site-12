@@ -77,15 +77,18 @@ export const Input = styled.input<MobileProps>`
     box-shadow: 0px 0px 50px 0px rgba(182, 255, 246, 0.5);
     width: ${({isMobile}) => (isMobile ? "100%" : "260px")};
     height: 55px;
+    color: black;
     font-family: 'Manrope', sans-serif;
     padding: 10px 20px;
 `;
 
 export const TextArea = styled.textarea<MobileProps>`
     width: 100%;
+    resize: none;
     height: 110px;
     padding: 18px;
     border-radius: 10px;
+    color: black;
     border: 1px solid #8edeff;
     background: #fff;
     font-family: 'Manrope', sans-serif;
