@@ -3,7 +3,6 @@ import {
   ModuleBackground,
   ModuleContainer,
 } from "@/app/components/shared/containers/index.styles";
-import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
 import Manrope from "@/app/components/shared/fonts/manrope";
 
 type MobileProps = {
@@ -27,6 +26,7 @@ export const InputWrapper = styled.div<MobileProps>`
   flex-direction: ${(props) => (props.isMobile ? "column" : "row")};
   align-items: center;
   gap: 10px;
+  color: black;
   width: 95%;
 `;
 

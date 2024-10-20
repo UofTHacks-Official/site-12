@@ -1,7 +1,7 @@
 export const testimonies = [
     {
         name: "Ishwak Sharda",
-        yearProgram: "2nd Year Computer Science",
+        yearProgram: "2nd year Computer Science",
         message: "UofTHacks is an incredible opportunity to create lasting connections, just like I have. Most importantly, focus on connecting with others and having fun!",
         imagePath: "/assets/testimonies/ishwak-sharda.svg",
     },
@@ -13,8 +13,8 @@ export const testimonies = [
     },
     {
         name: "James Yang",
-        yearProgram: "3rd year Computer Science and Engineering @ Western",
-        message: "I’ve participated in dozens of hackathons, but UofTHacks11 was the most fun. Out of the 36-hour coding marathon, my team spent 16 hours deciding what to build. A walk to Shoppers Drug Mart finally inspired us to create a Furby.  With no clue where to start, we quickly learned new technologies and APIs. Thanks to mentors and YouTube tutorials, we brought our quirky idea to life.  The food? Incredible—I was stuffed all weekend!  UofTHacks brings together ambitious people and teaches lessons you can’t learn in a classroom. My biggest takeaway? You don’t need a perfect plan—just a solid idea to build on.",
+        yearProgram: "3rd year Computer Science and Engineering @ Western University",
+        message: "I’ve participated in dozens of hackathons, but UofTHacks 11 was the most fun. Out of the 36-hour coding marathon, my team spent 16 hours deciding what to build. A walk to Shoppers Drug Mart finally inspired us to create a Furby.  With no clue where to start, we quickly learned new technologies and APIs. Thanks to mentors and YouTube tutorials, we brought our quirky idea to life.  The food? Incredible—I was stuffed all weekend!  UofTHacks brings together ambitious people and teaches lessons you can’t learn in a classroom. My biggest takeaway? You don’t need a perfect plan—just a solid idea to build on.",
         imagePath: "/assets/testimonies/james-yang.svg",
     },
 ];
