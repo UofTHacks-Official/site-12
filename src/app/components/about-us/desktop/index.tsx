@@ -17,10 +17,10 @@ const AboutUsDesktop = () => {
   const aboutUsDescription = (
     <>
       <p>
-        At UofTHacks, we’re all about turning dreams into reality in a space
-        where everyone feels supported, empowered, and inspired. Whether you're
-        a seasoned developer or a first-time hacker, we’re here to help you
-        unlock your potential and bring your vision to life!
+        At UofTHacks, we&apos;re all about turning dreams into reality in a
+        space where everyone feels supported, empowered, and inspired. Whether
+        you&apos;re a seasoned developer or a first-time hacker, we&apos;re here
+        to help you unlock your potential and bring your vision to life!
       </p>
       <br />
       <p>
