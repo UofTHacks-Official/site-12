@@ -36,12 +36,11 @@ const FlipCard: React.FC<FlipCardProps> = ({
   }, [frontContent]);
 
   useEffect(() => {
-    hideRef.current = flippedStates.some(state => state);
+    hideRef.current = flippedStates.some((state) => state);
     setFlipped(flippedStates[id]);
     if (!flipped && backRef.current) {
       setCardSize({ width: "100%", height: "4000" });
     }
-
 
     if (!flippedStates[id]) {
       setCardSize({ width: "300px", height: "185" });

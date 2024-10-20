@@ -21,35 +21,44 @@ interface CarouselCardBordersProps {
     subText: string;
     padding: string;
     borderRadius: string;
+    img1: string;
+    img2: string;
+    img3: string;
   };
   children?: React.ReactNode;
 }
 
 const CardBack: React.FC<CarouselCardBordersProps> = (props) => {
-    const isMobile = useMobileDetect();
+  const isMobile = useMobileDetect();
   const spaceGroteskStylesNumber = {
     color: "#225c91",
     fontSize: isMobile ? "75px" : "100px",
   };
   const spaceGroteskStylesTheme = {
     color: "#225c91",
-    fontSize: isMobile ? "35px" : "45px",
+    fontSize: isMobile ? "35px" : "40px",
+    letterSpacing: "0.05px",
   };
   const spaceGroteskStylesSubText = {
     color: "#225c91",
-    fontSize: isMobile ? "18px" : "24px",
+    fontSize: isMobile ? "18px" : "22px",
+    letterSpacing: "0.05px",
   };
   return (
-    <CarouselSlides height={isMobile ? '80vh' : '80vh'}>
-      <CarouselCardBorders item={props.item} height={isMobile ? '60%' : '70%'} width={isMobile ? '60%' : '50%'}>
-        <CarouselCards borderRadius={isMobile ? '15px' : '25px'}>
+    <CarouselSlides height={isMobile ? "80vh" : "80vh"}>
+      <CarouselCardBorders
+        item={props.item}
+        height={isMobile ? "60%" : "70%"}
+        width={isMobile ? "90%" : "max(60%, 700px)"}
+      >
+        <CarouselCards borderRadius={isMobile ? "15px" : "25px"}>
           <CarouselCardText>
             <CarouselCardTextNumber>
               <SpaceGrotesk style={spaceGroteskStylesNumber}>
                 {props.item.year}
               </SpaceGrotesk>
             </CarouselCardTextNumber>
-            <CarouselCardTextOther marginLeft={isMobile ? '50px' : '60px'}>
+            <CarouselCardTextOther marginLeft={isMobile ? "50px" : "60px"}>
               <CarouselCardTextTheme>
                 <SpaceGrotesk style={spaceGroteskStylesTheme}>
                   {props.item.theme}
@@ -63,9 +72,15 @@ const CardBack: React.FC<CarouselCardBordersProps> = (props) => {
             </CarouselCardTextOther>
           </CarouselCardText>
           <CarouselCardImages>
-            <CarouselCardImage />
-            <CarouselCardImage />
-            <CarouselCardImage />
+            <CarouselCardImage
+              src={"/assets/past-hackathons/" + props.item.img1}
+            />
+            <CarouselCardImage
+              src={"/assets/past-hackathons/" + props.item.img2}
+            />
+            <CarouselCardImage
+              src={"/assets/past-hackathons/" + props.item.img3}
+            />
           </CarouselCardImages>
         </CarouselCards>
       </CarouselCardBorders>

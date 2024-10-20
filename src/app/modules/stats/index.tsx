@@ -1,7 +1,8 @@
 import {
   StatsModuleContainer,
-  StatsModuleBackground,
   StatsImageWrapper,
+  TopBook,
+  BottomBook,
 } from "@/app/modules/stats/index.styles";
 import FullBooksSVG from "../../../../public/assets/main-books.svg";
 import Image from "next/image";
@@ -12,7 +13,7 @@ const Stats = () => {
 
   return (
     <StatsModuleContainer isMobile={isMobile} id="Stats-module">
-      <StatsModuleBackground src="/background/stats.svg" />
+      <TopBook src="/assets/stats/book-top-right.svg" />
       <StatsImageWrapper isMobile={isMobile}>
         <Image
           src={FullBooksSVG} // Use the full SVG on larger screens
@@ -22,6 +23,7 @@ const Stats = () => {
           objectPosition={"center"} // Center the image on larger screens
         />
       </StatsImageWrapper>
+      <BottomBook src="/assets/stats/book-bottom-left.svg" />
     </StatsModuleContainer>
   );
 };

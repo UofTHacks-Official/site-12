@@ -7,6 +7,7 @@ import {
   NoteWrapper,
   ImageWrapper,
   Board,
+  BackgroundGrid,
 } from "@/app/modules/why-join/index.styles";
 import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
 
@@ -83,6 +84,7 @@ const WhyJoinMobile = () => (
       </Grid> */}
     </Box>
     <Board src="/assets/why-join/board-mobile.svg" isMobile={true} />
+    <BackgroundGrid src="/assets/why-join/grid.svg" />
   </ImageBackgroundContainer>
 );
 
