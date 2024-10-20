@@ -20,7 +20,6 @@ const PastHackathonsModuleContainer = styled(ModuleContainer)`
   padding-top: 5vh;
   padding-bottom: 5vh;
 `;
-
 const PastHackathonsModuleTitle = styled.h1`
   color: white;
   font-size: 50px;
