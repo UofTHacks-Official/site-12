@@ -9,7 +9,7 @@ const AboutUsMobileContainer = styled(ModuleContainer)`
   padding: 0.5rem;
   position: relative;
   margin: 0 auto;
-  height: 1200px;
+  height: 1500px;
   overflow: visible;
 `;
 
