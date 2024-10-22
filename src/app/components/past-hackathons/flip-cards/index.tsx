@@ -6,8 +6,7 @@ interface FlipCardProps {
   onClick: () => void;
   frontContent: React.ReactNode;
   backContent: React.ReactNode;
-  mLeft: string;
-  mTop: string;
+  styles: string;
   z: string;
   r: string;
   id: number;
@@ -17,8 +16,7 @@ const FlipCard: React.FC<FlipCardProps> = ({
   onClick,
   frontContent,
   backContent,
-  mLeft,
-  mTop,
+  styles,
   z,
   r,
   id,
@@ -66,8 +64,7 @@ const FlipCard: React.FC<FlipCardProps> = ({
         height: `${cardSize.height}px`,
       }}
       flipped={flipped}
-      marginLeft={mLeft}
-      marginTop={mTop}
+      styles={styles}
       z={z}
       r={r}
     >

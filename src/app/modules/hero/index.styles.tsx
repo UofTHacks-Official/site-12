@@ -80,10 +80,15 @@ const GenericDescription = styled(Manrope)<MobileProps>`
 
 const LeftDescription = styled(GenericDescription)<MobileProps>`
   padding-bottom: 0;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 20px;
 `;
 
 const RightDescription = styled(GenericDescription)<MobileProps>`
   padding-top: 0;
+  text-align: center;
+  font-size: 20px;
 `;
 
 export {

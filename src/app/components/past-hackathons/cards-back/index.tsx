@@ -30,6 +30,7 @@ interface CarouselCardBordersProps {
 
 const CardBack: React.FC<CarouselCardBordersProps> = (props) => {
   const isMobile = useMobileDetect();
+
   const spaceGroteskStylesNumber = {
     color: "#225c91",
     fontSize: isMobile ? "75px" : "100px",

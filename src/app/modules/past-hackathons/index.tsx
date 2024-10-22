@@ -4,6 +4,7 @@ import {
   PastHackathonsModuleTitle,
   PastHackathonsModuleCardsContainer,
   IntroCardContainer,
+  IntroCardWrapper,
   CarouselContainer,
   TopBook,
 } from "@/app/modules/past-hackathons/index.styles";
@@ -17,7 +18,7 @@ import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { useMobileDetect } from "@/app/hooks/useMobileDetect";
-import {SvgBackgroundContainer} from "@/app/components/about-us/desktop/index.styles";
+import { SvgBackgroundContainer } from "@/app/components/about-us/desktop/index.styles";
 
 interface ArrowButtonProps {
   onClick: () => void;
@@ -71,7 +72,7 @@ const PastHackathons = () => {
     },
     {
       colour: "#b5fff7",
-      year: "X",
+      year: "10",
       theme: "Exploration",
       subText:
         "UofTHacks launched us into outer space on a journey of exploration, where hackers pushed boundaries and brought bold, innovative ideas to life in an unforgettable experience!",
@@ -105,6 +106,7 @@ const PastHackathons = () => {
   const spaceGroteskStylesCardNumber = {
     color: "#225c91",
     fontSize: isMobile ? "20px" : "30px",
+    letterSpacing: "0.05px",
   };
 
   const CloseButton: React.FC<CloseButtonProps> = ({ onClick }) => {
@@ -200,12 +202,7 @@ const PastHackathons = () => {
     targetSlide: number
   ) => {
     shouldAnimate.current = false;
-    setFlippedStates((prevStates) =>
-      prevStates.map((state, index) => index === targetSlide - 1)
-    );
-    setTimeout(() => {
-      setActiveIndex(targetSlide);
-    }, 400);
+    setActiveIndex(targetSlide);
   };
 
   useEffect(() => {
@@ -217,78 +214,76 @@ const PastHackathons = () => {
   const IntroCards = () => {
     return (
       <IntroCardContainer>
-        {/* bottom right */}
-        <FlipCard
-          flippedStates={flippedStates}
-          onClick={() => handleCardClick(4)}
-          frontContent={
-            <CardFront bgColour={items[4].colour} borderColour={"#bd90d8"}>
-              <SpaceGrotesk style={spaceGroteskStylesCardNumber}>
-                {items[4].year}
-              </SpaceGrotesk>
-            </CardFront>
-          }
-          backContent={<CardBack item={items[4]} />}
-          mLeft="28%"
-          mTop="10%"
-          z="0"
-          r="-6.19deg"
-          id={3}
-        />
-        {/* top right */}
-        <FlipCard
-          flippedStates={flippedStates}
-          onClick={() => handleCardClick(2)}
-          frontContent={
-            <CardFront bgColour={items[2].colour} borderColour={"#8ccbe5"}>
-              <SpaceGrotesk style={spaceGroteskStylesCardNumber}>
-                {items[2].year}
-              </SpaceGrotesk>
-            </CardFront>
-          }
-          backContent={<CardBack item={items[2]} />}
-          mLeft="12%"
-          mTop="-12%"
-          z="1"
-          r="-17.55deg"
-          id={1}
-        />
-        {/* bottom left */}
-        <FlipCard
-          flippedStates={flippedStates}
-          onClick={() => handleCardClick(3)}
-          frontContent={
-            <CardFront bgColour={items[3].colour} borderColour={"#8ccbe5"}>
-              <SpaceGrotesk style={spaceGroteskStylesCardNumber}>
-                {items[3].year}
-              </SpaceGrotesk>
-            </CardFront>
-          }
-          backContent={<CardBack item={items[3]} />}
-          mLeft="-20%"
-          mTop="13%"
-          z="2"
-          r="9.27deg"
-          id={2}
-        />
-        {/* top left */}
-        <FlipCard
-          flippedStates={flippedStates}
-          onClick={() => handleCardClick(1)}
-          frontContent={
-            <CardFront bgColour={items[1].colour} borderColour={"#bd90d8"}>
-              <SpaceGrotesk style={spaceGroteskStylesCardNumber}>
-                {items[1].year}
-              </SpaceGrotesk>
-            </CardFront>
-          }
-          backContent={<CardBack item={items[1]} />}
-          mLeft="-40%"
-          mTop="-10%"
-          z="3"
-          r="-8.12deg"
-          id={0}
-        />
+        <IntroCardWrapper>
+          {/* bottom right */}
+          <FlipCard
+            flippedStates={flippedStates}
+            onClick={() => handleCardClick(4)}
+            frontContent={
+              <CardFront bgColour={items[4].colour} borderColour={"#bd90d8"}>
+                <SpaceGrotesk style={spaceGroteskStylesCardNumber}>
+                  {items[4].year}
+                </SpaceGrotesk>
+              </CardFront>
+            }
+            backContent={<CardBack item={items[4]} />}
+            styles="bottom: 5%; right: 0;"
+            z="0"
+            r="-6.19deg"
+            id={3}
+          />
+          {/* top right */}
+          <FlipCard
+            flippedStates={flippedStates}
+            onClick={() => handleCardClick(3)}
+            frontContent={
+              <CardFront bgColour={items[3].colour} borderColour={"#8ccbe5"}>
+                <SpaceGrotesk style={spaceGroteskStylesCardNumber}>
+                  {items[3].year}
+                </SpaceGrotesk>
+              </CardFront>
+            }
+            backContent={<CardBack item={items[3]} />}
+            styles="top: 3%; right: 18%;"
+            z="1"
+            r="-17.55deg"
+            id={2}
+          />
+          {/* bottom left */}
+          <FlipCard
+            flippedStates={flippedStates}
+            onClick={() => handleCardClick(2)}
+            frontContent={
+              <CardFront bgColour={items[2].colour} borderColour={"#8ccbe5"}>
+                <SpaceGrotesk style={spaceGroteskStylesCardNumber}>
+                  {items[2].year}
+                </SpaceGrotesk>
+              </CardFront>
+            }
+            backContent={<CardBack item={items[2]} />}
+            styles="bottom: 0; left: 18%;"
+            z="2"
+            r="9.27deg"
+            id={1}
+          />
+          {/* top left */}
+          <FlipCard
+            flippedStates={flippedStates}
+            onClick={() => handleCardClick(1)}
+            frontContent={
+              <CardFront bgColour={items[1].colour} borderColour={"#bd90d8"}>
+                <SpaceGrotesk style={spaceGroteskStylesCardNumber}>
+                  {items[1].year}
+                </SpaceGrotesk>
+              </CardFront>
+            }
+            backContent={<CardBack item={items[1]} />}
+            styles="top: 0; left: 0;"
+            z="3"
+            r="-8.12deg"
+            id={0}
+          />
+        </IntroCardWrapper>
       </IntroCardContainer>
     );
   };
@@ -306,14 +301,14 @@ const PastHackathons = () => {
           {!isMobile && activeIndex !== 0 && (
             <CloseButton onClick={handleCloseCard} />
           )}
-          {activeIndex !== 0 && (
+          {activeIndex !== 0 && activeIndex !== 1 && (
             <ArrowBackButton
               onClick={handleBackArrowClick}
               isMobile={isMobile}
             />
           )}{" "}
           {/* todo animate this*/}
-          {activeIndex !== 0 && (
+          {activeIndex !== 0 && activeIndex !== 4 && (
             <ArrowForwordButton
               onClick={handleForwardArrowClick}
               isMobile={isMobile}
