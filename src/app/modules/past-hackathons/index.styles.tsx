@@ -48,6 +48,12 @@ const IntroCardContainer = styled.div`
   align-items: center;
 `;
 
+const IntroCardWrapper = styled.div`
+  width: 850px;
+  height: 380px;
+  position: relative;
+`;
+
 const ArrowBackButton = styled(IconButton)`
   position: absolute;
 `;
@@ -69,5 +75,6 @@ export {
   PastHackathonsModuleCardsContainer,
   IntroCardContainer,
   CarouselContainer,
+  IntroCardWrapper,
   TopBook,
 };

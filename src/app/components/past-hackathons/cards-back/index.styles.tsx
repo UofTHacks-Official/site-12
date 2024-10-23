@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
 interface CarouselCardBordersProps {
   item: {
@@ -26,11 +26,20 @@ export const CarouselSlides = styled.div<CarouselSlidesProps>`
   align-items: center;
 `;
 
+const rotateAnimation = keyframes`
+  0% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+`;
+
 export const CarouselCardBorders: React.FC<CarouselCardBordersProps> = styled.div<CarouselCardBordersProps>`
   border-radius: ${(props) => props.item.borderRadius};
   background: ${(props) => props.item.colour};
   height: ${(props) => props.height};
-  width: ${(props) => props.width};
+  width: min(${(props) => props.width}, 900px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,6 +52,8 @@ export const CarouselCardBorders: React.FC<CarouselCardBordersProps> = styled.di
     /* Intensify the glow on hover */
     box-shadow: 0 0 40px ${(props) => props.item.colour};
   }
+
+  animation: ${rotateAnimation} 1s forwards;
 `;
 
 interface CarouselCardsProps {
