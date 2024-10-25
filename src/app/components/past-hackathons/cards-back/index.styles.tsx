@@ -18,6 +18,10 @@ interface CarouselSlidesProps {
   height: string;
 }
 
+interface CarouselTextProps {
+  isMobile: boolean;
+}
+
 export const CarouselSlides = styled.div<CarouselSlidesProps>`
   width: 100%;
   height: ${(props) => props.height};
@@ -38,7 +42,7 @@ const rotateAnimation = keyframes`
 export const CarouselCardBorders: React.FC<CarouselCardBordersProps> = styled.div<CarouselCardBordersProps>`
   border-radius: ${(props) => props.item.borderRadius};
   background: ${(props) => props.item.colour};
-  height: ${(props) => props.height};
+  height: max(${(props) => props.height}, 450px);
   width: min(${(props) => props.width}, 900px);
   display: flex;
   justify-content: center;
@@ -71,13 +75,14 @@ export const CarouselCards = styled.div<CarouselCardsProps>`
   align-items: center;
 `;
 
-export const CarouselCardText = styled.h1`
-  width: 90%;
+export const CarouselCardText = styled.h1<CarouselTextProps>`
+  width: ${(props) => (props.isMobile ? "75%" : "90%")};
   color: #225c91;
   font-size: 50px;
   display: flex;
-  flex-direction: row;
+  flex-direction: ${(props) => (props.isMobile ? "column" : "row")};
   margin-top: 20px;
+  align-items: center;
 `;
 
 export const CarouselCardTextNumber = styled.h1``;
@@ -95,19 +100,23 @@ export const CarouselCardTextOther = styled.div<CarouselCardTextOtherProps>`
 
 export const CarouselCardTextTheme = styled.h1``;
 export const CarouselCardTextSubText = styled.h1``;
-export const CarouselCardImages = styled.div`
+export const CarouselCardImages = styled.div<CarouselTextProps>`
   width: 90%;
   height: 100%;
   background: #ffffff;
   display: flex;
-  justify-content: space-between;
+  justify-content: ${(props) => (props.isMobile ? "center" : "space-between")};
+  gap: 10px;
   align-items: center;
 `;
-export const CarouselCardImage = styled.img`
-  width: 30%;
+export const CarouselCardImage = styled.img<CarouselTextProps>`
+  width: ${(props) => (props.isMobile ? "min(48%, 220px)" : "32%")};
+  height: 60%;
   border-radius: 25px;
   background: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
+  object-fit: cover;
+  object-position: center center;
 `;

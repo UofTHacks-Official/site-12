@@ -22,9 +22,7 @@ const Hero = () => {
           <HeroHeader isMobile={isMobile}>UofTHacks 12</HeroHeader>
           <DescriptionContainer isMobile={isMobile}>
             <LeftDescription isMobile={isMobile}>
-              At UofTHacks, we strive to provide a space where everyone feels
-              supported, empowered, and encouraged to transform their dreams
-              into reality!
+              January 17-19, 2025 | In-person event
             </LeftDescription>
             <RightDescription isMobile={isMobile}>
               Redefine possibilities—explore new ideas at UofTHacks!

@@ -52,30 +52,32 @@ const PastHackathons = () => {
       colour: "#ffcdf8",
       year: "8",
       theme: "Connectivity",
-      subText: "yapyapyapyap",
+      subText:
+        "UofTHacks 8 embodied 'Connectivity', bringing hackers together in a virtual space to build projects that bridged gaps and strengthened connections.",
       padding: isMobile ? "10px" : "20px",
       borderRadius: isMobile ? "25px" : "45px",
-      img1: "11-1.jpg",
-      img2: "11-2.jpg",
-      img3: "11-3.jpg",
+      img1: "8-1.png",
+      img2: "8-x.png",
+      img3: "8-xx.png",
     },
     {
       colour: "#bae9fd",
       year: "9",
       theme: "Restoration",
-      subText: "yapyapyapyap",
+      subText:
+        "UofTHacks 9 focused on 'Restoration', as hackers worked virtually to revive and reimagine ideas, creating solutions that sparked renewal.",
       padding: isMobile ? "10px" : "20px",
       borderRadius: isMobile ? "25px" : "45px",
-      img1: "11-1.jpg",
-      img2: "11-2.jpg",
-      img3: "11-3.jpg",
+      img1: "9-1.jpg",
+      img2: "9-2.png",
+      img3: "9-3.jpg",
     },
     {
       colour: "#b5fff7",
       year: "10",
       theme: "Exploration",
       subText:
-        "UofTHacks launched us into outer space on a journey of exploration, where hackers pushed boundaries and brought bold, innovative ideas to life in an unforgettable experience!",
+        "UofTHacks 10 launched us into 'Exploration', where hackers ventured into new frontiers, pushing the limits of innovation and creativity.",
       padding: isMobile ? "10px" : "20px",
       borderRadius: isMobile ? "25px" : "45px",
       img1: "10-1.JPG",
@@ -87,7 +89,7 @@ const PastHackathons = () => {
       year: "11",
       theme: "Nostalgia",
       subText:
-        "UofTHacks took us on a nostalgic trip down memory lane, where for 36 hours, hackers channeled the past to inspire their creations of the future.",
+        "UofTHacks 11 took us on a nostalgic journey, using the past as inspiration to shape imaginative, forward-thinking creations.",
       padding: isMobile ? "10px" : "20px",
       borderRadius: isMobile ? "25px" : "45px",
       img1: "11-1.jpg",
@@ -201,7 +203,7 @@ const PastHackathons = () => {
   const handleCardClick: (targetSlide: number) => void = (
     targetSlide: number
   ) => {
-    shouldAnimate.current = false;
+    shouldAnimate.current = true;
     setActiveIndex(targetSlide);
   };
 
@@ -325,6 +327,7 @@ const PastHackathons = () => {
             duration={shouldAnimate.current ? 500 : 0}
             indicators={false}
             index={activeIndex}
+            height={"800px"}
             onChange={(now?: number) => {
               if (now !== undefined) {
                 setActiveIndex(now);

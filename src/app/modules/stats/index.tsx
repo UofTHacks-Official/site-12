@@ -1,11 +1,9 @@
 import {
   StatsModuleContainer,
-  StatsImageWrapper,
+  StatsImage,
   TopBook,
   BottomBook,
 } from "@/app/modules/stats/index.styles";
-import FullBooksSVG from "../../../../public/assets/main-books.svg";
-import Image from "next/image";
 import { useMobileDetect } from "@/app/hooks/useMobileDetect";
 
 const Stats = () => {
@@ -14,15 +12,16 @@ const Stats = () => {
   return (
     <StatsModuleContainer isMobile={isMobile} id="Stats-module">
       <TopBook src="/assets/stats/book-top-right.svg" />
-      <StatsImageWrapper isMobile={isMobile}>
+      <StatsImage isMobile={isMobile} src="/assets/stats/main-books.png" />
+      {/* <StatsImage isMobile={isMobile}>
         <Image
           src={FullBooksSVG} // Use the full SVG on larger screens
           alt="books"
           layout="fill"
           objectFit="contain"
           objectPosition={"center"} // Center the image on larger screens
-        />
-      </StatsImageWrapper>
+        /> */}
+      {/* </StatsImageWrapper> */}
       <BottomBook src="/assets/stats/book-bottom-left.svg" />
     </StatsModuleContainer>
   );

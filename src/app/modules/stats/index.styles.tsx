@@ -10,7 +10,7 @@ interface MobileProps {
 
 const StatsModuleContainer = styled(ModuleContainer)<MobileProps>`
   position: relative;
-  ${(props) => (props.isMobile ? "height: 400px;" : "")}
+  ${(props) => (props.isMobile ? "height: min(700px, 120vw);" : "")}
   overflow: hidden;
   display: flex;
   align-items: ${(props) => (props.isMobile ? "flex-start" : "center")};
@@ -18,12 +18,13 @@ const StatsModuleContainer = styled(ModuleContainer)<MobileProps>`
   background-color: #dcf4fd;
 `;
 
-const StatsImageWrapper = styled.div<MobileProps>`
-  position: relative;
-  left: ${(props) => (props.isMobile ? "0" : "-50px")};
-  width: ${(props) => (props.isMobile ? "100%" : "110vw")};
-  height: ${(props) => (props.isMobile ? "90%" : "100%")};
-  overflow: ${(props) => (props.isMobile ? "hidden" : "visible")};
+const StatsImage = styled("img")<MobileProps>`
+  position: absolute;
+  width: ${(props) =>
+    props.isMobile ? "min(150%, 800px)" : "min(80%, 1400px)"};
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%);
 `;
 
 const TopBook = styled("img")`
@@ -42,4 +43,4 @@ const BottomBook = styled("img")`
   filter: blur(4px);
 `;
 
-export { StatsModuleContainer, StatsImageWrapper, TopBook, BottomBook };
+export { StatsModuleContainer, StatsImage, TopBook, BottomBook };
