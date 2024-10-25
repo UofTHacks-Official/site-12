@@ -19,7 +19,7 @@ interface CarouselSlidesProps {
 }
 
 interface CarouselTextProps {
-  isMobile: boolean;
+  isMobile: boolean | null;
 }
 
 export const CarouselSlides = styled.div<CarouselSlidesProps>`
