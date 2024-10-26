@@ -44,23 +44,21 @@ const Subscribe = () => {
           hacker_email: formData.email,
         }),
       });
-            if (response.status === 200) {
-                setResponseMsg("Your email has successfully been added to the mailing list!");
-                setFormData({
-                    email: "",
-                })
-            } else if (response.status === 400) {
-                const responseData = await response.json();
-                if (responseData.message.includes("invalid")) {
-                    setResponseMsg("The email you entered is invalid, please try again.");
-                } else {
-                    setResponseMsg("Your email has already been added to the mailing list.");
-                }
-            } else {
-                setResponseMsg("Error submitting email.");
-            }
-        } catch (error) {
-            setResponseMsg("Error submitting email.");
+      if (response.status === 200) {
+        setResponseMsg(
+          "Your email has successfully been added to the mailing list!"
+        );
+        setFormData({
+          email: "",
+        });
+      } else if (response.status === 400) {
+        const responseData = await response.json();
+        if (responseData.message.includes("invalid")) {
+          setResponseMsg("The email you entered is invalid, please try again.");
+        } else {
+          setResponseMsg(
+            "Your email has already been added to the mailing list."
+          );
         }
       } else {
         setResponseMsg("Error submitting email.");
