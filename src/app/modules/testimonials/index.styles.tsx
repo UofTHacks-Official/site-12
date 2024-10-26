@@ -13,7 +13,7 @@ const TestimonialsModuleContainer = styled(ModuleContainer)`
 const TestimonialsModuleBackground = styled(ModuleBackground)``;
 
 const StyledContentContainer = styled.div<{ isMobile: boolean | null }>`
-  padding: ${(props) => (props.isMobile ? "0.6rem 1rem" : "0.6rem 5rem")};
+  padding: ${(props) => (props.isMobile ? "0.6rem 1rem" : "0.6rem 10vw")};
   display: flex;
   flex-direction: column;
   gap: ${(props) => (props.isMobile ? "1rem" : "2.5rem")};

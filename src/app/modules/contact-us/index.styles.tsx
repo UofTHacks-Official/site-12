@@ -12,15 +12,18 @@ type MobileProps = {
 };
 
 export const ContactUsModuleContainer = styled(ModuleContainer)`
-  height: 100vh;
-  min-height: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    height: 100%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `;
 
-export const ContactUsModuleBackground = styled(ModuleBackground)``;
+export const ContactUsModuleBackground = styled(ModuleBackground)`
+    height: 100%;
+    
+`;
 
 export const InputWrapper = styled.div<MobileProps>`
   display: flex;
@@ -49,13 +52,14 @@ export const Container = styled.div<MobileProps>`
 `;
 
 export const StyledHeader = styled(SpaceGrotesk)<MobileProps>`
-  color: var(--Neutral-600, #191a1b);
-  font-size: ${({ isMobile }) => (isMobile ? "32px" : "45px")};
-  font-weight: var(--Heading2-weight, 700);
-  line-height: ${({ isMobile }) => (isMobile ? "48px" : "72px")};
-  margin-bottom: ${({ isMobile }) => (isMobile ? "10px" : "20px")};
-  text-align: left;
-  letter-spacing: 0rem;
+    color: var(--Neutral-600, #191a1b);
+    font-size: ${({isMobile}) => (isMobile ? "32px" : "45px")};
+    font-weight: var(--Heading2-weight, 700);
+    line-height: ${({isMobile}) => (isMobile ? "48px" : "72px")};
+    margin-bottom: ${({isMobile}) => (isMobile ? "10px" : "20px")};
+    padding-top: ${({isMobile}) => (isMobile ? "30px" : "0px")};
+    text-align: left;
+    letter-spacing: 0rem;
 `;
 
 export const StyledParagraph = styled(Manrope)<MobileProps>`
@@ -69,7 +73,9 @@ export const StyledParagraph = styled(Manrope)<MobileProps>`
 `;
 
 export const StyledFormResponsePrompt = styled(StyledParagraph)<MobileProps>`
-  font-size: ${({ isMobile }) => (isMobile ? "12px" : "18px")};
+    font-size: ${({isMobile}) => (isMobile ? "14px" : "18px")};
+    padding: 0;
+    line-height: ${({isMobile}) => (isMobile ? "14px" : "18px")};
 `;
 
 export const Input = styled.input<MobileProps>`
@@ -127,9 +133,7 @@ const StyledIcon = styled(Image)`
   overflow: visible;
 `;
 
-export const ContactUsRenderIcon = styled(StyledIcon)<{
-  isMobile?: boolean | null;
-}>`
-  width: ${({ isMobile }) => (isMobile ? "200px" : "400px")};
-  height: ${({ isMobile }) => (isMobile ? "200px" : "400px")};
+export const ContactUsRenderIcon = styled(StyledIcon)<{ isMobile?: boolean | null }>`
+    width: ${({ isMobile }) => (isMobile ? '180px' : '360px')};
+    height: ${({ isMobile }) => (isMobile ? '180px' : '360px')};
 `;

@@ -50,7 +50,7 @@ const Logo = styled.div`
   font-size: 24px;
   font-weight: bold;
 
-  padding: 10px;
+  padding: 10px 10px 4px;
   background: rgba(34, 92, 144, 0.5);
   backdrop-filter: blur(6px);
   border-radius: 10px;

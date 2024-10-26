@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {
     ContactUsModuleContainer,
     FormContainer,
@@ -13,7 +13,10 @@ import {
 } from "./index.styles";
 import {useMobileDetect} from "@/app/hooks/useMobileDetect";
 import {Stack} from "@mui/material";
+import ReCAPTCHA from "react-google-recaptcha";
 
+
+const CAPTCHA_SITE_KEY = "6Lcu7WYqAAAAAKcjNMaz3W2x8KN0hCpeZggIZXEY"
 const ContactUs = () => {
     const isMobile = useMobileDetect();
     const [formData, setFormData] = useState({
@@ -22,6 +25,7 @@ const ContactUs = () => {
         reason: "",
     });
     const [responseMsg, setResponseMsg] = useState("");
+    const [captchaToken, setCaptchaToken] = useState("");
 
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -33,13 +37,24 @@ const ContactUs = () => {
         }));
     };
 
+    const handleCaptchaChange = (token: string | null) => {
+        if (token) {
+            setCaptchaToken(token);
+        }
+    };
+
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setResponseMsg("");
 
         if (!formData.name || !formData.email || !formData.reason) {
             setResponseMsg("Please fill out all fields.")
-            return
+            return;
+        }
+
+        if (!captchaToken) {
+            setResponseMsg("Please verify that you're not a robot.");
+            return;
         }
 
         const endpoint = "https://api.uofthacks.com/12/email_list/contact_us";
@@ -50,11 +65,13 @@ const ContactUs = () => {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({ ...formData, captchaToken }),
             });
 
             if (response.status === 200) {
                 setResponseMsg("Thank you for contacting us! We'll get back to you shortly.");
+                setFormData({ name: "", email: "", reason: "" });
+                setCaptchaToken("");
             } else if (response.status === 400) {
                 const responseData = await response.json();
                 if (responseData.message.includes("invalid")) {
@@ -68,9 +85,10 @@ const ContactUs = () => {
         }
     };
 
+
     return (
         <ContactUsModuleContainer id="Contact-module">
-            <ContactUsModuleBackground src="/background/contact-us.svg"/>
+            <ContactUsModuleBackground src={isMobile ? "/background/contact-us-mobile.svg" : "/background/contact-us.svg"}/>
             <Container isMobile={isMobile}>
                 <Stack>
                     <StyledHeader isMobile={isMobile}>Contact Us</StyledHeader>
@@ -102,6 +120,10 @@ const ContactUs = () => {
                             value={formData.reason}
                             onChange={handleChange}
                             isMobile={isMobile}
+                        />
+                        <ReCAPTCHA
+                            sitekey={CAPTCHA_SITE_KEY}
+                            onChange={handleCaptchaChange}
                         />
                         <SubmitButton type="submit" isMobile={isMobile}>
                             <ManropeSubmitButtonText>

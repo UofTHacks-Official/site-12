@@ -5,31 +5,42 @@ import {
   HeroHeader,
   HeroModuleContainer,
   LedgeSVG,
-  LeftDescription,
-  RightDescription,
+  GenericDescription,
+  ScrollButton,
+  ScrollButtonText,
 } from "@/app/modules/hero/index.styles";
 import { useMobileDetect } from "@/app/hooks/useMobileDetect";
 
 const Hero = () => {
   const isMobile = useMobileDetect();
 
+  const handleScroll = () => {
+    const targetSection = document.getElementById("Subscribe-module");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <HeroModuleContainer id="hero-module">
-      <HeroContentContainer>
-        <HeroContent isMobile={isMobile}>
-          <HeroHeader isMobile={isMobile}>UofTHacks 12</HeroHeader>
-          <DescriptionContainer isMobile={isMobile}>
-            <LeftDescription isMobile={isMobile}>
-              January 17-19, 2025 | In-person event
-            </LeftDescription>
-            <RightDescription isMobile={isMobile}>
-              Redefine possibilities—explore new ideas at UofTHacks!
-            </RightDescription>
-          </DescriptionContainer>
-          <LedgeSVG isMobile={isMobile} />
-        </HeroContent>
-      </HeroContentContainer>
-    </HeroModuleContainer>
+      <HeroModuleContainer id="hero-module">
+        <HeroContentContainer>
+          <HeroContent isMobile={isMobile}>
+            <DescriptionContainer isMobile={isMobile}>
+              <GenericDescription isMobile={isMobile}>
+                January 17-19, 2025 | In-person event
+              </GenericDescription>
+              <HeroHeader isMobile={isMobile}>UofTHacks 12</HeroHeader>
+              <GenericDescription isMobile={isMobile}>
+                Redefine possibilities—explore new ideas at UofTHacks!
+              </GenericDescription>
+              <ScrollButton onClick={handleScroll} isMobile={isMobile}>
+                <ScrollButtonText>Be first to apply!</ScrollButtonText>
+              </ScrollButton>
+            </DescriptionContainer>
+            <LedgeSVG isMobile={isMobile} />
+          </HeroContent>
+        </HeroContentContainer>
+      </HeroModuleContainer>
   );
 };
 

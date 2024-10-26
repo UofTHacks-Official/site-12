@@ -6,7 +6,7 @@ const AboutUsModule = () => {
     <AboutUsModuleContainer>
       <AboutUs />
     </AboutUsModuleContainer>
-  );
+  )
 };
 
 export default AboutUsModule;
