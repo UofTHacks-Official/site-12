@@ -36,7 +36,7 @@ const Hero = () => {
                 Redefine possibilities—explore new ideas at UofTHacks!
               </GenericDescription>
               <ScrollButton onClick={handleScroll} isMobile={isMobile}>
-                <ScrollButtonText>Be first to reply!</ScrollButtonText>
+                <ScrollButtonText>Be first to apply!</ScrollButtonText>
               </ScrollButton>
             </DescriptionContainer>
             <LedgeSVG isMobile={isMobile} />
