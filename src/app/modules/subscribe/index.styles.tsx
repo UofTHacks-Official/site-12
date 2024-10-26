@@ -10,12 +10,13 @@ type MobileProps = {
 };
 
 export const SubscribeModuleContainer = styled(ModuleContainer)`
-  height: 50vh;
+  height: 400px;
   min-height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #dcf4fd;
 `;
 
 export const SubscribeModuleBackground = styled(ModuleBackground)``;
@@ -62,7 +63,7 @@ export const StyledHeader = styled(Manrope)<MobileProps>`
 `;
 
 export const StyledParagraph = styled(Manrope)<MobileProps>`
-  width: ${({ isMobile }) => (isMobile ? "100%" : "650px")};
+  width: 100%;
   color: var(--Neutral-600, #191a1b);
   font-size: ${({ isMobile }) => (isMobile ? "15px" : "18px")};
   font-weight: var(--Subtitle1-weight, 600);

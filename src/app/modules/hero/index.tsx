@@ -1,6 +1,5 @@
 import {
   DescriptionContainer,
-  HeroBackground,
   HeroContent,
   HeroContentContainer,
   HeroHeader,
@@ -24,7 +23,6 @@ const Hero = () => {
 
   return (
       <HeroModuleContainer id="hero-module">
-        <HeroBackground src="/background/hero.svg" />
         <HeroContentContainer>
           <HeroContent isMobile={isMobile}>
             <DescriptionContainer isMobile={isMobile}>
