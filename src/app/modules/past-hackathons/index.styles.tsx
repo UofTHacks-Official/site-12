@@ -10,7 +10,7 @@ import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRound
 const PastHackathonsModuleContainer = styled(ModuleContainer)`
   background-color: #225c90;
   height: 100vh;
-  min-height: 600px;
+  min-height: 750px;
   width: 100vw;
   max-width: 100vw;
   display: flex;
@@ -29,7 +29,7 @@ const PastHackathonsModuleTitle = styled.h1`
 
 const PastHackathonsModuleCardsContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  height: max(100vh, 550px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@ const CarouselContainer = styled.div`
 
 const IntroCardContainer = styled.div`
   width: 100%;
-  height: 80vh;
+  height: max(80vh, 500px);
   display: flex;
   justify-content: center;
   align-items: center;

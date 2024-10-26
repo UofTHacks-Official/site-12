@@ -48,11 +48,12 @@ export const Container = styled.div<MobileProps>`
   );
   border: 1px solid #0daef1;
   border-radius: 10px;
-  width: ${({ isMobile }) => (isMobile ? "min(550px, 95%)" : "")};
+  width: ${({ isMobile }) =>
+    isMobile ? "min(550px, 95%)" : "min(80%, 1040px)"};
 `;
 
 export const StyledHeader = styled(Manrope)<MobileProps>`
-  width: ${({ isMobile }) => (isMobile ? "100%" : "650px")};
+  width: 100%;
   color: var(--Neutral-600, #191a1b);
   font-size: ${({ isMobile }) => (isMobile ? "20px" : "28px")};
   font-weight: var(--Subtitle1-weight, 600);
