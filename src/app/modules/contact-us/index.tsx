@@ -49,7 +49,7 @@ const ContactUs = () => {
 
         if (!formData.name || !formData.email || !formData.reason) {
             setResponseMsg("Please fill out all fields.")
-            return
+            return;
         }
 
         if (!captchaToken) {
@@ -70,6 +70,8 @@ const ContactUs = () => {
 
             if (response.status === 200) {
                 setResponseMsg("Thank you for contacting us! We'll get back to you shortly.");
+                setFormData({ name: "", email: "", reason: "" });
+                setCaptchaToken("");
             } else if (response.status === 400) {
                 const responseData = await response.json();
                 if (responseData.message.includes("invalid")) {
@@ -82,6 +84,7 @@ const ContactUs = () => {
             setResponseMsg("Something went wrong. Please try again.");
         }
     };
+
 
     return (
         <ContactUsModuleContainer id="Contact-module">

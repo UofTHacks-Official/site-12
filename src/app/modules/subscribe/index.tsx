@@ -31,7 +31,7 @@ const Subscribe = () => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setResponseMsg(""); // Clear previous messages
+        setResponseMsg("");
 
         const endpoint = "https://api.uofthacks.com/12/email_list/add";
 
@@ -48,6 +48,9 @@ const Subscribe = () => {
 
             if (response.status === 200) {
                 setResponseMsg("Your email has successfully been added to the mailing list!");
+                setFormData({
+                    email: "",
+                })
             } else if (response.status === 400) {
                 const responseData = await response.json();
                 if (responseData.message.includes("invalid")) {
