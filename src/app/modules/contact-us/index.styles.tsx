@@ -68,6 +68,8 @@ export const StyledParagraph = styled(Manrope)<MobileProps>`
 
 export const StyledFormResponsePrompt = styled(StyledParagraph)<MobileProps>`
     font-size: ${({isMobile}) => (isMobile ? "12px" : "18px")};
+    padding: 0;
+    line-height: 10px;
 `;
 
 
@@ -120,6 +122,6 @@ export const SubmitButton = styled.button<MobileProps>`
 `;
 
 export const ContactUsRenderIcon = styled(StyledIcon)<{ isMobile?: boolean | null }>`
-    width: ${({ isMobile }) => (isMobile ? '200px' : '400px')};
-    height: ${({ isMobile }) => (isMobile ? '200px' : '400px')};
+    width: ${({ isMobile }) => (isMobile ? '180px' : '360px')};
+    height: ${({ isMobile }) => (isMobile ? '180px' : '360px')};
 `;
