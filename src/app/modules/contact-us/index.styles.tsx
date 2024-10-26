@@ -72,7 +72,7 @@ export const StyledParagraph = styled(Manrope)<MobileProps>`
 export const StyledFormResponsePrompt = styled(StyledParagraph)<MobileProps>`
     font-size: ${({isMobile}) => (isMobile ? "14px" : "18px")};
     padding: 0;
-    line-height: 10px;
+    line-height: ${({isMobile}) => (isMobile ? "14px" : "18px")};
 `;
 
 
