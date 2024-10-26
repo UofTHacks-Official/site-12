@@ -16,7 +16,6 @@ export const SubscribeModuleContainer = styled(ModuleContainer)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 80px;
 `;
 
 export const SubscribeModuleBackground = styled(ModuleBackground)``;

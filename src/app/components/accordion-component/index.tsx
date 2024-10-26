@@ -3,6 +3,7 @@ import { AccordionDetails, AccordionSummary } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { MuiAccordionStyled } from "@/app/components/accordion-component/index.styles";
 import Manrope from "@/app/components/shared/fonts/manrope";
+import {useMobileDetect} from "@/app/hooks/useMobileDetect";
 
 interface AccordionProps {
   title: string;
@@ -10,9 +11,10 @@ interface AccordionProps {
 }
 
 const AccordianComponent = ({ title, content }: AccordionProps) => {
+  const isMobile = useMobileDetect()
   const manRopeTitleStyles = {
     color: "#191A1B",
-    fontSize: "1.25rem",
+    fontSize: isMobile ? "1rem" : "1.25rem",
     letterSpacing: "0.0rem",
     fontWeight: 600,
     textAlign: "left",
@@ -20,7 +22,7 @@ const AccordianComponent = ({ title, content }: AccordionProps) => {
 
   const manRopeContentStyles = {
     color: "#191A1B",
-    fontSize: 16,
+    fontSize: isMobile ? 12 : 16,
     textAlign: "left",
     padding: "0 1.5rem",
     letterSpacing: "0.0rem",
