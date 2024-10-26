@@ -6,9 +6,10 @@ import {
 import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
 import Manrope from "@/app/components/shared/fonts/manrope";
 
-const HeroModuleContainer = styled(ModuleContainer)``;
-
-const HeroBackground = styled(ModuleBackground)``;
+const HeroModuleContainer = styled(ModuleContainer)`
+  background: url("/background/hero.jpg") no-repeat center center;
+  background-size: 100% 100%;
+`;
 
 type MobileProps = {
   isMobile?: boolean | null;
@@ -93,7 +94,6 @@ const RightDescription = styled(GenericDescription)<MobileProps>`
 
 export {
   HeroModuleContainer,
-  HeroBackground,
   HeroContentContainer,
   HeroContent,
   HeroHeader,

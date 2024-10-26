@@ -10,7 +10,7 @@ interface MobileProps {
 
 const StatsModuleContainer = styled(ModuleContainer)<MobileProps>`
   position: relative;
-  ${(props) => (props.isMobile ? "height: min(700px, 120vw);" : "")}
+  height: ${(props) => (props.isMobile ? "min(700px, 120vw)" : "1000px")};
   overflow: hidden;
   display: flex;
   align-items: ${(props) => (props.isMobile ? "flex-start" : "center")};
@@ -21,7 +21,7 @@ const StatsModuleContainer = styled(ModuleContainer)<MobileProps>`
 const StatsImage = styled("img")<MobileProps>`
   position: absolute;
   width: ${(props) =>
-    props.isMobile ? "min(150%, 800px)" : "min(80%, 1400px)"};
+    props.isMobile ? "min(150%, 800px)" : "min(95%, 1400px)"};
   top: 50%;
   left: 48%;
   transform: translate(-50%, -50%);

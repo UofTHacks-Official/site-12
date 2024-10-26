@@ -1,18 +1,21 @@
 import {
-  AboutUsDesktopContainer,
+  AboutUsContainer,
   CenterContainer,
   AboutUsDescription,
   AboutHeader,
   SvgBackgroundContainer,
   StyledIcon,
   StyledLeftImage,
+  StyledMobileImage,
   StyledRightImage,
   StyledKeys,
-} from "@/app/components/about-us/desktop/index.styles";
+} from "@/app/components/about-us/index.styles";
 import Manrope from "@/app/components/shared/fonts/manrope";
 import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
+import { useMobileDetect } from "@/app/hooks/useMobileDetect";
 
-const AboutUsDesktop = () => {
+const AboutUs = () => {
+  const isMobile = useMobileDetect();
   const aboutUsDescription = (
     <>
       <p>
@@ -32,43 +35,52 @@ const AboutUsDesktop = () => {
   );
 
   return (
-    <AboutUsDesktopContainer>
-      <SvgBackgroundContainer>
+    <AboutUsContainer isMobile={isMobile}>
+      <SvgBackgroundContainer isMobile={isMobile}>
         <StyledIcon
-          src="/assets/about/about-icons-bkg.svg"
+          src={
+            isMobile
+              ? "/assets/about/mobile-icons-bkg.svg"
+              : "/assets/about/about-icons-bkg.svg"
+          }
           alt="Background Graphics"
           width={100}
           height={100}
         />
       </SvgBackgroundContainer>
-      <CenterContainer>
+      <CenterContainer isMobile={isMobile}>
         <SpaceGrotesk>
-          <AboutHeader>Canada’s 1st student-run hackathon</AboutHeader>
+          <AboutHeader isMobile={isMobile}>
+            Canada’s 1st student-run hackathon
+          </AboutHeader>
         </SpaceGrotesk>
         <Manrope>
           <AboutUsDescription>{aboutUsDescription}</AboutUsDescription>
         </Manrope>
         <StyledLeftImage
+          isMobile={isMobile}
           src="/assets/about/left-image.svg"
           alt="Left img"
-          width={100}
-          height={100}
         />
+        {isMobile && (
+          <StyledMobileImage
+            src="/assets/about/mobile-btmright.svg"
+            alt="Right img"
+          />
+        )}
         <StyledRightImage
+          isMobile={isMobile}
           src="/assets/about/right-image.svg"
           alt="Right img"
-          width={100}
-          height={100}
         />
         <StyledKeys
+          isMobile={isMobile}
           src="/assets/about/new-keys.svg"
           alt="Keys graphic"
-          width={100}
-          height={100}
         />
       </CenterContainer>
-    </AboutUsDesktopContainer>
+    </AboutUsContainer>
   );
 };
 
-export default AboutUsDesktop;
+export default AboutUs;

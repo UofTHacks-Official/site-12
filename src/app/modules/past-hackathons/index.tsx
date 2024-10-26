@@ -18,7 +18,6 @@ import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { useMobileDetect } from "@/app/hooks/useMobileDetect";
-import { SvgBackgroundContainer } from "@/app/components/about-us/desktop/index.styles";
 
 interface ArrowButtonProps {
   onClick: () => void;
