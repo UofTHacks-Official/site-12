@@ -14,7 +14,7 @@ const AboutUs = () => {
       <AboutUsModuleBackground src="/background/about-us.svg" />
       {isMobile ? <AboutUsMobile /> : <AboutUsDesktop />}
     </AboutUsModuleContainer>
-  );
+  )
 };
 
 export default AboutUs;

@@ -93,7 +93,7 @@ interface SpaceGroteskSectionTitleProps {
 }
 
 export const SpaceGroteskSectionTitle = styled(SpaceGrotesk)<SpaceGroteskSectionTitleProps>`
-    text-align: start;
+    text-align: ${({ isMobile }) => (isMobile ? 'center' : `start`)};
     font-size: ${({ isMobile }) => (isMobile ? '2rem' : '3.75rem')};
     letter-spacing: 0rem;
 `;

@@ -38,7 +38,7 @@ export const Container = styled.div<MobileProps>`
     flex-direction: ${({ isMobile }) => (isMobile ? "column" : "row")};
     justify-content: ${({ isMobile }) => (isMobile ? "center" : "center")};
     align-items: ${({ isMobile }) => (isMobile ? "center" : "center")};
-    gap: ${({ isMobile }) => (isMobile ? "20px" : "30px")};
+    gap: ${({ isMobile }) => (isMobile ? "0px" : "30px")};
     width: 100%;
     padding: ${({ isMobile }) => (isMobile ? "20px" : "40px")};
     max-width: 1200px;
@@ -51,6 +51,7 @@ export const StyledHeader = styled(SpaceGrotesk)<MobileProps>`
     font-weight: var(--Heading2-weight, 700);
     line-height: ${({isMobile}) => (isMobile ? "48px" : "72px")};
     margin-bottom: ${({isMobile}) => (isMobile ? "10px" : "20px")};
+    padding-top: ${({isMobile}) => (isMobile ? "30px" : "0px")};
     text-align: left;
     letter-spacing: 0rem;
 `;

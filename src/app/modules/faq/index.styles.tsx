@@ -7,7 +7,6 @@ import {
 const FAQModuleContainer = styled(ModuleContainer)`
     height: 100%;
     min-height: 600px;
-    padding-top: 80px;
 `;
 
 const FAQModuleBackground = styled(ModuleBackground)`
@@ -15,10 +14,11 @@ const FAQModuleBackground = styled(ModuleBackground)`
 `;
 
 const StyledContentContainer = styled.div<{ isMobile: boolean | null }>`
-    padding: ${(props) => (props.isMobile ? "0.6rem 1rem" : "0.6rem 5rem")};
+    padding: ${(props) => (props.isMobile ? "0.6rem 1rem" : "0.6rem 10vw")};
     display: flex;
     flex-direction: column;
     gap: ${(props) => (props.isMobile ? "1rem" : "2.5rem")};
+    padding-bottom: 20px;
 `;
 const StyledAccordionContainer = styled.div`
     display: flex;

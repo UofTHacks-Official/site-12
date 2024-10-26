@@ -33,7 +33,7 @@ const TestimonialsMobile: React.FC = () => {
                 bottom: 0,
                 left: "50%",
                 transform: "translateX(-50%)",
-                maxWidth: "300px",
+                maxWidth: "380px",
                 padding: 2,
             }}
         >
