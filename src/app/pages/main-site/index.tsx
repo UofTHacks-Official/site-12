@@ -28,7 +28,6 @@ interface Site12Props {
 const Site12 = ({children}: Site12Props) => {
     return (
         <MainContainer id="start">
-            <MLHBanner />
             {children}
             <Hero/>
             <AboutUs/>
