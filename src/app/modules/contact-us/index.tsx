@@ -85,7 +85,7 @@ const ContactUs = () => {
 
     return (
         <ContactUsModuleContainer id="Contact-module">
-            <ContactUsModuleBackground src="/background/contact-us.svg"/>
+            <ContactUsModuleBackground src={isMobile ? "/background/contact-us-mobile.svg" : "/background/contact-us.svg"}/>
             <Container isMobile={isMobile}>
                 <Stack>
                     <StyledHeader isMobile={isMobile}>Contact Us</StyledHeader>

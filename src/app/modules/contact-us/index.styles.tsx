@@ -9,7 +9,7 @@ type MobileProps = {
 }
 
 export const ContactUsModuleContainer = styled(ModuleContainer)`
-    height: 100vh;
+    height: 100%;
     min-height: 600px;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,10 @@ export const ContactUsModuleContainer = styled(ModuleContainer)`
     justify-content: center;
 `;
 
-export const ContactUsModuleBackground = styled(ModuleBackground)``;
+export const ContactUsModuleBackground = styled(ModuleBackground)`
+    height: 100%;
+    
+`;
 
 export const InputWrapper = styled.div<MobileProps>`
     display: flex;
@@ -38,7 +41,7 @@ export const Container = styled.div<MobileProps>`
     flex-direction: ${({ isMobile }) => (isMobile ? "column" : "row")};
     justify-content: ${({ isMobile }) => (isMobile ? "center" : "center")};
     align-items: ${({ isMobile }) => (isMobile ? "center" : "center")};
-    gap: ${({ isMobile }) => (isMobile ? "0px" : "30px")};
+    gap: ${({ isMobile }) => (isMobile ? "20px" : "30px")};
     width: 100%;
     padding: ${({ isMobile }) => (isMobile ? "20px" : "40px")};
     max-width: 1200px;
@@ -67,7 +70,7 @@ export const StyledParagraph = styled(Manrope)<MobileProps>`
 `;
 
 export const StyledFormResponsePrompt = styled(StyledParagraph)<MobileProps>`
-    font-size: ${({isMobile}) => (isMobile ? "12px" : "18px")};
+    font-size: ${({isMobile}) => (isMobile ? "14px" : "18px")};
     padding: 0;
     line-height: 10px;
 `;
@@ -122,6 +125,6 @@ export const SubmitButton = styled.button<MobileProps>`
 `;
 
 export const ContactUsRenderIcon = styled(StyledIcon)<{ isMobile?: boolean | null }>`
-    width: ${({ isMobile }) => (isMobile ? '160px' : '360px')};
-    height: ${({ isMobile }) => (isMobile ? '160px' : '360px')};
+    width: ${({ isMobile }) => (isMobile ? '180px' : '360px')};
+    height: ${({ isMobile }) => (isMobile ? '180px' : '360px')};
 `;
