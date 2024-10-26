@@ -122,6 +122,6 @@ export const SubmitButton = styled.button<MobileProps>`
 `;
 
 export const ContactUsRenderIcon = styled(StyledIcon)<{ isMobile?: boolean | null }>`
-    width: ${({ isMobile }) => (isMobile ? '180px' : '360px')};
-    height: ${({ isMobile }) => (isMobile ? '180px' : '360px')};
+    width: ${({ isMobile }) => (isMobile ? '160px' : '360px')};
+    height: ${({ isMobile }) => (isMobile ? '160px' : '360px')};
 `;
