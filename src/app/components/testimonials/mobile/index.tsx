@@ -30,7 +30,7 @@ const TestimonialsMobile: React.FC = () => {
         <Box
             sx={{
                 position: "absolute",
-                bottom: 0,
+                top: 190,
                 left: "50%",
                 transform: "translateX(-50%)",
                 maxWidth: "380px",
@@ -49,11 +49,23 @@ const TestimonialsMobile: React.FC = () => {
                                 padding: 2,
                             }}
                         >
-                            <Avatar
-                                src={testimonial.imagePath}
-                                alt={testimonial.name}
-                                sx={{ width: 100, height: 100, marginBottom: 1 }}
-                            />
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    width: "100%",
+                                }}
+                            >
+                                <Avatar
+                                    src={testimonial.imagePath}
+                                    alt={testimonial.name}
+                                    sx={{
+                                        width: 100,
+                                        height: 100,
+                                        marginBottom: 1,
+                                    }}
+                                />
+                            </Box>
                             <CarouselHeader isMobile>
                                 {testimonial.name}
                             </CarouselHeader>
