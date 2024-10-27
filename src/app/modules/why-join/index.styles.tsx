@@ -56,7 +56,7 @@ export const Title = styled(SpaceGrotesk)<MobileProps>`
   font-size: ${(props) => (props.isMobile ? "20px" : "50px")};
   color: white;
   text-align: center;
-  margin-top: ${(props) => (props.isMobile ? "17%" : "100px")};
+  margin-top: ${(props) => (props.isMobile ? "17%" : "10px")};
   margin-bottom: 20px;
   z-index: 10;
 `;
