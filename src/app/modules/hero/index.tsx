@@ -22,25 +22,25 @@ const Hero = () => {
   };
 
   return (
-      <HeroModuleContainer id="hero-module">
-        <HeroContentContainer>
-          <HeroContent isMobile={isMobile}>
-            <DescriptionContainer isMobile={isMobile}>
-              <GenericDescription isMobile={isMobile}>
-                January 17-19, 2025 | In-person event
-              </GenericDescription>
-              <HeroHeader isMobile={isMobile}>UofTHacks 12</HeroHeader>
-              <GenericDescription isMobile={isMobile}>
-                Redefine possibilities—explore new ideas at UofTHacks!
-              </GenericDescription>
-              <ScrollButton onClick={handleScroll} isMobile={isMobile}>
+    <HeroModuleContainer id="hero-module">
+      <HeroContentContainer>
+        <HeroContent isMobile={isMobile}>
+          <DescriptionContainer isMobile={isMobile}>
+            <GenericDescription isMobile={isMobile}>
+              January 17-19, 2025 | In-person event
+            </GenericDescription>
+            <HeroHeader isMobile={isMobile}>UofTHacks 12</HeroHeader>
+            <GenericDescription isMobile={isMobile}>
+              Redefine possibilities—explore new ideas at UofTHacks!
+            </GenericDescription>
+            {/* <ScrollButton onClick={handleScroll} isMobile={isMobile}>
                 <ScrollButtonText>Be first to apply!</ScrollButtonText>
-              </ScrollButton>
-            </DescriptionContainer>
-            <LedgeSVG isMobile={isMobile} />
-          </HeroContent>
-        </HeroContentContainer>
-      </HeroModuleContainer>
+              </ScrollButton> */}
+          </DescriptionContainer>
+          <LedgeSVG isMobile={isMobile} />
+        </HeroContent>
+      </HeroContentContainer>
+    </HeroModuleContainer>
   );
 };
 

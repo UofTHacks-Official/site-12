@@ -12,17 +12,16 @@ type MobileProps = {
 };
 
 export const ContactUsModuleContainer = styled(ModuleContainer)`
-    height: 100%;
-    min-height: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const ContactUsModuleBackground = styled(ModuleBackground)`
-    height: 100%;
-    
+  height: 100%;
 `;
 
 export const InputWrapper = styled.div<MobileProps>`
@@ -42,24 +41,23 @@ export const FormContainer = styled.form<MobileProps>`
 export const Container = styled.div<MobileProps>`
   display: flex;
   flex-direction: ${({ isMobile }) => (isMobile ? "column" : "row")};
-  justify-content: ${({ isMobile }) => (isMobile ? "center" : "center")};
-  align-items: ${({ isMobile }) => (isMobile ? "center" : "center")};
+  justify-content: center;
+  align-items: center;
   gap: ${({ isMobile }) => (isMobile ? "20px" : "30px")};
-  width: 100%;
-  padding: ${({ isMobile }) => (isMobile ? "20px" : "40px")};
+  width: ${({ isMobile }) => (isMobile ? "100%" : "min(80%, 1040px)")};
   max-width: 1200px;
   margin: 0 auto;
 `;
 
 export const StyledHeader = styled(SpaceGrotesk)<MobileProps>`
-    color: var(--Neutral-600, #191a1b);
-    font-size: ${({isMobile}) => (isMobile ? "32px" : "45px")};
-    font-weight: var(--Heading2-weight, 700);
-    line-height: ${({isMobile}) => (isMobile ? "48px" : "72px")};
-    margin-bottom: ${({isMobile}) => (isMobile ? "10px" : "20px")};
-    padding-top: ${({isMobile}) => (isMobile ? "30px" : "0px")};
-    text-align: left;
-    letter-spacing: 0rem;
+  color: var(--Neutral-600, #191a1b);
+  font-size: ${({ isMobile }) => (isMobile ? "32px" : "45px")};
+  font-weight: var(--Heading2-weight, 700);
+  line-height: ${({ isMobile }) => (isMobile ? "48px" : "72px")};
+  margin-bottom: ${({ isMobile }) => (isMobile ? "10px" : "20px")};
+  padding-top: ${({ isMobile }) => (isMobile ? "30px" : "0px")};
+  text-align: left;
+  letter-spacing: 0rem;
 `;
 
 export const StyledParagraph = styled(Manrope)<MobileProps>`
@@ -73,9 +71,9 @@ export const StyledParagraph = styled(Manrope)<MobileProps>`
 `;
 
 export const StyledFormResponsePrompt = styled(StyledParagraph)<MobileProps>`
-    font-size: ${({isMobile}) => (isMobile ? "14px" : "18px")};
-    padding: 0;
-    line-height: ${({isMobile}) => (isMobile ? "14px" : "18px")};
+  font-size: ${({ isMobile }) => (isMobile ? "14px" : "18px")};
+  padding: 0;
+  line-height: ${({ isMobile }) => (isMobile ? "14px" : "18px")};
 `;
 
 export const Input = styled.input<MobileProps>`
@@ -83,7 +81,7 @@ export const Input = styled.input<MobileProps>`
   border: 1px solid #8edeff;
   background: #fff;
   box-shadow: 0px 0px 50px 0px rgba(182, 255, 246, 0.5);
-  width: ${({ isMobile }) => (isMobile ? "100%" : "260px")};
+  width: 100%;
   height: 55px;
   color: black;
   font-family: "Manrope", sans-serif;
@@ -119,7 +117,12 @@ export const SubmitButton = styled.button<MobileProps>`
   height: 45px;
   transition: background 0.3s ease;
 
-  &:hover {
+  &:disabled {
+    background: #b0b0b0;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover {
     background: #1a4871;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -133,7 +136,10 @@ const StyledIcon = styled(Image)`
   overflow: visible;
 `;
 
-export const ContactUsRenderIcon = styled(StyledIcon)<{ isMobile?: boolean | null }>`
-    width: ${({ isMobile }) => (isMobile ? '180px' : '360px')};
-    height: ${({ isMobile }) => (isMobile ? '180px' : '360px')};
+export const ContactUsRenderIcon = styled(StyledIcon)<{
+  isMobile?: boolean | null;
+}>`
+  width: ${({ isMobile }) => (isMobile ? "80%" : "min(100%, 400px)")};
+  height: auto;
+  margin: ${({ isMobile }) => (isMobile ? "0 auto" : "0 0 0 auto")};
 `;

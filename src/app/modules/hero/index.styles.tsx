@@ -41,13 +41,17 @@ const LedgeSVG = styled.div<MobileProps>`
 const HeroContent = styled.div<MobileProps>`
   position: relative;
   width: ${({ isMobile }) =>
-      isMobile ? "90%" : "min(800px, max(55%, 600px))"};
+    isMobile ? "90%" : "min(800px, max(55%, 650px))"};
   height: ${({ isMobile }) =>
-      isMobile ? "65%" : "min(500px, max(60%, 400px))"};
+    isMobile ? "65%" : "min(500px, max(60%, 400px))"};
   border-width: 30px;
   border-style: solid;
   border-color: #5acdff #0daef1;
-  background: url("/background/hero-container.svg");
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("/background/hero-container.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -114,5 +118,5 @@ export {
   GenericDescription,
   LedgeSVG,
   ScrollButton,
-  ScrollButtonText
+  ScrollButtonText,
 };
