@@ -9,7 +9,6 @@ const TestimonialsModuleContainer = styled(ModuleContainer)`
   height: 100%;
   min-height: 600px;
   background-color: #fffbff;
-  margin-bottom: 20px;
 `;
 
 const TestimonialsModuleBackground = styled(ModuleBackground)``;
