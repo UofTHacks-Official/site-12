@@ -8,7 +8,7 @@ interface MobileProps {
   isMobile?: boolean | null;
 }
 
-export const Board = styled(Image)<MobileProps>`
+export const Board = styled("img")<MobileProps>`
   position: absolute;
   z-index: 1;
   width: ${(props) =>
@@ -42,7 +42,7 @@ export const WhyJoinModuleContainer = styled(ModuleContainer)`
 
 export const ImageBackgroundContainer = styled(Box)<MobileProps>`
   width: 100%;
-  height: 1200px;
+  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;

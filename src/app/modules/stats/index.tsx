@@ -11,8 +11,8 @@ const Stats = () => {
 
   return (
     <StatsModuleContainer isMobile={isMobile} id="Stats-module">
-      <TopBook src="/assets/stats/book-top-right.svg" alt="top book" />
-      <StatsImage isMobile={isMobile} src="/assets/stats/main-books.png" alt="stats image" />
+      <TopBook src="/assets/stats/book-top-right.svg" alt="top book" width={400} height={400}/>
+      <StatsImage isMobile={isMobile} src="/assets/stats/main-books.png" alt="stats image"/>
       {/* <StatsImage isMobile={isMobile}>
         <Image
           src={FullBooksSVG} // Use the full SVG on larger screens
@@ -22,7 +22,7 @@ const Stats = () => {
           objectPosition={"center"} // Center the image on larger screens
         /> */}
       {/* </StatsImageWrapper> */}
-      <BottomBook src="/assets/stats/book-bottom-left.svg" alt="bottom book"/>
+      <BottomBook src="/assets/stats/book-bottom-left.svg" alt="bottom book" width={400} height={400}/>
     </StatsModuleContainer>
   );
 };

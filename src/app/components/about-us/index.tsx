@@ -61,22 +61,29 @@ const AboutUs = () => {
           isMobile={isMobile}
           src="/assets/about/left-image.svg"
           alt="Left img"
+          width={200} height={200}
+          quality={100}
         />
         {isMobile && (
           <StyledMobileImage
             src="/assets/about/mobile-btmright.svg"
             alt="Right img"
+            width={200} height={200}
+            quality={100}
           />
         )}
         <StyledRightImage
           isMobile={isMobile}
           src="/assets/about/right-image.svg"
           alt="Right img"
+          width={200} height={200}
+          quality={100}
         />
         <StyledKeys
           isMobile={isMobile}
           src="/assets/about/new-keys.svg"
           alt="Keys graphic"
+          width={200} height={200}
         />
       </CenterContainer>
     </AboutUsContainer>

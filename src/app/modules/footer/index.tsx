@@ -6,7 +6,7 @@ const Footer = () => {
     const isMobile = useMobileDetect()
     return (
         <FooterModuleContainer id="Footer-module">
-            <FooterModuleBackground src={isMobile ? "/background/footer-mobile.svg" : "/background/footer.svg"} alt="module background"/>
+            <FooterModuleBackground src={isMobile ? "/background/footer-mobile.svg" : "/background/footer.svg"} alt="module background" layout="fill" width={undefined} height={undefined}/>
             <SocialsContainer/>
         </FooterModuleContainer>
     );

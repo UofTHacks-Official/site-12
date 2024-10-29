@@ -15,9 +15,9 @@ const Testimonials = () => {
   return (
     <TestimonialsModuleContainer id="Testimonials-module">
       {isMobile ? (
-        <LampMobile src="/assets/testimonies/lamp-mobile.svg" alt="lamp"/>
+        <LampMobile src="/assets/testimonies/lamp-mobile.svg" alt="lamp" width={800} height={1000}/>
       ) : (
-        <LampDesktop src="/assets/testimonies/lamp-desktop.svg" alt="lamp desk" />
+        <LampDesktop src="/assets/testimonies/lamp-desktop.svg" alt="lamp desk" width={1920} height={1080}/>
       )}
       {/* {isMobile ? <TestimonialsModuleBackground src="/background/testimonies-mobile.svg"/> :
                 <TestimonialsModuleBackground src="/background/testimonies-desktop.svg"/>} */}

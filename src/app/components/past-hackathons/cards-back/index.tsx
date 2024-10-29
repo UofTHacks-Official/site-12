@@ -78,16 +78,22 @@ const CardBack: React.FC<CarouselCardBordersProps> = (props) => {
             <CarouselCardImage
               isMobile={isMobile}
               src={"/assets/past-hackathons/" + props.item.img1}
+              width={200} height={200}
+              alt={"carousel"}
             />
             {!isMobile && (
               <CarouselCardImage
                 isMobile={isMobile}
                 src={"/assets/past-hackathons/" + props.item.img2}
+                width={200} height={200}
+                alt={"carousel"}
               />
             )}
             <CarouselCardImage
               isMobile={isMobile}
               src={"/assets/past-hackathons/" + props.item.img3}
+              width={200} height={200}
+              alt={"carousel"}
             />
           </CarouselCardImages>
         </CarouselCards>

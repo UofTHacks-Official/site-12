@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const ModuleContainer = styled.div`
     position: relative;
-    height: 100vh;
+    //height: 100vh;
     width: 100vw;
     z-index: 0;
 `;

@@ -1,4 +1,5 @@
 import styled, { keyframes, css } from "styled-components";
+import Image from "next/image"
 
 interface CarouselCardBordersProps {
   item: {
@@ -109,7 +110,7 @@ export const CarouselCardImages = styled.div<CarouselTextProps>`
   gap: 10px;
   align-items: center;
 `;
-export const CarouselCardImage = styled.img<CarouselTextProps>`
+export const CarouselCardImage = styled(Image)<CarouselTextProps>`
   width: ${(props) => (props.isMobile ? "min(48%, 220px)" : "32%")};
   height: 60%;
   border-radius: 25px;

@@ -40,6 +40,8 @@ const WhyJoinMobile = () => (
               <Image
                 src="/assets/why-join/mobile-photo-1.svg"
                 alt="Group Photo"
+                width="400" height="200"
+                quality={100}
               />
             </ImageWrapper>
           </Grid>
@@ -61,7 +63,7 @@ const WhyJoinMobile = () => (
           </Grid>
           <Grid item xs={12}>
             <ImageWrapper>
-              <Image src="/assets/why-join/mobile-photo-2.svg" alt="Polaroid 1" />
+              <Image src="/assets/why-join/mobile-photo-2.svg" alt="Polaroid 1" width="301" height="160" quality={100}/>
             </ImageWrapper>
           </Grid>
         </Grid>
@@ -91,8 +93,8 @@ const WhyJoinMobile = () => (
       </Grid> */}
       </Box>
     </div>
-    <Board src="/assets/why-join/board.svg" isMobile={true} alt="board" />
-    <BackgroundGrid src="/assets/why-join/grid.svg" alt="background grid" />
+      <Board src="/assets/why-join/Board.svg" isMobile={true} alt="board"/>
+      <BackgroundGrid src="/assets/why-join/grid.svg" alt="background" layout="fill" width={undefined} height={undefined}/>
   </ImageBackgroundContainer>
 );
 
