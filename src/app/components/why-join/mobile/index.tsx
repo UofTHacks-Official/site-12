@@ -29,11 +29,9 @@ const WhyJoinMobile = () => (
         <Grid container spacing={2} justifyContent="center" alignItems="center">
           <Grid item xs={12}>
             <NoteWrapper>
-              <p>
                 Be part of a vibrant community of over 500 hackers from diverse
                 schools, collaborating on exciting projects for 36+ hours of
                 innovation.
-              </p>
             </NoteWrapper>
           </Grid>
           <Grid item xs={12}>
@@ -56,10 +54,8 @@ const WhyJoinMobile = () => (
         >
           <Grid item xs={12}>
             <NoteWrapper>
-              <p>
                 Boost your skills with hands-on workshops and mentorship from
                 industry professionals, helping you bring your ideas to life.
-              </p>
             </NoteWrapper>
           </Grid>
           <Grid item xs={12}>

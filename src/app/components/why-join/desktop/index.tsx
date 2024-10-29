@@ -36,11 +36,9 @@ const WhyJoinDesktop = () => (
         <Grid container spacing={2} justifyContent="center" alignItems="center">
           <Grid item xs={12} md={3}>
             <NoteWrapper>
-              <p>
                 Be part of a vibrant community of over 500 hackers from diverse
                 schools, collaborating on exciting projects for 36+ hours of
                 innovation.
-              </p>
             </NoteWrapper>
           </Grid>
           <Grid item xs={12} md={4.5}>
@@ -65,10 +63,8 @@ const WhyJoinDesktop = () => (
           </Grid>
           <Grid item xs={12} md={4}>
             <NoteWrapper>
-              <p>
                 Boost your skills with hands-on workshops and mentorship from
                 industry professionals, helping you bring your ideas to life.
-              </p>
             </NoteWrapper>
           </Grid>
         </Grid>
