@@ -292,7 +292,7 @@ const PastHackathons = () => {
   return (
     <PastHackathonsModuleContainer id="PastHackathons-module">
       {!isMobile && (
-        <TopBook src="/assets/past-hackathons/book-top-right.svg" />
+        <TopBook src="/assets/past-hackathons/book-top-right.svg" alt="top book" />
       )}
       <PastHackathonsModuleTitle>
         <SpaceGrotesk style={spaceGroteskStyles}>Past Hackathons</SpaceGrotesk>

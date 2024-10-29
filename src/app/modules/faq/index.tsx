@@ -11,7 +11,7 @@ const FAQ = () => {
     const $isMobile = useMobileDetect();
     return (
         <FAQModuleContainer id="FAQ-module">
-            <FAQModuleBackground src="/background/faq.svg"/>
+            <FAQModuleBackground src="/background/faq.svg" alt="faq module background"/>
             <StyledContentContainer isMobile={$isMobile}>
                 <SpaceGroteskSectionTitle isMobile={$isMobile}>FAQ</SpaceGroteskSectionTitle>
                 <StyledAccordionContainer>
