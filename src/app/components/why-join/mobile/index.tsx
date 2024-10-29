@@ -38,7 +38,7 @@ const WhyJoinMobile = () => (
           <Grid item xs={12}>
             <ImageWrapper>
               <Image
-                src="/assets/why-join/mobile-photo-1.svg"
+                src="/assets/why-join/mobile-photo-1.png"
                 alt="Group Photo"
                 width="400" height="200"
                 quality={100}
@@ -63,7 +63,7 @@ const WhyJoinMobile = () => (
           </Grid>
           <Grid item xs={12}>
             <ImageWrapper>
-              <Image src="/assets/why-join/mobile-photo-2.svg" alt="Polaroid 1" width="301" height="160" quality={100}/>
+              <Image src="/assets/why-join/mobile-photo-2.png" alt="Polaroid 1" width="301" height="160" quality={100}/>
             </ImageWrapper>
           </Grid>
         </Grid>

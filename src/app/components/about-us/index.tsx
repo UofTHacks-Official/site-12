@@ -59,14 +59,14 @@ const AboutUs = () => {
         </Manrope>
         <StyledLeftImage
           isMobile={isMobile}
-          src="/assets/about/left-image.svg"
+          src={isMobile ? "/assets/about/left-image.png" : "/assets/about/left-image.svg"}
           alt="Left img"
           width={200} height={200}
           quality={100}
         />
         {isMobile && (
           <StyledMobileImage
-            src="/assets/about/mobile-btmright.svg"
+            src="/assets/about/mobile-btmright.png"
             alt="Right img"
             width={200} height={200}
             quality={100}
@@ -74,7 +74,7 @@ const AboutUs = () => {
         )}
         <StyledRightImage
           isMobile={isMobile}
-          src="/assets/about/right-image.svg"
+          src={isMobile ? "/assets/about/right-image.png" : "/assets/about/right-image.svg"}
           alt="Right img"
           width={200} height={200}
           quality={100}
