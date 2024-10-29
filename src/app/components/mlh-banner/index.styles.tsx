@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from 'next/image'
 
 type MLHContainerProps = {
   isMobile?: boolean | null;
@@ -12,7 +13,7 @@ const MLHContainer = styled.a<MLHContainerProps>`
   z-index: 10000;
 `;
 
-const MLHWrapper = styled.img`
+const MLHWrapper = styled(Image)`
   width: 100%;
   height: 100%;
 `;

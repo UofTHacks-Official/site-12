@@ -2,12 +2,13 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
 import { ModuleContainer } from "@/app/components/shared/containers/index.styles";
+import Image from 'next/image'
 
 interface MobileProps {
   isMobile?: boolean | null;
 }
 
-export const Board = styled("img")<MobileProps>`
+export const Board = styled(Image)<MobileProps>`
   position: absolute;
   z-index: 1;
   width: ${(props) =>
@@ -19,14 +20,14 @@ export const Board = styled("img")<MobileProps>`
   transform: translate(-50%, 0);
 `;
 
-export const BackgroundGrid = styled("img")<MobileProps>`
+export const BackgroundGrid = styled(Image)<MobileProps>`
   position: absolute;
   top: -10px;
   height: 90%;
   z-index: 0;
 `;
 
-export const BottomBook = styled("img")`
+export const BottomBook = styled(Image)`
   position: absolute;
   left: 0;
   top: -20%;

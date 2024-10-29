@@ -10,6 +10,7 @@ import {
   BackgroundGrid,
 } from "@/app/modules/why-join/index.styles";
 import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
+import Image from 'next/image'
 
 const WhyJoinMobile = () => (
   <ImageBackgroundContainer isMobile={true}>
@@ -36,7 +37,7 @@ const WhyJoinMobile = () => (
           </Grid>
           <Grid item xs={12}>
             <ImageWrapper>
-              <img
+              <Image
                 src="/assets/why-join/mobile-photo-1.svg"
                 alt="Group Photo"
               />
@@ -60,7 +61,7 @@ const WhyJoinMobile = () => (
           </Grid>
           <Grid item xs={12}>
             <ImageWrapper>
-              <img src="/assets/why-join/mobile-photo-2.svg" alt="Polaroid 1" />
+              <Image src="/assets/why-join/mobile-photo-2.svg" alt="Polaroid 1" />
             </ImageWrapper>
           </Grid>
         </Grid>
@@ -90,8 +91,8 @@ const WhyJoinMobile = () => (
       </Grid> */}
       </Box>
     </div>
-    <Board src="/assets/why-join/board.svg" isMobile={true} />
-    <BackgroundGrid src="/assets/why-join/grid.svg" />
+    <Board src="/assets/why-join/board.svg" isMobile={true} alt="board" />
+    <BackgroundGrid src="/assets/why-join/grid.svg" alt="background grid" />
   </ImageBackgroundContainer>
 );
 

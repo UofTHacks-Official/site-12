@@ -11,6 +11,7 @@ import {
   BottomBook,
 } from "@/app/modules/why-join/index.styles";
 import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
+import Image from 'next/image'
 
 const WhyJoinDesktop = () => (
   <ImageBackgroundContainer isMobile={false}>
@@ -43,7 +44,7 @@ const WhyJoinDesktop = () => (
           </Grid>
           <Grid item xs={12} md={4.5}>
             <ImageWrapper>
-              <img src="/assets/why-join/Image.svg" alt="Group Photo" />
+              <Image src="/assets/why-join/Image.svg" alt="Group Photo" />
             </ImageWrapper>
           </Grid>
         </Grid>
@@ -58,7 +59,7 @@ const WhyJoinDesktop = () => (
         >
           <Grid item xs={12} md={4}>
             <ImageWrapper>
-              <img src="/assets/why-join/Polaroid 1.svg" alt="Polaroid 1" />
+              <Image src="/assets/why-join/Polaroid 1.svg" alt="Polaroid 1" />
             </ImageWrapper>
           </Grid>
           <Grid item xs={12} md={4}>
@@ -79,24 +80,22 @@ const WhyJoinDesktop = () => (
         >
           <Grid item xs={12} md={4}>
             <NoteWrapper>
-              <p>
                 Network with top companies and industry leaders while creating
                 something unique, all with the support of complimentary meals
                 and snacks to keep you going.
-              </p>
             </NoteWrapper>
           </Grid>
           <Grid item xs={12} md={4}>
             <ImageWrapper>
-              <img src="/assets/why-join/Polaroid 2.svg" alt="Polaroid 2" />
+              <Image src="/assets/why-join/Polaroid 2.svg" alt="Polaroid 2" />
             </ImageWrapper>
           </Grid>
         </Grid>
       </Box>
     </div>
-    <Board src="/assets/why-join/Board.svg" isMobile={false} />
-    <BackgroundGrid src="/assets/why-join/grid.svg" />
-    <BottomBook src="/assets/past-hackathons/book-bottom-left.svg" />
+    <Board src="/assets/why-join/Board.svg" isMobile={false} alt="board" />
+    <BackgroundGrid src="/assets/why-join/grid.svg" alt="background" />
+    <BottomBook src="/assets/past-hackathons/book-bottom-left.svg" alt="bottom book" />
   </ImageBackgroundContainer>
 );
 
