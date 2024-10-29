@@ -1,11 +1,9 @@
 import styled from "styled-components";
 import {
-  ModuleBackground,
   ModuleContainer,
 } from "@/app/components/shared/containers/index.styles";
 import { IconButton } from "@mui/material";
-import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
-import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import Image from 'next/image'
 
 const PastHackathonsModuleContainer = styled(ModuleContainer)`
   background-color: #225c90;
@@ -62,7 +60,7 @@ const ArrowForwardButton = styled(IconButton)`
   position: absolute;
 `;
 
-const TopBook = styled("img")`
+const TopBook = styled(Image)`
   position: absolute;
   right: 0;
   top: -10%;

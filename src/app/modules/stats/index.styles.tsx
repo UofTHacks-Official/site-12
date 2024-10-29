@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import {
-  ModuleBackground,
   ModuleContainer,
 } from "@/app/components/shared/containers/index.styles";
+import Image from 'next/image'
 
 interface MobileProps {
   isMobile?: boolean | null;
@@ -18,7 +18,7 @@ const StatsModuleContainer = styled(ModuleContainer)<MobileProps>`
   background-color: #dcf4fd;
 `;
 
-const StatsImage = styled("img")<MobileProps>`
+const StatsImage = styled(Image)<MobileProps>`
   position: absolute;
   width: ${(props) =>
     props.isMobile ? "min(150%, 800px)" : "min(95%, 1400px)"};
@@ -27,7 +27,7 @@ const StatsImage = styled("img")<MobileProps>`
   transform: translate(-50%, -50%);
 `;
 
-const TopBook = styled("img")`
+const TopBook = styled(Image)`
   position: absolute;
   right: 0;
   top: 20px;
@@ -35,7 +35,7 @@ const TopBook = styled("img")`
   filter: blur(4px);
 `;
 
-const BottomBook = styled("img")`
+const BottomBook = styled(Image)`
   position: absolute;
   left: 0;
   bottom: 20px;

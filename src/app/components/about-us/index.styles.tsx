@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ModuleContainer } from "@/app/components/shared/containers/index.styles";
-import Image from "next/image";
+import Image from 'next/image'
 
 interface MobileProps {
   isMobile: boolean | null;
@@ -61,7 +61,7 @@ const AboutUsDescription = styled.div`
   color: #191a1b;
 `;
 
-const StyledLeftImage = styled("img")<MobileProps>`
+const StyledLeftImage = styled(Image)<MobileProps>`
   position: absolute;
   z-index: 5;
 
@@ -81,7 +81,7 @@ const StyledLeftImage = styled("img")<MobileProps>`
   height: auto;
 `;
 
-const StyledMobileImage = styled("img")`
+const StyledMobileImage = styled(Image)`
   position: absolute;
   z-index: 5;
   width: 260px;
@@ -91,7 +91,7 @@ const StyledMobileImage = styled("img")`
   height: auto;
 `;
 
-const StyledRightImage = styled("img")<MobileProps>`
+const StyledRightImage = styled(Image)<MobileProps>`
   position: absolute;
   z-index: 5;
 
@@ -112,18 +112,18 @@ const StyledRightImage = styled("img")<MobileProps>`
   height: auto;
 `;
 
-const StyledKeys = styled("img")<MobileProps>`
+const StyledKeys = styled(Image)<MobileProps>`
   position: absolute;
   width: 200px;
   height: 200px;
   z-index: 5;
   bottom: -198px;
   left: ${(props) => (props.isMobile ? "-30px" : "50px")};
-  transition: transform 0.5s ease-in-out; /* Smooth transition for rotation */
-  transform-origin: 125px 5px; /* Sets the point of rotation at the center of the image */
+  transition: transform 0.5s ease-in-out; 
+  transform-origin: 125px 5px; 
 
   &:hover {
-    transform: rotate(10deg); /* Rotates the image 360 degrees on hover */
+    transform: rotate(10deg);
   }
 `;
 
