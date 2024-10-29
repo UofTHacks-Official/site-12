@@ -1,8 +1,20 @@
+import {Manrope, Space_Grotesk} from "next/font/google";
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({ subsets: ["latin"] });
+
+
+const spaceGrotesk = Space_Grotesk({
+    subsets: ["latin"],
+    variable: "--font-space-grotesk",
+    weight: ["400", "500", "700"],
+});
+
+const manrope = Manrope({
+    subsets: ["latin"],
+    variable: "--font-manrope",
+    weight: ["400", "700"],
+});
 
 export const metadata: Metadata = {
   title: "UoftHacks 12",
@@ -36,7 +48,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" href="/favicon.ico" sizes="any" />
-      <body className={manrope.className}>{children}</body>
+      <body className={`${manrope.variable} ${spaceGrotesk.variable}`}>
+          {children}
+      </body>
     </html>
   );
 }
