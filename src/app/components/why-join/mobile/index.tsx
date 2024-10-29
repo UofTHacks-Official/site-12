@@ -18,7 +18,7 @@ const WhyJoinMobile = () => (
       style={{
         zIndex: "10",
         width: "min(90%, 650px)",
-        margin: "0 auto",
+        margin: "0 auto", height: "100%",
       }}
     >
       <Title isMobile={true}>
@@ -38,9 +38,9 @@ const WhyJoinMobile = () => (
           <Grid item xs={12}>
             <ImageWrapper>
               <Image
-                src="/assets/why-join/mobile-photo-1.svg"
+                src="/assets/why-join/mobile-photo-1.png"
                 alt="Group Photo"
-                width="400" height="200"
+                width="190" height="165"
                 quality={100}
               />
             </ImageWrapper>
@@ -63,7 +63,7 @@ const WhyJoinMobile = () => (
           </Grid>
           <Grid item xs={12}>
             <ImageWrapper>
-              <Image src="/assets/why-join/mobile-photo-2.svg" alt="Polaroid 1" width="301" height="160" quality={100}/>
+              <Image src="/assets/why-join/mobile-photo-2.png" alt="Polaroid 1" width="190" height="145" quality={100}/>
             </ImageWrapper>
           </Grid>
         </Grid>

@@ -43,6 +43,7 @@ export const WhyJoinModuleContainer = styled(ModuleContainer)`
 export const ImageBackgroundContainer = styled(Box)<MobileProps>`
   width: 100%;
   padding-bottom: 30px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
