@@ -12,7 +12,6 @@ import ContactUs from "@/app/modules/contact-us";
 import Footer from "@/app/modules/footer";
 import { ReactNode } from "react";
 import Testimonials from "@/app/modules/testimonials";
-import MLHBanner from "@/app/components/mlh-banner";
 
 const MainContainer = styled.div`
   background-color: #f9f9f9;

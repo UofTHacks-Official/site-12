@@ -17,7 +17,6 @@ import {
 import { useMobileDetect } from "@/app/hooks/useMobileDetect";
 import { Stack } from "@mui/material";
 import ReCAPTCHA from "react-google-recaptcha";
-import { Margin } from "@mui/icons-material";
 
 const CAPTCHA_SITE_KEY = "6Lcu7WYqAAAAAKcjNMaz3W2x8KN0hCpeZggIZXEY";
 const ContactUs = () => {
@@ -165,4 +164,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default ContactUs
