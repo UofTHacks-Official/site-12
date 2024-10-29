@@ -82,8 +82,13 @@ export const FAQItems = [
       "You just need to be enthusiastic and ready to help! No specific skills are needed, just a good attitude and a willingness to pitch in.",
   },
   {
-    title: "I still have a question...",
+    title:
+      "Are sleeping areas or supplies available for participants at UofTHacks 2024?",
     content:
-      `No worries! You can use the Contact Us form below or reach out to us on ${instagram}, and we'll help with anything else you need!`,
+      "Unfortunately, due to university regulations, we are unable to provide or allow sleeping accommodations on-site this year. However, the venue will be open throughout the event so you can continue hacking, take breaks, and grab refreshments whenever you need! Our team will be around to help out, so don’t hesitate to stop by the help desk for anything you might need to stay energized.",
+  },
+  {
+    title: "I still have a question...",
+    content: `No worries! You can use the Contact Us form below or reach out to us on ${instagram}, and we'll help with anything else you need!`,
   },
 ];

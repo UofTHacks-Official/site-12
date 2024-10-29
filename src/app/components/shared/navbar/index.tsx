@@ -13,6 +13,7 @@ import {
   MobileNavLinkItem,
 } from "./index.styles";
 import Manrope from "../fonts/manrope";
+import MLHBanner from "@/app/components/mlh-banner";
 
 const NavBarLogo = "/assets/navbar-logo.svg";
 
@@ -130,6 +131,7 @@ const NavBar = () => {
     <>
       <NavigationContainer open={isNavBarVisible}>
         <NavigationBar>
+          <MLHBanner />
           <Logo onClick={() => scrollToSection("start")}>
             <Image
               src={NavBarLogo}
@@ -139,7 +141,12 @@ const NavBar = () => {
             />
           </Logo>
           <NavLinks>
-            <div style={{ display: isMobile ? "none" : "flex", gap: 10 }}>
+            <div
+              style={{
+                display: isMobile ? "none" : "flex",
+                gap: 10,
+              }}
+            >
               <NavLinkItem>
                 <NavLink onClick={() => scrollToSection("Why-join-module")}>
                   <Manrope style={navManropeStyle()}>Why Join?</Manrope>

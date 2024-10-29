@@ -24,7 +24,7 @@ const NavigationContainer = styled.div<NavContainerProps>`
   background-color: transparent;
   position: fixed;
   z-index: 1000;
-  overflow: hidden;
+  overflow: visible;
 `;
 const NavigationBar = styled.nav<NavbarProps>`
   display: flex;
@@ -39,7 +39,7 @@ const NavigationBar = styled.nav<NavbarProps>`
     margin: 40px 0;
   `
       : `
-      margin: 35px 8%;
+      margin: 35px 6%;
   `}
   top: 0;
   width: 84%;
@@ -109,9 +109,9 @@ const HamburgerMenu = styled.div<HamburgerProps>`
 const MobileMenu = styled.div<MobileMenuProps>`
   transform: translateY(${(props) => (props.open ? "0" : "-200%")});
   transition: transform 0.3s ease-in-out;
-  
+
   position: fixed;
-  background-image: linear-gradient(to bottom, #225C90, #5D91C5);
+  background-image: linear-gradient(to bottom, #225c90, #5d91c5);
   padding-top: 100px;
   left: 0;
   width: 100%;

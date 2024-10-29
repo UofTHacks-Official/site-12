@@ -43,7 +43,7 @@ const EntryPoint: React.FC = () => {
 
   return (
     <Site12>
-      <MLHBanner />
+      {/* <MLHBanner /> */}
       <NavBar />
     </Site12>
   );

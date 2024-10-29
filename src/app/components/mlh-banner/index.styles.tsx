@@ -5,9 +5,9 @@ type MLHContainerProps = {
 };
 const MLHContainer = styled.a<MLHContainerProps>`
   display: block;
-  width: ${(props) => (props.isMobile ? "50px" : "80px")};
+  width: ${(props) => (props.isMobile ? "60px" : "80px")};
   position: fixed;
-  right: ${(props) => (props.isMobile ? "25%" : "2%")};
+  right: ${(props) => (props.isMobile ? "28%" : "1.5%")};
   top: 0;
   z-index: 10000;
 `;
