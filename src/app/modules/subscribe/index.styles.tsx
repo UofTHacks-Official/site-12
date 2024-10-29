@@ -76,6 +76,7 @@ export const Input = styled.input<MobileProps>`
   border-radius: 10px;
   border: 1px solid #8edeff;
   background: #fff;
+  color: #000000;
   width: 100%;
   height: 40px;
   font-family: "Manrope", sans-serif;
