@@ -69,7 +69,8 @@ const ContactUs = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ ...formData, captchaToken }),
+        // body: JSON.stringify({ ...formData, captchaToken: captchaToken }),
+        body: JSON.stringify({ ...formData }),
       });
 
       if (response.status === 200) {
