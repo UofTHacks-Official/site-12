@@ -9,6 +9,7 @@ import Manrope from "@/app/components/shared/fonts/manrope";
 const HeroModuleContainer = styled(ModuleContainer)`
   background: url("/background/hero.jpg") no-repeat center center;
   background-size: 100% 100%;
+  height: 100vh
 `;
 
 type MobileProps = {

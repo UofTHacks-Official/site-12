@@ -44,7 +44,7 @@ const WhyJoinDesktop = () => (
           </Grid>
           <Grid item xs={12} md={4.5}>
             <ImageWrapper>
-              <Image src="/assets/why-join/Image.svg" alt="Group Photo" />
+              <Image src="/assets/why-join/Image.svg" alt="Group Photo" width={200} height={200}/>
             </ImageWrapper>
           </Grid>
         </Grid>
@@ -59,7 +59,7 @@ const WhyJoinDesktop = () => (
         >
           <Grid item xs={12} md={4}>
             <ImageWrapper>
-              <Image src="/assets/why-join/Polaroid 1.svg" alt="Polaroid 1" />
+              <Image src="/assets/why-join/Polaroid 1.svg" alt="Polaroid 1" width={200} height={230}/>
             </ImageWrapper>
           </Grid>
           <Grid item xs={12} md={4}>
@@ -87,15 +87,15 @@ const WhyJoinDesktop = () => (
           </Grid>
           <Grid item xs={12} md={4}>
             <ImageWrapper>
-              <Image src="/assets/why-join/Polaroid 2.svg" alt="Polaroid 2" />
+              <Image src="/assets/why-join/Polaroid 2.svg" alt="Polaroid 2" width={200} height={300}/>
             </ImageWrapper>
           </Grid>
         </Grid>
       </Box>
     </div>
-    <Board src="/assets/why-join/Board.svg" isMobile={false} alt="board" />
-    <BackgroundGrid src="/assets/why-join/grid.svg" alt="background" />
-    <BottomBook src="/assets/past-hackathons/book-bottom-left.svg" alt="bottom book" />
+    <Board src="/assets/why-join/Board.svg" isMobile={false} alt="board"/>
+    <BackgroundGrid src="/assets/why-join/grid.svg" alt="background" layout="fill" width={undefined} height={undefined}/>
+    <BottomBook src="/assets/past-hackathons/book-bottom-left.svg" alt="bottom book" width={400} height={400}/>
   </ImageBackgroundContainer>
 );
 

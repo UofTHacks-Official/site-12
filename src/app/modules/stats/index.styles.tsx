@@ -18,7 +18,7 @@ const StatsModuleContainer = styled(ModuleContainer)<MobileProps>`
   background-color: #dcf4fd;
 `;
 
-const StatsImage = styled(Image)<MobileProps>`
+const StatsImage = styled.img<MobileProps>`
   position: absolute;
   width: ${(props) =>
     props.isMobile ? "min(150%, 800px)" : "min(95%, 1400px)"};

@@ -4,7 +4,7 @@ import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
 const Sponsors = () => {
     return (
         <SponsorsModuleContainer id="Sponsors-module">
-            <SponsorsModuleBackground src="/background/sponsors.svg" alt="sponsor module background"/>
+            <SponsorsModuleBackground src="/background/sponsors.svg" alt="sponsor module background" layout="fill" width={undefined} height={undefined}/>
             <SpaceGrotesk>Sponsors section</SpaceGrotesk>
         </SponsorsModuleContainer>
     );

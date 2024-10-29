@@ -10,7 +10,7 @@ const MLHBanner = () => {
           target="_blank"
           isMobile={isMobile}
       >
-        <MLHWrapper src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-blue.svg" alt="mlh wrapper"/>
+        <MLHWrapper src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-blue.svg" alt="mlh wrapper" width={100} height={100}/>
       </MLHContainer>
   );
 };

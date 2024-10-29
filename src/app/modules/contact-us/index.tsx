@@ -101,6 +101,7 @@ const ContactUs = () => {
             : "/background/contact-us.svg"
         }
         alt="module background"
+        layout="fill" width={undefined} height={undefined}
       />
       <Container isMobile={isMobile}>
         <Stack width={isMobile ? "80%" : "50%"}>
