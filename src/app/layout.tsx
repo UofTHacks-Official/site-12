@@ -1,6 +1,6 @@
-import type { ReactNode } from "react";
 import Head from "next/head";
 import {Manrope, Space_Grotesk} from "next/font/google";
+import type { Metadata } from "next";
 import "./globals.css";
 
 
@@ -17,29 +17,41 @@ const manrope = Manrope({
     weight: ["400", "700"],
 });
 
-interface RootLayoutProps {
-    children: ReactNode;
-}
-
-const metadata = {
-    title: "UofTHacks 12",
+export const metadata: Metadata = {
+  title: "UoftHacks 12",
+  description:
+    "Join 500+ hackers for a great weekend of learning, building, and networking at University of Toronto's largest annual hackathon 💻",
+  openGraph: {
+    type: "website",
+    url: "https://uofthacks.com",
+    title: "UoftHacks 12",
     description:
-        "Join 500+ hackers for a great weekend of learning, building, and networking at University of Toronto's largest annual hackathon 💻",
+      "Join 500+ hackers for a great weekend of learning, building, and networking at University of Toronto's largest annual hackathon 💻",
+    images: [
+      {
+        url: "https://i.ibb.co/wh9g3wR/Uof-THacks-11-SEO.png",
+      },
+    ],
+  },
+  twitter: {
+    site: "@uofthacks",
+    title: "UoftHacks 12",
+    description:
+      "Join 500+ hackers for a great weekend of learning, building, and networking at University of Toronto's largest annual hackathon 💻",
+  },
 };
 
-export default function RootLayout({ children }: RootLayoutProps) {
-    return (
-        <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <link rel="icon" href="/favicon.ico" sizes="any" />
-            </Head>
-            <html lang="en">
-                <body className={`${manrope.variable} ${spaceGrotesk.variable}`}>
-                    {children}
-                </body>
-            </html>
-        </>
-    );
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <link rel="icon" href="/favicon.ico" sizes="any" />
+      <body className={`${manrope.variable} ${spaceGrotesk.variable}`}>
+          {children}
+      </body>
+    </html>
+  );
 }
