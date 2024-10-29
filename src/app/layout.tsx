@@ -1,9 +1,21 @@
 import type { ReactNode } from "react";
 import Head from "next/head";
-import { Manrope } from "next/font/google";
+import {Manrope, Space_Grotesk} from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({ subsets: ["latin"] });
+
+
+const spaceGrotesk = Space_Grotesk({
+    subsets: ["latin"],
+    variable: "--font-space-grotesk",
+    weight: ["400", "500", "700"],
+});
+
+const manrope = Manrope({
+    subsets: ["latin"],
+    variable: "--font-manrope",
+    weight: ["400", "700"],
+});
 
 interface RootLayoutProps {
     children: ReactNode;
@@ -23,8 +35,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <meta name="description" content={metadata.description} />
                 <link rel="icon" href="/favicon.ico" sizes="any" />
             </Head>
-            <html>
-                <body className={manrope.className}>{children}</body>
+            <html lang="en">
+                <body className={`${manrope.variable} ${spaceGrotesk.variable}`}>
+                    {children}
+                </body>
             </html>
         </>
     );
