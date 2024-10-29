@@ -30,7 +30,7 @@ const TestimonialsMobile: React.FC = () => {
         <Box
             sx={{
                 position: "absolute",
-                top: 190,
+                top: 150,
                 left: "50%",
                 transform: "translateX(-50%)",
                 maxWidth: "380px",

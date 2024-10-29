@@ -26,7 +26,7 @@ const TestimonialsDesktop = () => {
       sx={{
         position: "absolute",
         bottom: 0,
-        right: "10%",
+        right: "6%",
         maxWidth: "600px",
         padding: 2,
       }}
