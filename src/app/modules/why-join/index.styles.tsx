@@ -9,11 +9,14 @@ interface MobileProps {
 
 export const Board = styled("img")<MobileProps>`
   position: absolute;
-  top: ${(props) => (props.isMobile ? "-10px" : "-30px")};
-  width: ${(props) => (props.isMobile ? "130vw" : "100%")};
-  height: auto;
   z-index: 1;
-  max-width: 1500px;
+  width: ${(props) =>
+    props.isMobile
+      ? "max(min(160%, 950px), 750px)"
+      : "max(min(80%, 970px), 890px)"};
+  top: -35px;
+  left: 50%;
+  transform: translate(-50%, 0);
 `;
 
 export const BackgroundGrid = styled("img")<MobileProps>`
@@ -28,6 +31,7 @@ export const BottomBook = styled("img")`
   left: 0;
   top: -20%;
   width: 20%;
+  z-index: 5;
 `;
 
 export const WhyJoinModuleContainer = styled(ModuleContainer)`
@@ -37,15 +41,13 @@ export const WhyJoinModuleContainer = styled(ModuleContainer)`
 
 export const ImageBackgroundContainer = styled(Box)<MobileProps>`
   width: 100%;
-  min-height: 100vh;
+  height: 1200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-image: linear-gradient(to bottom, #0796d330, #fcf9fe);
   background-position: center center;
   background-repeat: no-repeat;
-  padding: ${(props) => (props.isMobile ? "20px" : "40px")};
   background-size: cover;
   box-sizing: border-box;
 `;
@@ -54,28 +56,27 @@ export const Title = styled(SpaceGrotesk)<MobileProps>`
   font-size: ${(props) => (props.isMobile ? "20px" : "50px")};
   color: white;
   text-align: center;
-  margin-top: ${(props) =>
-    props.isMobile ? "12%" : "min(calc(10% - 30px), 110px)"};
+  margin-top: ${(props) => (props.isMobile ? "17%" : "10px")};
   margin-bottom: 20px;
   z-index: 10;
 `;
 
-export const NoteWrapper = styled(Box)<{ customHeight?: string }>`
+export const NoteWrapper = styled(Box)`
   background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  height: ${(props) => props.customHeight || "auto"};
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  font-size: 16px;
 `;
 
-export const ImageWrapper = styled(Box)<{ isMobile?: boolean | null }>`
+export const ImageWrapper = styled(Box)`
   img {
     width: 100%;
-    height: auto;
     border-radius: 8px;
     object-fit: cover;
   }

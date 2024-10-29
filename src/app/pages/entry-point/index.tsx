@@ -9,6 +9,7 @@ import {
   Screen,
 } from "@/app/pages/entry-point/index.styles";
 import NavBar from "@/app/components/shared/navbar";
+import MLHBanner from "@/app/components/mlh-banner";
 
 const EntryPoint: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -42,6 +43,7 @@ const EntryPoint: React.FC = () => {
 
   return (
     <Site12>
+      {/* <MLHBanner /> */}
       <NavBar />
     </Site12>
   );

@@ -3,22 +3,27 @@ import styled, { css } from "styled-components";
 export const CardContainer = styled.div<{
   hide: boolean;
   flipped: boolean;
-  marginLeft: string;
-  marginTop: string;
   r: string;
   z: string;
+  styles: string;
 }>`
   perspective: 1000px;
   cursor: pointer;
   position: absolute;
-  margin-left: ${({ marginLeft }) => marginLeft};
-  margin-top: ${({ marginTop }) => marginTop};
+  border-radius: 15px;
+  ${({ styles }) => styles}
   z-index: ${({ z }) => z};
   transform: rotate(${({ r }) => r});
   opacity: 1;
   transition: margin-left 0.6s ease, margin-top 0.6s ease, transform 0.6s ease,
     width 0.6s ease, height 0.6s ease;
+  box-shadow: 0 0 20px rgba(175, 246, 238, 0.7);
 
+  transition: box-shadow 0.3s ease-in-out;
+  &:hover {
+    /* Intensify the glow on hover */
+    box-shadow: 0 0 40px rgba(175, 246, 238, 0.7);
+  }
   ${({ flipped }) =>
     flipped &&
     css`

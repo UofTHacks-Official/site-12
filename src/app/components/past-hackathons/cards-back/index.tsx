@@ -30,35 +30,38 @@ interface CarouselCardBordersProps {
 
 const CardBack: React.FC<CarouselCardBordersProps> = (props) => {
   const isMobile = useMobileDetect();
+
   const spaceGroteskStylesNumber = {
     color: "#225c91",
     fontSize: isMobile ? "75px" : "100px",
   };
   const spaceGroteskStylesTheme = {
     color: "#225c91",
-    fontSize: isMobile ? "35px" : "40px",
+    fontSize: isMobile ? "30px" : "40px",
     letterSpacing: "0.05px",
+    textAlign: isMobile ? "center" : "left",
   };
   const spaceGroteskStylesSubText = {
     color: "#225c91",
-    fontSize: isMobile ? "18px" : "22px",
+    fontSize: isMobile ? "15px" : "22px",
     letterSpacing: "0.05px",
+    textAlign: isMobile ? "center" : "left",
   };
   return (
-    <CarouselSlides height={isMobile ? "80vh" : "80vh"}>
+    <CarouselSlides height={isMobile ? "80vh" : "max(80vh, 550px)"}>
       <CarouselCardBorders
         item={props.item}
         height={isMobile ? "60%" : "70%"}
         width={isMobile ? "90%" : "max(60%, 700px)"}
       >
         <CarouselCards borderRadius={isMobile ? "15px" : "25px"}>
-          <CarouselCardText>
+          <CarouselCardText isMobile={isMobile}>
             <CarouselCardTextNumber>
               <SpaceGrotesk style={spaceGroteskStylesNumber}>
                 {props.item.year}
               </SpaceGrotesk>
             </CarouselCardTextNumber>
-            <CarouselCardTextOther marginLeft={isMobile ? "50px" : "60px"}>
+            <CarouselCardTextOther marginLeft={isMobile ? "0" : "60px"}>
               <CarouselCardTextTheme>
                 <SpaceGrotesk style={spaceGroteskStylesTheme}>
                   {props.item.theme}
@@ -71,14 +74,19 @@ const CardBack: React.FC<CarouselCardBordersProps> = (props) => {
               </CarouselCardTextSubText>
             </CarouselCardTextOther>
           </CarouselCardText>
-          <CarouselCardImages>
+          <CarouselCardImages isMobile={isMobile}>
             <CarouselCardImage
+              isMobile={isMobile}
               src={"/assets/past-hackathons/" + props.item.img1}
             />
+            {!isMobile && (
+              <CarouselCardImage
+                isMobile={isMobile}
+                src={"/assets/past-hackathons/" + props.item.img2}
+              />
+            )}
             <CarouselCardImage
-              src={"/assets/past-hackathons/" + props.item.img2}
-            />
-            <CarouselCardImage
+              isMobile={isMobile}
               src={"/assets/past-hackathons/" + props.item.img3}
             />
           </CarouselCardImages>

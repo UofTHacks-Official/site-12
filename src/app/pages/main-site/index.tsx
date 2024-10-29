@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 import Hero from "@/app/modules/hero";
-import AboutUs from "@/app/modules/about-us";
+import AboutUsModule from "@/app/modules/about-us";
 import Stats from "@/app/modules/stats";
 import PastHackathons from "@/app/modules/past-hackathons";
 import WhyJoin from "@/app/modules/why-join";
@@ -12,7 +12,6 @@ import ContactUs from "@/app/modules/contact-us";
 import Footer from "@/app/modules/footer";
 import { ReactNode } from "react";
 import Testimonials from "@/app/modules/testimonials";
-import MLHBanner from "@/app/components/MLHBanner";
 
 const MainContainer = styled.div`
   background-color: #f9f9f9;
@@ -28,14 +27,13 @@ interface Site12Props {
 const Site12 = ({ children }: Site12Props) => {
   return (
     <MainContainer id="start">
-      <MLHBanner />
       {children}
       <Hero />
-      <AboutUs />
+      <AboutUsModule />
+      <Subscribe />
       <Stats />
       <PastHackathons />
       <WhyJoin />
-      <Subscribe />
       {/*<Sponsors/>*/}
       <Testimonials />
       <FAQ />

@@ -27,7 +27,7 @@ const TestimonialsDesktop = () => {
         position: "absolute",
         bottom: 0,
         right: "10%",
-        maxWidth: "780px",
+        maxWidth: "600px",
         padding: 2,
       }}
     >

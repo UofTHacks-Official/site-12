@@ -1,34 +1,41 @@
 import {
   DescriptionContainer,
-  HeroBackground,
   HeroContent,
   HeroContentContainer,
   HeroHeader,
   HeroModuleContainer,
   LedgeSVG,
-  LeftDescription,
-  RightDescription,
+  GenericDescription,
+  ScrollButton,
+  ScrollButtonText,
 } from "@/app/modules/hero/index.styles";
 import { useMobileDetect } from "@/app/hooks/useMobileDetect";
 
 const Hero = () => {
   const isMobile = useMobileDetect();
 
+  const handleScroll = () => {
+    const targetSection = document.getElementById("Subscribe-module");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <HeroModuleContainer id="hero-module">
-      <HeroBackground src="/background/hero.svg" />
       <HeroContentContainer>
         <HeroContent isMobile={isMobile}>
-          <HeroHeader isMobile={isMobile}>UofTHacks 12</HeroHeader>
           <DescriptionContainer isMobile={isMobile}>
-            <LeftDescription isMobile={isMobile}>
-              At UofTHacks, we strive to provide a space where everyone feels
-              supported, empowered, and encouraged to transform their dreams
-              into reality!
-            </LeftDescription>
-            <RightDescription isMobile={isMobile}>
+            <GenericDescription isMobile={isMobile}>
+              January 17-19, 2025 | In-person event
+            </GenericDescription>
+            <HeroHeader isMobile={isMobile}>UofTHacks 12</HeroHeader>
+            <GenericDescription isMobile={isMobile}>
               Redefine possibilities—explore new ideas at UofTHacks!
-            </RightDescription>
+            </GenericDescription>
+            {/* <ScrollButton onClick={handleScroll} isMobile={isMobile}>
+                <ScrollButtonText>Be first to apply!</ScrollButtonText>
+              </ScrollButton> */}
           </DescriptionContainer>
           <LedgeSVG isMobile={isMobile} />
         </HeroContent>

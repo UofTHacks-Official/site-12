@@ -12,7 +12,6 @@ const AboutUsModuleContainer = styled(ModuleContainer)<MobileProps>`
   display: ${(props) => (props.mobile ? "block" : "flex")};
   justify-content: space-between;
   align-items: center;
-  padding: ${(props) => (props.mobile ? "0.5rem" : "2rem")};
   position: relative;
   margin: 0 auto;
   height: auto;
