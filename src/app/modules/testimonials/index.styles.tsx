@@ -3,12 +3,15 @@ import {
   ModuleBackground,
   ModuleContainer,
 } from "@/app/components/shared/containers/index.styles";
-import Image from 'next/image'
+import Image from "next/image";
 
 const TestimonialsModuleContainer = styled(ModuleContainer)`
   height: 100%;
+  width: 100vw;
   min-height: 600px;
+  height: 1000px;
   background-color: #fffbff;
+  display: flex;
 `;
 
 const TestimonialsModuleBackground = styled(ModuleBackground)``;
@@ -18,20 +21,48 @@ const StyledContentContainer = styled.div<{ isMobile: boolean | null }>`
   display: flex;
   flex-direction: column;
   gap: ${(props) => (props.isMobile ? "1rem" : "2.5rem")};
+  width: 100%;
 `;
 
 const LampDesktop = styled(Image)`
   height: 90%;
   position: absolute;
-  right: calc(-1000px + 30%);
-  bottom: 0;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const LampMobile = styled(Image)`
-  height: 90%;
   position: absolute;
-  left: -160px;
-  bottom: 0;
+  top: 45%;
+  left: 70%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  @media (min-width: 0px) {
+    left: 65%;
+    width: 200%;
+  }
+  @media (min-width: 500px) {
+    left: 65%;
+    top: 55%;
+    width: 200%;
+  }
+  @media (min-width: 600px) {
+    left: 65%;
+    top: 65%;
+    width: 200%;
+  }
+    @media (min-width: 700px) {
+    left: 65%;
+    top: 70%;
+    width: 200%;
+  }
+
+  @media (min-width: 800px) {
+    left: 65%;
+    top: 80%;
+    width: 200%;
+  }
 `;
 
 export {

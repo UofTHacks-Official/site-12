@@ -24,10 +24,13 @@ const TestimonialsDesktop = () => {
   return (
     <Box
       sx={{
-        position: "absolute",
+        position: "relative",
         bottom: 0,
-        right: "6%",
         maxWidth: "600px",
+        height: "90%",
+        top: "80%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
         padding: 2,
       }}
     >
