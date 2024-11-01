@@ -21,13 +21,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://uofthacks.com",
-    title: "UoftHacks 12",
+    title: "UofTHacks 12",
     description:
       "Join 500+ hackers for a great weekend of learning, building, and networking at University of Toronto's largest annual hackathon 💻",
   },
   twitter: {
     site: "@uofthacks",
-    title: "UoftHacks 12",
+    title: "UofTHacks 12",
     description:
       "Join 500+ hackers for a great weekend of learning, building, and networking at University of Toronto's largest annual hackathon 💻",
   },
