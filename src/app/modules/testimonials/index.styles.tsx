@@ -6,12 +6,12 @@ import {
 import Image from "next/image";
 
 const TestimonialsModuleContainer = styled(ModuleContainer)`
-  height: 100%;
-  width: 100vw;
-  min-height: 600px;
-  height: 1000px;
-  background-color: #fffbff;
-  display: flex;
+    width: 100vw;
+    min-height: 1000px;
+    background-color: #fffbff;
+    display: flex;
+    height: auto;
+    overflow: hidden;
 `;
 
 const TestimonialsModuleBackground = styled(ModuleBackground)``;
@@ -22,6 +22,7 @@ const StyledContentContainer = styled.div<{ isMobile: boolean | null }>`
   flex-direction: column;
   gap: ${(props) => (props.isMobile ? "1rem" : "2.5rem")};
   width: 100%;
+  height: auto;
 `;
 
 const LampDesktop = styled(Image)`
@@ -52,7 +53,7 @@ const LampMobile = styled(Image)`
     top: 65%;
     width: 200%;
   }
-    @media (min-width: 700px) {
+  @media (min-width: 700px) {
     left: 65%;
     top: 70%;
     width: 200%;

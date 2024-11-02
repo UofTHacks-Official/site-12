@@ -12,6 +12,7 @@ import ContactUs from "@/app/modules/contact-us";
 import Footer from "@/app/modules/footer";
 import { ReactNode } from "react";
 import Testimonials from "@/app/modules/testimonials";
+import Sponsors from "@/app/modules/sponsors";
 
 const MainContainer = styled.div`
   background-color: #f9f9f9;
@@ -34,8 +35,8 @@ const Site12 = ({ children }: Site12Props) => {
       <Stats />
       <PastHackathons />
       <WhyJoin />
-      {/*<Sponsors/>*/}
       <Testimonials />
+      <Sponsors/>
       <FAQ />
       <ContactUs />
       <Footer />
