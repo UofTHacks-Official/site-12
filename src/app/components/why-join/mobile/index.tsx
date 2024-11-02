@@ -40,7 +40,7 @@ const WhyJoinMobile = () => (
               <Image
                 src="/assets/why-join/mobile-photo-1.png"
                 alt="Group Photo"
-                width="1000" height="165"
+                width="1000" height="365"
                 quality={100}
               />
             </ImageWrapper>
