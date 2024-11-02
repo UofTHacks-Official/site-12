@@ -3,6 +3,7 @@ import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
 import Manrope from "@/app/components/shared/fonts/manrope";
 
 const CarouselContainer = styled.div`
+position: relative;
   .slick-slide {
     padding: 10px;
     width: 100%;

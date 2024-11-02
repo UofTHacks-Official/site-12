@@ -80,11 +80,13 @@ export const NoteWrapper = styled(Box)`
 export const ImageWrapper = styled(Box)`
   img {
     width: 100%;
+    height: auto;
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 `;

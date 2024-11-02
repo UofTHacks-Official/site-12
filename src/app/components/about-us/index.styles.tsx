@@ -11,7 +11,7 @@ const AboutUsContainer = styled(ModuleContainer)<MobileProps>`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  height: ${(props) => (props.isMobile ? "1250px" : "1100px")};
+  height: ${(props) => (props.isMobile ? "1400px" : "1100px")};
   ${(props) => (props.isMobile ? "padding-bottom: 50px;" : "")}
   background: linear-gradient(to bottom, rgba(34, 92, 144, 1) 0%, #dcf4fd 100%);
 `;
@@ -64,29 +64,30 @@ const AboutUsDescription = styled.div`
 const StyledLeftImage = styled(Image)<MobileProps>`
   position: absolute;
   z-index: 5;
+  height: auto;
+  max-height: 100%; /* Ensures it doesn't exceed container height */
+  object-fit: contain;
 
   ${(props) =>
     props.isMobile
       ? `
-    width: 250px;
-    bottom: -400px;
-    left: -30px;
-    `
+     width: 250px;
+     bottom: -400px;
+     left: -30px;
+     `
       : `
-    width: max(40%, 270px);
-    bottom: -140px;
-    left: -32%;
-    `}
-
-  height: auto;
+     width: max(40%, 270px);
+     bottom: -140px;
+     left: -32%;
+     `}
 `;
 
 const StyledMobileImage = styled(Image)`
   position: absolute;
   z-index: 5;
-  width: 260px;
-  bottom: -230px;
-  right: -100px;
+  width: 215px;
+  bottom: -300px;
+  right: -10%;
 
   height: auto;
 `;
