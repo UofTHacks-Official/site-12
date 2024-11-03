@@ -3,6 +3,7 @@ import {
   ModuleBackground,
   ModuleContainer,
 } from "@/app/components/shared/containers/index.styles";
+import Image from "next/image";
 
 const SponsorsModuleContainer = styled(ModuleContainer)`
   min-height: 600px;
@@ -46,8 +47,46 @@ const SubmitButton = styled.button<{ mobile: boolean }>`
     cursor: pointer;
   }
 `;
+const SponsorsButtons = styled.button`
+  all: unset;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+`;
+
+const SponsorsImage = styled(Image)`
+  width: 100%;
+  height: auto;
+  objectfit: cover;
+  margin-bottom: 2vh;
+`;
+const SponsorsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+  padding: 3% 10% 10% 10%;
+`;
+
+const SponsorsRow = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+const SponsorsColumn = styled.div`
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+`;
 
 export {
+  SponsorsButtons,
+  SponsorsColumn,
+  SponsorsImage,
+  SponsorsContainer,
+  SponsorsRow,
   SponsorsModuleContainer,
   SponsorsDescription,
   SubmitButton,
