@@ -26,7 +26,7 @@ const SponsorsDescription = styled.div<{ mobile: boolean }>`
 const SponsorsDescContainer = styled.div<{ mobile: boolean }>`
   display: flex;
   flex-direction: column;
-  width: ${({ mobile }) => (mobile ? "80vw" : "70vw")};
+  width: ${({ mobile }) => (mobile ? "95vw" : "70vw")};
   align-items: ${({ mobile }) => (mobile ? "flex-start" : "center")};
 `;
 
@@ -43,7 +43,7 @@ const SubmitButton = styled.button<{ mobile: boolean }>`
 
   &:hover {
     background: #1a4871;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 15px rgba(34, 92, 144, 0.2);
     cursor: pointer;
   }
 `;
@@ -54,18 +54,39 @@ const SponsorsButtons = styled.button`
   cursor: pointer;
 `;
 
-const SponsorsImage = styled(Image)`
+const SponsorsImageBackground = styled(Image)`
   width: 100%;
   height: auto;
   objectfit: cover;
+  cursor: pointer;
+`;
+const SponsorsImageLogo = styled(Image)<{ mobile: boolean }>`
+  position: absolute;
+  top: ${({ mobile }) => (mobile ? "48%" : "48%")};
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  height: auto;
+  z-index: 1;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+`;
+const SponsorsImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: auto;
   margin-bottom: 2vh;
 `;
-const SponsorsContainer = styled.div`
+const SponsorsContainer = styled.div<{ mobile: boolean }>`
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: ${({ mobile }) => (mobile ? "95vw" : "max(80vw, 1040px)")};
   height: auto;
-  padding: 3% 10% 10% 10%;
+  padding: 3% 0% 3% 0%;
 `;
 
 const SponsorsRow = styled.div`
@@ -84,7 +105,9 @@ const SponsorsColumn = styled.div`
 export {
   SponsorsButtons,
   SponsorsColumn,
-  SponsorsImage,
+  SponsorsImageBackground,
+  SponsorsImageLogo,
+  SponsorsImageContainer,
   SponsorsContainer,
   SponsorsRow,
   SponsorsModuleContainer,

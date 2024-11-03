@@ -1,8 +1,10 @@
 import {
   SponsorsButtons,
-  SponsorsImage,
+  SponsorsImageBackground,
   SponsorsDescription,
   SponsorsRow,
+  SponsorsImageContainer,
+  SponsorsImageLogo,
   SponsorsColumn,
   SponsorsContainer,
   SponsorsModuleContainer,
@@ -23,6 +25,10 @@ const handleClick = (index: number) => {
   } else {
     console.error("Invalid link index:", index);
   }
+};
+
+const handleEmailClick = () => {
+  window.open("mailto:sponsor@uofthacks.com", "_blank");
 };
 
 const Sponsors = () => {
@@ -48,7 +54,7 @@ const Sponsors = () => {
         <SpaceGrotesk style={spaceGroteskStyleTitle}>
           {isMobile ? "Sponsors" : "Our Sponsors"}
         </SpaceGrotesk>
-        {/* <SponsorsDescription mobile={isMobile}>
+        <SponsorsDescription mobile={isMobile}>
           <Manrope style={manropeStyleDesc}>
             Join us in shaping the future of innovation at UofTHacks! By
             sponsoring our hackathon, you will gain valuable exposure to a
@@ -59,104 +65,231 @@ const Sponsors = () => {
             and foster creativity.{" "}
           </Manrope>
         </SponsorsDescription>
-        <SubmitButton mobile={isMobile}>
+        <SubmitButton mobile={isMobile} onClick={handleEmailClick}>
           <Manrope style={manropeStyleButton}>Become a Sponsor</Manrope>
-        </SubmitButton> */}
+        </SubmitButton>
       </SponsorsDescContainer>
-      <SponsorsContainer>
-        <SponsorsButtons key={0}>
-          <SponsorsImage
-            src="/assets/sponsorship/rbc.png"
-            alt="test"
+      <SponsorsContainer mobile={isMobile}>
+        <SponsorsImageContainer>
+          <SponsorsImageBackground
+            src="/assets/sponsorship/row1.png"
+            alt="background"
             onClick={() => handleClick(0)}
-            width={1000}
-            height={1000}
+            width={2000}
+            height={2000}
           />
-          <SponsorsImage
-            src="/assets/sponsorship/uoftcs.png"
-            alt="test"
+          <SponsorsImageLogo
+            mobile={isMobile}
+            src="/assets/sponsorship/rbc.png"
+            alt="rbclogo"
+            onClick={() => handleClick(0)}
+            width={2000}
+            height={2000}
+          />
+        </SponsorsImageContainer>
+        <SponsorsImageContainer>
+          <SponsorsImageBackground
+            src="/assets/sponsorship/row2.png"
+            alt="background"
             onClick={() => handleClick(1)}
-            width={1000}
-            height={1000}
+            width={2000}
+            height={2000}
           />
-        </SponsorsButtons>
+          <SponsorsImageLogo
+            mobile={isMobile}
+            src="/assets/sponsorship/uoftcs.png"
+            alt="uoftcslogo"
+            onClick={() => handleClick(1)}
+            width={2000}
+            height={2000}
+          />
+        </SponsorsImageContainer>
         <SponsorsRow>
           <SponsorsColumn>
-            <SponsorsImage
-              src="/assets/sponsorship/ubisoft.png"
-              alt="test"
-              onClick={() => handleClick(2)}
-              width={1000}
-              height={1000}
-            />
-            <SponsorsImage
-              src="/assets/sponsorship/skule.png"
-              alt="test"
-              onClick={() => handleClick(4)}
-              width={1000}
-              height={1000}
-              style={{ width: "75%", height: "75%", marginLeft: "auto" }}
-            />
-            <SponsorsImage
-              src="/assets/sponsorship/warp.png"
-              alt="test"
-              onClick={() => handleClick(6)}
-              width={1000}
-              height={1000}
-              style={{ width: "75%", height: "75%", marginLeft: "auto" }}
-            />
+            <SponsorsImageContainer>
+              <SponsorsImageBackground
+                src="/assets/sponsorship/row3.png"
+                alt="background"
+                onClick={() => handleClick(2)}
+                width={2000}
+                height={2000}
+              />
+              <SponsorsImageLogo
+                mobile={isMobile}
+                src="/assets/sponsorship/ubisoft.png"
+                alt="ubisoftlogo"
+                onClick={() => handleClick(2)}
+                width={2000}
+                height={2000}
+                style={{ width: "25%", height: "auto" }}
+              />
+            </SponsorsImageContainer>
+            <SponsorsImageContainer
+              style={{ width: "75%", marginLeft: "auto" }}
+            >
+              <SponsorsImageBackground
+                src="/assets/sponsorship/row4-5.png"
+                alt="background"
+                onClick={() => handleClick(4)}
+                width={2000}
+                height={2000}
+              />
+              <SponsorsImageLogo
+                mobile={isMobile}
+                src="/assets/sponsorship/skule.png"
+                alt="skulelogo"
+                onClick={() => handleClick(4)}
+                width={2000}
+                height={2000}
+                style={{ width: "50%", height: "auto" }}
+              />
+            </SponsorsImageContainer>
+            <SponsorsImageContainer
+              style={{ width: "75%", marginLeft: "auto" }}
+            >
+              <SponsorsImageBackground
+                src="/assets/sponsorship/row4-5.png"
+                alt="background"
+                onClick={() => handleClick(7)}
+                width={2000}
+                height={2000}
+              />
+              <SponsorsImageLogo
+                mobile={isMobile}
+                src="/assets/sponsorship/dorahacks.png"
+                alt="dorahackslogo"
+                onClick={() => handleClick(7)}
+                width={2000}
+                height={2000}
+                style={{ width: "50%", height: "auto" }}
+              />
+            </SponsorsImageContainer>
           </SponsorsColumn>
           <SponsorsColumn>
-            <SponsorsImage
-              src="/assets/sponsorship/1pass.png"
-              alt="test"
-              onClick={() => handleClick(3)}
-              width={1000}
-              height={1000}
-            />
-            <SponsorsImage
-              src="/assets/sponsorship/googledeepmind.png"
-              alt="test"
-              onClick={() => handleClick(5)}
-              width={1000}
-              height={1000}
-              style={{ width: "75%", height: "75%", marginRight: "auto" }}
-            />
-            <SponsorsImage
-              src="/assets/sponsorship/dorahacks.png"
-              alt="test"
-              onClick={() => handleClick(7)}
-              width={1000}
-              height={1000}
-              style={{ width: "75%", height: "75%", marginRight: "auto" }}
-            />
+            <SponsorsImageContainer>
+              <SponsorsImageBackground
+                src="/assets/sponsorship/row3.png"
+                alt="background"
+                onClick={() => handleClick(3)}
+                width={2000}
+                height={2000}
+              />
+              <SponsorsImageLogo
+                mobile={isMobile}
+                src="/assets/sponsorship/1pass.png"
+                alt="ubisoftlogo"
+                onClick={() => handleClick(3)}
+                width={2000}
+                height={2000}
+                style={{ width: "50%", height: "auto" }}
+              />
+            </SponsorsImageContainer>
+            <SponsorsImageContainer
+              style={{ width: "75%", marginRight: "auto" }}
+            >
+              <SponsorsImageBackground
+                src="/assets/sponsorship/row4-5.png"
+                alt="background"
+                onClick={() => handleClick(5)}
+                width={2000}
+                height={2000}
+              />
+              <SponsorsImageLogo
+                mobile={isMobile}
+                src="/assets/sponsorship/deepmind.png"
+                alt="skulelogo"
+                onClick={() => handleClick(5)}
+                width={2000}
+                height={2000}
+                style={{ width: "75%", height: "auto" }}
+              />
+            </SponsorsImageContainer>
+            <SponsorsImageContainer
+              style={{ width: "75%", marginRight: "auto" }}
+            >
+              <SponsorsImageBackground
+                src="/assets/sponsorship/row4-5.png"
+                alt="background"
+                onClick={() => handleClick(6)}
+                width={2000}
+                height={2000}
+              />
+              <SponsorsImageLogo
+                mobile={isMobile}
+                src="/assets/sponsorship/warp.png"
+                alt="dorahackslogo"
+                onClick={() => handleClick(6)}
+                width={2000}
+                height={2000}
+                style={{ width: "35%", height: "auto" }}
+              />
+            </SponsorsImageContainer>
           </SponsorsColumn>
         </SponsorsRow>
-        <SponsorsRow style={{justifyContent: 'center'}}>
-          <SponsorsImage
-            src="/assets/sponsorship/redbull.png"
-            alt="test"
-            onClick={() => handleClick(8)}
-            width={1000}
-            height={1000}
-            style={{ width: "30%", height: "30%" }}
-          />
-          <SponsorsImage
-            src="/assets/sponsorship/hatchery.png"
-            alt="test"
-            onClick={() => handleClick(9)}
-            width={1000}
-            height={1000}
-            style={{ width: "30%", height: "30%", marginLeft: '2vh', marginRight: '2vh'}}
-          />
-          <SponsorsImage
-            src="/assets/sponsorship/wics.png"
-            alt="test"
-            onClick={() => handleClick(10)}
-            width={1000}
-            height={1000}
-            style={{ width: "30%", height: "30%"}}
-          />
+        <SponsorsRow style={{ justifyContent: "center" }}>
+          <SponsorsImageContainer style={{ width: "30%", height: "30%" }}>
+            <SponsorsImageBackground
+              src="/assets/sponsorship/row6.png"
+              alt="test"
+              onClick={() => handleClick(8)}
+              width={2000}
+              height={2000}
+            />
+            <SponsorsImageLogo
+              mobile={isMobile}
+              src="/assets/sponsorship/redbull.png"
+              alt="redbulllogo"
+              onClick={() => handleClick(8)}
+              width={2000}
+              height={2000}
+            />
+          </SponsorsImageContainer>
+          <SponsorsImageContainer
+            style={{
+              width: "30%",
+              height: "30%",
+              marginLeft: "2vh",
+              marginRight: "2vh",
+            }}
+          >
+            <SponsorsImageBackground
+              src="/assets/sponsorship/row6.png"
+              alt="test"
+              onClick={() => handleClick(9)}
+              width={2000}
+              height={2000}
+            />
+            <SponsorsImageLogo
+              mobile={isMobile}
+              src="/assets/sponsorship/hatchery.png"
+              alt="hatcherylogo"
+              onClick={() => handleClick(9)}
+              width={2000}
+              height={2000}
+            />
+          </SponsorsImageContainer>
+          <SponsorsImageContainer
+            style={{
+              width: "30%",
+              height: "30%",
+            }}
+          >
+            <SponsorsImageBackground
+              src="/assets/sponsorship/row6.png"
+              alt="test"
+              onClick={() => handleClick(10)}
+              width={2000}
+              height={2000}
+            />
+            <SponsorsImageLogo
+              mobile={isMobile}
+              src="/assets/sponsorship/wics.png"
+              alt="hatcherylogo"
+              onClick={() => handleClick(10)}
+              width={2000}
+              height={2000}
+            />
+          </SponsorsImageContainer>
         </SponsorsRow>
       </SponsorsContainer>
       ƒ
