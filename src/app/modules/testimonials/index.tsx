@@ -9,6 +9,7 @@ import { SpaceGroteskSectionTitle } from "@/app/components/shared/fonts/space-gr
 import { useMobileDetect } from "@/app/hooks/useMobileDetect";
 import TestimonialsMobile from "@/app/components/testimonials/mobile";
 import TestimonialsDesktop from "@/app/components/testimonials/desktop";
+import Sponsors from "@/app/modules/sponsors";
 
 const Testimonials = () => {
   const isMobile = useMobileDetect();
