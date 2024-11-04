@@ -292,7 +292,7 @@ const Sponsors = () => {
           </SponsorsImageContainer>
         </SponsorsRow>
       </SponsorsContainer>
-      ƒ
+
       {/* <img
         src="/assets/sponsorship/sponsor-titles.png"
         alt="Sponsorship"
