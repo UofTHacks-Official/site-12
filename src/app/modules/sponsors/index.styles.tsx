@@ -84,7 +84,7 @@ const SponsorsImageContainer = styled.div`
 const SponsorsContainer = styled.div<{ mobile: boolean }>`
   display: flex;
   flex-direction: column;
-  width: ${({ mobile }) => (mobile ? "95vw" : "max(80vw, 1040px)")};
+  width: ${({ mobile }) => (mobile ? "95vw" : "min(80vw, 1040px)")};
   height: auto;
   padding: 3% 0% 3% 0%;
 `;
