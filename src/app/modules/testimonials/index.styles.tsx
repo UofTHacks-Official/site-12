@@ -6,12 +6,20 @@ import {
 import Image from "next/image";
 
 const TestimonialsModuleContainer = styled(ModuleContainer)`
-    width: 100vw;
-    min-height: 1000px;
-    background-color: #fffbff;
-    display: flex;
-    height: auto;
-    overflow: hidden;
+  width: 100vw;
+  @media (min-width: 0px) {
+    min-height: 650px;
+  }
+  @media (min-width: 600px) {
+    min-height: 750px;
+  }
+  @media (min-width: 700px) {
+    min-height: 800px;
+  }
+  background-color: #fffbff;
+  display: flex;
+  height: auto;
+  overflow: hidden;
 `;
 
 const TestimonialsModuleBackground = styled(ModuleBackground)``;
@@ -23,6 +31,7 @@ const StyledContentContainer = styled.div<{ isMobile: boolean | null }>`
   gap: ${(props) => (props.isMobile ? "1rem" : "2.5rem")};
   width: 100%;
   height: auto;
+
 `;
 
 const LampDesktop = styled(Image)`
@@ -40,29 +49,45 @@ const LampMobile = styled(Image)`
   width: 100%;
   transform: translate(-50%, -50%);
   @media (min-width: 0px) {
+    top: 65%;
     left: 65%;
     width: 200%;
   }
   @media (min-width: 500px) {
     left: 65%;
-    top: 55%;
+    top: 75%;
+    width: 200%;
+  }
+  @media (min-width: 550px) {
+    left: 65%;
+    top: 80%;
     width: 200%;
   }
   @media (min-width: 600px) {
     left: 65%;
-    top: 65%;
+    top: 75%;
     width: 200%;
   }
-  @media (min-width: 700px) {
+  @media (min-width: 650px) {
     left: 65%;
-    top: 70%;
-    width: 200%;
+    top: 75%;
+    width: 180%;
+  }
+  @media (min-width: 700px) {
+    left: 60%;
+    top: 75%;
+    width: 180%;
+  }
+  @media (min-width: 750px) {
+    left: 60%;
+    top: 80%;
+    width: 180%;
   }
 
   @media (min-width: 800px) {
-    left: 65%;
-    top: 80%;
-    width: 200%;
+    left: 60%;
+    top: 85%;
+    width: 180%;
   }
 `;
 

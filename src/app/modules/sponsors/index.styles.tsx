@@ -12,6 +12,7 @@ const SponsorsModuleContainer = styled(ModuleContainer)`
   display: flex;
   height: auto;
   background: #fefbfe;
+  padding-top: 10%;
 `;
 
 const SponsorsModuleBackground = styled(ModuleBackground)`
@@ -26,7 +27,9 @@ const SponsorsDescription = styled.div<{ mobile: boolean }>`
 const SponsorsDescContainer = styled.div<{ mobile: boolean }>`
   display: flex;
   flex-direction: column;
-  width: ${({ mobile }) => (mobile ? "95vw" : "70vw")};
+  padding-left: ${({ mobile }) => (mobile ? "0" : "5vw")};
+  padding-right: ${({ mobile }) => (mobile ? "0" : "5vw")};
+  width: ${({ mobile }) => (mobile ? "95vw" : "min(80vw, 1040px)")};
   align-items: ${({ mobile }) => (mobile ? "flex-start" : "center")};
 `;
 
@@ -84,7 +87,7 @@ const SponsorsImageContainer = styled.div`
 const SponsorsContainer = styled.div<{ mobile: boolean }>`
   display: flex;
   flex-direction: column;
-  width: ${({ mobile }) => (mobile ? "95vw" : "max(80vw, 1040px)")};
+  width: ${({ mobile }) => (mobile ? "95vw" : "min(80vw, 1040px)")};
   height: auto;
   padding: 3% 0% 3% 0%;
 `;
