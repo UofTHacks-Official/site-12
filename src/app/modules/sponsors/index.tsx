@@ -292,17 +292,6 @@ const Sponsors = () => {
           </SponsorsImageContainer>
         </SponsorsRow>
       </SponsorsContainer>
-      ƒ
-      {/* <img
-        src="/assets/sponsorship/sponsor-titles.png"
-        alt="Sponsorship"
-        style={{
-          width: "80%",
-          height: "auto",
-          marginTop: "20px",
-          marginBottom: "10%",
-        }}
-      /> */}
     </SponsorsModuleContainer>
   );
 };
