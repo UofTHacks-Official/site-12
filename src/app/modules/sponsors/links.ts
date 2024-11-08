@@ -10,4 +10,6 @@ export const Links = [
     'https://www.redbull.com/ca-en',
     'https://hatchery.engineering.utoronto.ca/',
     'https://sop.utoronto.ca/group/undergraduate-womens-computer-science-association/',
+    'https://www.pg.ca/en-ca/',
+    'https://www.voiceflow.com/'
 ]

@@ -226,7 +226,33 @@ const Sponsors = () => {
             </SponsorsImageContainer>
           </SponsorsColumn>
         </SponsorsRow>
-        <SponsorsRow style={{ justifyContent: "center" }}>
+        <SponsorsRow
+          style={{ justifyContent: "center" }}
+        >
+          <SponsorsImageContainer
+              style={{ width: "36.75%" }}
+            >
+              <SponsorsImageBackground
+                src="/assets/sponsorship/row4-5.png"
+                alt="background"
+                onClick={() => handleClick(11)}
+                width={2000}
+                height={2000}
+              />
+              <SponsorsImageLogo
+                mobile={isMobile}
+                src="/assets/sponsorship/pg.png"
+                alt="dorahackslogo"
+                onClick={() => handleClick(11)}
+                width={2000}
+                height={2000}
+                style={{ width: "35%", height: "auto" }}
+              />
+            </SponsorsImageContainer>
+        </SponsorsRow>
+        <SponsorsRow
+          style={{ justifyContent: "center" }}
+        >
           <SponsorsImageContainer style={{ width: "30%", height: "30%" }}>
             <SponsorsImageBackground
               src="/assets/sponsorship/row6.png"
@@ -286,6 +312,27 @@ const Sponsors = () => {
               src="/assets/sponsorship/wics.png"
               alt="hatcherylogo"
               onClick={() => handleClick(10)}
+              width={2000}
+              height={2000}
+            />
+          </SponsorsImageContainer>
+        </SponsorsRow>
+        <SponsorsRow
+          style={{ justifyContent: "center" }}
+        >
+          <SponsorsImageContainer style={{ width: "30%", height: "30%" }}>
+            <SponsorsImageBackground
+              src="/assets/sponsorship/row6.png"
+              alt="test"
+              onClick={() => handleClick(12)}
+              width={2000}
+              height={2000}
+            />
+            <SponsorsImageLogo
+              mobile={isMobile}
+              src="/assets/sponsorship/voiceflow.png"
+              alt="redbulllogo"
+              onClick={() => handleClick(12)}
               width={2000}
               height={2000}
             />
