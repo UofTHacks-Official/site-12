@@ -11,5 +11,6 @@ export const Links = [
     'https://hatchery.engineering.utoronto.ca/',
     'https://sop.utoronto.ca/group/undergraduate-womens-computer-science-association/',
     'https://www.pg.ca/en-ca/',
-    'https://www.voiceflow.com/'
+    'https://www.voiceflow.com/',
+    'https://entrepreneurs.utoronto.ca/'
 ]

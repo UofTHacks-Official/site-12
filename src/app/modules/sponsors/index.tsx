@@ -337,6 +337,24 @@ const Sponsors = () => {
               height={2000}
             />
           </SponsorsImageContainer>
+          <SponsorsImageContainer style={{ width: "30%", height: "30%", marginLeft: '2vh'}}>
+            <SponsorsImageBackground
+              src="/assets/sponsorship/row6.png"
+              alt="test"
+              onClick={() => handleClick(13)}
+              width={2000}
+              height={2000}
+            />
+            <SponsorsImageLogo
+              mobile={isMobile}
+              src="/assets/sponsorship/uofte.png"
+              alt="redbulllogo"
+              onClick={() => handleClick(13)}
+              width={2000}
+              height={2000}
+              style={{width: '75%', height: 'auto'}}
+            />
+          </SponsorsImageContainer>
         </SponsorsRow>
       </SponsorsContainer>
     </SponsorsModuleContainer>

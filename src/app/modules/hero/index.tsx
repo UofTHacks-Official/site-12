@@ -27,7 +27,7 @@ const Hero = () => {
         <HeroContent isMobile={isMobile}>
           <DescriptionContainer isMobile={isMobile}>
             <GenericDescription isMobile={isMobile}>
-              January 17-19, 2025 | In-person event
+              January 17-19, 2025 &nbsp;&nbsp;|&nbsp;&nbsp; In-person event
             </GenericDescription>
             <HeroHeader isMobile={isMobile}>UofTHacks 12</HeroHeader>
             <GenericDescription isMobile={isMobile}>
