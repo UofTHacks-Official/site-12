@@ -75,16 +75,20 @@ const Sponsors = () => {
             src="/assets/sponsorship/row1.png"
             alt="background"
             onClick={() => handleClick(0)}
-            width={2000}
-            height={2000}
+            width={1500}
+            height={1500}
+            placeholder="blur"
+            blurDataURL="/assets/sponsorship/row1.png"
           />
           <SponsorsImageLogo
             mobile={isMobile}
             src="/assets/sponsorship/rbc.png"
             alt="rbclogo"
             onClick={() => handleClick(0)}
-            width={2000}
-            height={2000}
+            width={1500}
+            height={1500}
+            placeholder="blur"
+            blurDataURL="/assets/sponsorship/rbc.png"
           />
         </SponsorsImageContainer>
         <SponsorsImageContainer>
@@ -92,16 +96,20 @@ const Sponsors = () => {
             src="/assets/sponsorship/row2.png"
             alt="background"
             onClick={() => handleClick(1)}
-            width={2000}
-            height={2000}
+            width={1500}
+            height={1500}
+            placeholder="blur"
+            blurDataURL="/assets/sponsorship/row2.png"
           />
           <SponsorsImageLogo
             mobile={isMobile}
             src="/assets/sponsorship/uoftcs.png"
             alt="uoftcslogo"
             onClick={() => handleClick(1)}
-            width={2000}
-            height={2000}
+            width={1500}
+            height={1500}
+            placeholder="blur"
+            blurDataURL="/assets/sponsorship/uoftcs.png"
           />
         </SponsorsImageContainer>
         <SponsorsRow>
@@ -111,16 +119,20 @@ const Sponsors = () => {
                 src="/assets/sponsorship/row3.png"
                 alt="background"
                 onClick={() => handleClick(2)}
-                width={2000}
-                height={2000}
+                width={1500}
+                height={1500}
+                placeholder="blur"
+                blurDataURL="/assets/sponsorship/row3.png"
               />
               <SponsorsImageLogo
                 mobile={isMobile}
                 src="/assets/sponsorship/ubisoft.png"
                 alt="ubisoftlogo"
                 onClick={() => handleClick(2)}
-                width={2000}
-                height={2000}
+                width={1500}
+                height={1500}
+                placeholder="blur"
+                blurDataURL="/assets/sponsorship/ubisoft.png"
                 style={{ width: "25%", height: "auto" }}
               />
             </SponsorsImageContainer>
@@ -131,16 +143,20 @@ const Sponsors = () => {
                 src="/assets/sponsorship/row4-5.png"
                 alt="background"
                 onClick={() => handleClick(4)}
-                width={2000}
-                height={2000}
+                width={1500}
+                height={1500}
+                placeholder="blur"
+                blurDataURL="/assets/sponsorship/row4-5.png"
               />
               <SponsorsImageLogo
                 mobile={isMobile}
                 src="/assets/sponsorship/skule.png"
                 alt="skulelogo"
                 onClick={() => handleClick(4)}
-                width={2000}
-                height={2000}
+                width={1500}
+                height={1500}
+                placeholder="blur"
+                blurDataURL="/assets/sponsorship/skule.png"
                 style={{ width: "50%", height: "auto" }}
               />
             </SponsorsImageContainer>
@@ -151,16 +167,20 @@ const Sponsors = () => {
                 src="/assets/sponsorship/row4-5.png"
                 alt="background"
                 onClick={() => handleClick(7)}
-                width={2000}
-                height={2000}
+                width={1500}
+                height={1500}
+                placeholder="blur"
+                blurDataURL="/assets/sponsorship/row4-5.png"
               />
               <SponsorsImageLogo
                 mobile={isMobile}
                 src="/assets/sponsorship/dorahacks.png"
                 alt="dorahackslogo"
                 onClick={() => handleClick(7)}
-                width={2000}
-                height={2000}
+                width={1500}
+                height={1500}
+                placeholder="blur"
+                blurDataURL="/assets/sponsorship/dorahacks.png"
                 style={{ width: "50%", height: "auto" }}
               />
             </SponsorsImageContainer>
@@ -171,16 +191,20 @@ const Sponsors = () => {
                 src="/assets/sponsorship/row3.png"
                 alt="background"
                 onClick={() => handleClick(3)}
-                width={2000}
-                height={2000}
+                width={1500}
+                height={1500}
+                placeholder="blur"
+                blurDataURL="/assets/sponsorship/row3.png"
               />
               <SponsorsImageLogo
                 mobile={isMobile}
                 src="/assets/sponsorship/1pass.png"
                 alt="ubisoftlogo"
                 onClick={() => handleClick(3)}
-                width={2000}
-                height={2000}
+                width={1500}
+                height={1500}
+                placeholder="blur"
+                blurDataURL="/assets/sponsorship/1pass.png"
                 style={{ width: "50%", height: "auto" }}
               />
             </SponsorsImageContainer>
@@ -191,16 +215,20 @@ const Sponsors = () => {
                 src="/assets/sponsorship/row4-5.png"
                 alt="background"
                 onClick={() => handleClick(5)}
-                width={2000}
-                height={2000}
+                width={1500}
+                height={1500}
+                placeholder="blur"
+                blurDataURL="/assets/sponsorship/row4-5.png"
               />
               <SponsorsImageLogo
                 mobile={isMobile}
                 src="/assets/sponsorship/deepmind.png"
                 alt="skulelogo"
                 onClick={() => handleClick(5)}
-                width={2000}
-                height={2000}
+                width={1500}
+                height={1500}
+                placeholder="blur"
+                blurDataURL="/assets/sponsorship/deepmind.png"
                 style={{ width: "75%", height: "auto" }}
               />
             </SponsorsImageContainer>
@@ -211,63 +239,69 @@ const Sponsors = () => {
                 src="/assets/sponsorship/row4-5.png"
                 alt="background"
                 onClick={() => handleClick(6)}
-                width={2000}
-                height={2000}
+                width={1500}
+                height={1500}
+                placeholder="blur"
+                blurDataURL="/assets/sponsorship/row4-5.png"
               />
               <SponsorsImageLogo
                 mobile={isMobile}
                 src="/assets/sponsorship/warp.png"
                 alt="dorahackslogo"
                 onClick={() => handleClick(6)}
-                width={2000}
-                height={2000}
+                width={1500}
+                height={1500}
+                placeholder="blur"
+                blurDataURL="/assets/sponsorship/warp.png"
                 style={{ width: "35%", height: "auto" }}
               />
             </SponsorsImageContainer>
           </SponsorsColumn>
         </SponsorsRow>
-        <SponsorsRow
-          style={{ justifyContent: "center" }}
-        >
-          <SponsorsImageContainer
-              style={{ width: "36.75%" }}
-            >
-              <SponsorsImageBackground
-                src="/assets/sponsorship/row4-5.png"
-                alt="background"
-                onClick={() => handleClick(11)}
-                width={2000}
-                height={2000}
-              />
-              <SponsorsImageLogo
-                mobile={isMobile}
-                src="/assets/sponsorship/pg.png"
-                alt="dorahackslogo"
-                onClick={() => handleClick(11)}
-                width={2000}
-                height={2000}
-                style={{ width: "35%", height: "auto" }}
-              />
-            </SponsorsImageContainer>
+        <SponsorsRow style={{ justifyContent: "center" }}>
+          <SponsorsImageContainer style={{ width: "36.75%" }}>
+            <SponsorsImageBackground
+              src="/assets/sponsorship/row4-5.png"
+              alt="background"
+              onClick={() => handleClick(11)}
+              width={1500}
+              height={1500}
+              placeholder="blur"
+              blurDataURL="/assets/sponsorship/row4-5.png"
+            />
+            <SponsorsImageLogo
+              mobile={isMobile}
+              src="/assets/sponsorship/pg.png"
+              alt="dorahackslogo"
+              onClick={() => handleClick(11)}
+              width={1500}
+              height={1500}
+              placeholder="blur"
+              blurDataURL="/assets/sponsorship/pg.png"
+              style={{ width: "35%", height: "auto" }}
+            />
+          </SponsorsImageContainer>
         </SponsorsRow>
-        <SponsorsRow
-          style={{ justifyContent: "center" }}
-        >
+        <SponsorsRow style={{ justifyContent: "center" }}>
           <SponsorsImageContainer style={{ width: "30%", height: "30%" }}>
             <SponsorsImageBackground
               src="/assets/sponsorship/row6.png"
               alt="test"
               onClick={() => handleClick(8)}
-              width={2000}
-              height={2000}
+              width={1500}
+              height={1500}
+              placeholder="blur"
+              blurDataURL="/assets/sponsorship/row6.png"
             />
             <SponsorsImageLogo
               mobile={isMobile}
               src="/assets/sponsorship/redbull.png"
               alt="redbulllogo"
               onClick={() => handleClick(8)}
-              width={2000}
-              height={2000}
+              width={1500}
+              height={1500}
+              placeholder="blur"
+              blurDataURL="/assets/sponsorship/redbull.png"
             />
           </SponsorsImageContainer>
           <SponsorsImageContainer
@@ -282,16 +316,20 @@ const Sponsors = () => {
               src="/assets/sponsorship/row6.png"
               alt="test"
               onClick={() => handleClick(9)}
-              width={2000}
-              height={2000}
+              width={1500}
+              height={1500}
+              placeholder="blur"
+              blurDataURL="/assets/sponsorship/row6.png"
             />
             <SponsorsImageLogo
               mobile={isMobile}
               src="/assets/sponsorship/hatchery.png"
               alt="hatcherylogo"
               onClick={() => handleClick(9)}
-              width={2000}
-              height={2000}
+              width={1500}
+              height={1500}
+              placeholder="blur"
+              blurDataURL="/assets/sponsorship/hatchery.png"
             />
           </SponsorsImageContainer>
           <SponsorsImageContainer
@@ -304,55 +342,67 @@ const Sponsors = () => {
               src="/assets/sponsorship/row6.png"
               alt="test"
               onClick={() => handleClick(10)}
-              width={2000}
-              height={2000}
+              width={1500}
+              height={1500}
+              placeholder="blur"
+              blurDataURL="/assets/sponsorship/row6.png"
             />
             <SponsorsImageLogo
               mobile={isMobile}
               src="/assets/sponsorship/wics.png"
               alt="hatcherylogo"
               onClick={() => handleClick(10)}
-              width={2000}
-              height={2000}
+              width={1500}
+              height={1500}
+              placeholder="blur"
+              blurDataURL="/assets/sponsorship/wics.png"
             />
           </SponsorsImageContainer>
         </SponsorsRow>
-        <SponsorsRow
-          style={{ justifyContent: "center" }}
-        >
+        <SponsorsRow style={{ justifyContent: "center" }}>
           <SponsorsImageContainer style={{ width: "30%", height: "30%" }}>
             <SponsorsImageBackground
               src="/assets/sponsorship/row6.png"
               alt="test"
               onClick={() => handleClick(12)}
-              width={2000}
-              height={2000}
+              width={1500}
+              height={1500}
+              placeholder="blur"
+              blurDataURL="/assets/sponsorship/row6.png"
             />
             <SponsorsImageLogo
               mobile={isMobile}
               src="/assets/sponsorship/voiceflow.png"
               alt="redbulllogo"
               onClick={() => handleClick(12)}
-              width={2000}
-              height={2000}
+              width={1500}
+              height={1500}
+              placeholder="blur"
+              blurDataURL="/assets/sponsorship/voiceflow.png"
             />
           </SponsorsImageContainer>
-          <SponsorsImageContainer style={{ width: "30%", height: "30%", marginLeft: '2vh'}}>
+          <SponsorsImageContainer
+            style={{ width: "30%", height: "30%", marginLeft: "2vh" }}
+          >
             <SponsorsImageBackground
               src="/assets/sponsorship/row6.png"
               alt="test"
               onClick={() => handleClick(13)}
-              width={2000}
-              height={2000}
+              width={1500}
+              height={1500}
+              placeholder="blur"
+              blurDataURL="/assets/sponsorship/row6.png"
             />
             <SponsorsImageLogo
               mobile={isMobile}
               src="/assets/sponsorship/uofte.png"
               alt="redbulllogo"
               onClick={() => handleClick(13)}
-              width={2000}
-              height={2000}
-              style={{width: '75%', height: 'auto'}}
+              width={1500}
+              height={1500}
+              placeholder="blur"
+              blurDataURL="/assets/sponsorship/uofte.png"
+              style={{ width: "75%", height: "auto" }}
             />
           </SponsorsImageContainer>
         </SponsorsRow>

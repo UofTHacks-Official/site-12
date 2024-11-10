@@ -10,6 +10,13 @@ import {
 } from "@/app/pages/entry-point/index.styles";
 import NavBar from "@/app/components/shared/navbar";
 import MLHBanner from "@/app/components/mlh-banner";
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+  html, body {
+    overscroll-behavior: none;
+  }
+`;
 
 const EntryPoint: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -42,9 +49,12 @@ const EntryPoint: React.FC = () => {
   }
 
   return (
-    <Site12>
-      <NavBar />
-    </Site12>
+    <>
+      <GlobalStyle />
+      <Site12>
+        <NavBar />
+      </Site12>
+    </>
   );
 
   //   if (fullScreen && isolatedRender) {
