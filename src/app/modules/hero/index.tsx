@@ -39,7 +39,7 @@ const Hero = () => {
               }
               isMobile={isMobile}
             >
-              <ScrollButtonText>Be first to apply!</ScrollButtonText>
+              <ScrollButtonText>Apply Today!</ScrollButtonText>
             </ScrollButton>
           </DescriptionContainer>
           <LedgeSVG isMobile={isMobile} />
