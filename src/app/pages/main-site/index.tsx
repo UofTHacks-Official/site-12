@@ -19,6 +19,7 @@ const MainContainer = styled.div`
   opacity: 1;
   overflow: auto;
   overflow-x: hidden;
+  overscroll-behavior: none;
 `;
 
 interface Site12Props {
