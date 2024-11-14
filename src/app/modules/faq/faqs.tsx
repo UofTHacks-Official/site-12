@@ -4,6 +4,8 @@ const covidPolicy =
   '<a href="https://ehs.utoronto.ca/covid-19-information/" target="_blank" rel="noopener" style="color: #225C90; font-weight: 700">University of Toronto\'s</a>';
 const instagram =
   '<a href="https://www.instagram.com/uofthacks/" target="_blank" rel="noopener" style="color: #225C90; font-weight: 700">Instagram</a>';
+const mlhcoc =
+  '<a href="http://hackp.ac/coc" target="_blank" rel="noopener" style="color: #225C90; font-weight: 700">Code of Conduct</a>';
 
 export const FAQItems = [
   {
@@ -86,6 +88,12 @@ export const FAQItems = [
       "Are sleeping areas or supplies available for participants at UofTHacks 2025?",
     content:
       "Unfortunately, due to university regulations, we are unable to provide or allow sleeping accommodations on-site this year. However, the venue will be open throughout the event so you can continue hacking, take breaks, and grab refreshments whenever you need! Our team will be around to help out, so don’t hesitate to stop by the help desk for anything you might need to stay energized.",
+  },
+  {
+    title:
+      "What is MLH?",
+    content:
+      `Major League Hacking (MLH) is the official student hackathon league. Each year, we power over 300 weekend-long invention competitions that inspire innovation, cultivate communities and teach computer science skills to more than 500,000 developers around the world. MLH is an engaged and passionate maker community, consisting of the next generation of technology leaders and entrepreneurs. ${mlhcoc}`,
   },
   {
     title: "I still have a question...",
