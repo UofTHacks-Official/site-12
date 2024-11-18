@@ -32,7 +32,7 @@ export const FAQItems = [
   {
     title: "Can I join virtually?",
     content:
-      "Unfortunately, we will not have any virtual aspects to this year's event. All members of the your team must be in-person to be considered for judging.",
+      "Unfortunately, we will not have any virtual aspects to this year's event. All members of your team must be in-person to be considered for judging.",
   },
   {
     title: "How many hackers per team?",
