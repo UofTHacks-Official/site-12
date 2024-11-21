@@ -87,7 +87,7 @@ export const FAQItems = [
     title:
       "Are sleeping areas or supplies available for participants at UofTHacks 2025?",
     content:
-      "Unfortunately, due to university regulations, we are unable to provide or allow sleeping accommodations on-site this year. However, the venue will be open throughout the event so you can continue hacking, take breaks, and grab refreshments whenever you need! Our team will be around to help out, so don’t hesitate to stop by the help desk for anything you might need to stay energized.",
+      "Unfortunately, we are unable to provide on-site sleeping accommodations as the booked spaces are not equipped with sleeping quarters.",
   },
   {
     title:
