@@ -33,14 +33,14 @@ const Hero = () => {
             <GenericDescription isMobile={isMobile}>
               Redefine possibilities—explore new ideas at UofTHacks!
             </GenericDescription>
-            <ScrollButton
+            {/* <ScrollButton
               onClick={() =>
                 window.open("https://portal.uofthacks.com/", "_blank")
               }
               isMobile={isMobile}
             >
               <ScrollButtonText>Apply Today!</ScrollButtonText>
-            </ScrollButton>
+            </ScrollButton> */}
           </DescriptionContainer>
           <LedgeSVG isMobile={isMobile} />
         </HeroContent>
