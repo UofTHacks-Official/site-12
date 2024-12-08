@@ -35,9 +35,9 @@ const Site12 = ({ children }: Site12Props) => {
       {/* <Subscribe /> */}
       <Stats />
       <PastHackathons />
-      <WhyJoin />
+      {/* <WhyJoin /> */}
       <Testimonials />
-      <Sponsors/>
+      <Sponsors />
       <FAQ />
       <ContactUs />
       <Footer />
