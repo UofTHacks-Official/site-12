@@ -57,7 +57,7 @@ const AboutUs = () => {
         <Manrope>
           <AboutUsDescription>{aboutUsDescription}</AboutUsDescription>
         </Manrope>
-        <StyledLeftImage
+        {/* <StyledLeftImage
           isMobile={isMobile}
           src={isMobile ? "/assets/about/left-image.png" : "/assets/about/left-image.svg"}
           alt="Left img"
@@ -78,7 +78,7 @@ const AboutUs = () => {
           alt="Right img"
           width={200} height={200}
           quality={100}
-        />
+        /> */}
         <StyledKeys
           isMobile={isMobile}
           src="/assets/about/new-keys.svg"
