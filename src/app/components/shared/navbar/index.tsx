@@ -147,11 +147,11 @@ const NavBar = () => {
                 gap: 10,
               }}
             >
-              <NavLinkItem>
+              {/* <NavLinkItem>
                 <NavLink onClick={() => scrollToSection("Why-join-module")}>
                   <Manrope style={navManropeStyle()}>Why Join?</Manrope>
                 </NavLink>
-              </NavLinkItem>
+              </NavLinkItem> */}
               <NavLinkItem>
                 <NavLink onClick={() => scrollToSection("FAQ-module")}>
                   <Manrope style={navManropeStyle()}>FAQ</Manrope>
@@ -176,11 +176,11 @@ const NavBar = () => {
       {isMobile && (
         <span ref={(node) => setMobileMenuNode(node)}>
           <MobileMenu open={isMenuOpen}>
-            <MobileNavLinkItem>
+            {/* <MobileNavLinkItem>
               <NavLink onClick={() => scrollToSection("Why-join-module")}>
                 <Manrope style={navManropeStyle()}>Why Join?</Manrope>
               </NavLink>
-            </MobileNavLinkItem>
+            </MobileNavLinkItem> */}
             <MobileNavLinkItem>
               <NavLink onClick={() => scrollToSection("FAQ-module")}>
                 <Manrope style={navManropeStyle()}>
