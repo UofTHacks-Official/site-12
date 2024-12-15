@@ -248,13 +248,17 @@ const Sponsors = () => {
               <SponsorsImageLogo
                 mobile={isMobile}
                 src="/assets/sponsorship/google-min.png"
-                alt="skulelogo"
+                alt="googlelogo"
                 onClick={() => handleClick(14)}
                 width={1000}
                 height={1000}
                 placeholder="blur"
                 blurDataURL="/assets/sponsorship/google-min.png"
-                style={{ width: "45%", height: "auto", marginTop: "7px" }}
+                style={{ 
+                  width: "45%", 
+                  height: "auto", 
+                  marginTop: isMobile ? "0px" : "7px" 
+                }}
               />
             </SponsorsImageContainer>
 
