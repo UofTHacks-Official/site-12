@@ -12,5 +12,6 @@ export const Links = [
     'https://sop.utoronto.ca/group/undergraduate-womens-computer-science-association/',
     'https://www.pg.ca/en-ca/',
     'https://www.voiceflow.com/',
-    'https://entrepreneurs.utoronto.ca/'
+    'https://entrepreneurs.utoronto.ca/',
+    'https://google.com/'
 ]
