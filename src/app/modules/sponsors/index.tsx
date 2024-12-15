@@ -257,7 +257,7 @@ const Sponsors = () => {
                 style={{ 
                   width: "45%", 
                   height: "auto", 
-                  marginTop: isMobile ? "0px" : "7px" 
+                  marginTop: isMobile ? "0px" : "5px" 
                 }}
               />
             </SponsorsImageContainer>
