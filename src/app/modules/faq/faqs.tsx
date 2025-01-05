@@ -96,6 +96,12 @@ export const FAQItems = [
       `Major League Hacking (MLH) is the official student hackathon league. Each year, we power over 300 weekend-long invention competitions that inspire innovation, cultivate communities and teach computer science skills to more than 500,000 developers around the world. MLH is an engaged and passionate maker community, consisting of the next generation of technology leaders and entrepreneurs. ${mlhcoc}`,
   },
   {
+    title:
+      "How do I apply to UofTHacks 12?",
+    content:
+      `Our application period for UofTHacks 12 has already passed. We encourage you to follow us on Instagram to stay up to date with UofTHacks news!`
+  },
+  {
     title: "I still have a question...",
     content: `No worries! You can use the Contact Us form below or reach out to us on ${instagram}, and we'll help with anything else you need!`,
   },
