@@ -339,7 +339,7 @@ const Sponsors = () => {
               width: "30%",
               height: "30%",
               marginLeft: "2vh",
-              marginRight: "2vh",
+              marginRight: "0vh",
             }}
           >
             <SponsorsImageBackground
@@ -360,32 +360,6 @@ const Sponsors = () => {
               height={1000}
               placeholder="blur"
               blurDataURL="/assets/sponsorship/hatchery-min.png"
-            />
-          </SponsorsImageContainer>
-          <SponsorsImageContainer
-            style={{
-              width: "30%",
-              height: "30%",
-            }}
-          >
-            <SponsorsImageBackground
-              src="/assets/sponsorship/row6-min.png"
-              alt="test"
-              onClick={() => handleClick(10)}
-              width={1000}
-              height={1000}
-              placeholder="blur"
-              blurDataURL="/assets/sponsorship/row6-min.png"
-            />
-            <SponsorsImageLogo
-              mobile={isMobile}
-              src="/assets/sponsorship/wics-min.png"
-              alt="hatcherylogo"
-              onClick={() => handleClick(10)}
-              width={1000}
-              height={1000}
-              placeholder="blur"
-              blurDataURL="/assets/sponsorship/wics-min.png"
             />
           </SponsorsImageContainer>
         </SponsorsRow>
