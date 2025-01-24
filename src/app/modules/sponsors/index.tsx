@@ -1,6 +1,5 @@
 import {
   SponsorsButtons,
-  SponsorsImageBackground,
   SponsorsDescription,
   SponsorsRow,
   SponsorsImageContainer,
@@ -11,6 +10,7 @@ import {
   SubmitButton,
   SponsorsDescContainer,
   SponsorsModuleBackground,
+  SponsorsImageBackground2,
 } from "@/app/modules/sponsors/index.styles";
 import SpaceGrotesk from "@/app/components/shared/fonts/space-grotesk";
 import Manrope from "@/app/components/shared/fonts/manrope";
@@ -71,14 +71,9 @@ const Sponsors = () => {
       </SponsorsDescContainer>
       <SponsorsContainer mobile={isMobile}>
         <SponsorsImageContainer>
-          <SponsorsImageBackground
-            src="/assets/sponsorship/row1-min.png"
-            alt="background"
+          <SponsorsImageBackground2
             onClick={() => handleClick(0)}
-            width={1000}
-            height={1000}
-            placeholder="blur"
-            blurDataURL="/assets/sponsorship/row1-min.png"
+            aspectRatio={16/4}
           />
           <SponsorsImageLogo
             mobile={isMobile}
@@ -92,14 +87,9 @@ const Sponsors = () => {
           />
         </SponsorsImageContainer>
         <SponsorsImageContainer>
-          <SponsorsImageBackground
-            src="/assets/sponsorship/row2-min.png"
-            alt="background"
+          <SponsorsImageBackground2
             onClick={() => handleClick(1)}
-            width={1000}
-            height={1000}
-            placeholder="blur"
-            blurDataURL="/assets/sponsorship/row2-min.png"
+            aspectRatio={16/4}
           />
           <SponsorsImageLogo
             mobile={isMobile}
@@ -115,14 +105,9 @@ const Sponsors = () => {
         <SponsorsRow>
           <SponsorsColumn>
             <SponsorsImageContainer>
-              <SponsorsImageBackground
-                src="/assets/sponsorship/row3-min.png"
-                alt="background"
+              <SponsorsImageBackground2
                 onClick={() => handleClick(2)}
-                width={1000}
-                height={1000}
-                placeholder="blur"
-                blurDataURL="/assets/sponsorship/row3-min.png"
+                aspectRatio={16/6}
               />
               <SponsorsImageLogo
                 mobile={isMobile}
@@ -139,14 +124,9 @@ const Sponsors = () => {
             <SponsorsImageContainer
               style={{ width: "75%", marginLeft: "auto" }}
             >
-              <SponsorsImageBackground
-                src="/assets/sponsorship/row4-5-min.png"
-                alt="background"
+              <SponsorsImageBackground2
                 onClick={() => handleClick(5)}
-                width={1000}
-                height={1000}
-                placeholder="blur"
-                blurDataURL="/assets/sponsorship/row4-5-min.png"
+                aspectRatio={16/8}
               />
               <SponsorsImageLogo
                 mobile={isMobile}
@@ -163,14 +143,9 @@ const Sponsors = () => {
             <SponsorsImageContainer
               style={{ width: "75%", marginLeft: "auto" }}
             >
-              <SponsorsImageBackground
-                src="/assets/sponsorship/row4-5-min.png"
-                alt="background"
+              <SponsorsImageBackground2
                 onClick={() => handleClick(4)}
-                width={1000}
-                height={1000}
-                placeholder="blur"
-                blurDataURL="/assets/sponsorship/row4-5-min.png"
+                aspectRatio={16/8}
               />
               <SponsorsImageLogo
                 mobile={isMobile}
@@ -188,14 +163,8 @@ const Sponsors = () => {
             <SponsorsImageContainer
               style={{ width: "75%", marginLeft: "auto" }}
             >
-              <SponsorsImageBackground
-                src="/assets/sponsorship/row4-5-min.png"
-                alt="background"
-                onClick={() => handleClick(6)}
-                width={1000}
-                height={1000}
-                placeholder="blur"
-                blurDataURL="/assets/sponsorship/row4-5-min.png"
+              <SponsorsImageBackground2
+                aspectRatio={16/8}
               />
               <SponsorsImageLogo
                 mobile={isMobile}
@@ -212,14 +181,8 @@ const Sponsors = () => {
           </SponsorsColumn>
           <SponsorsColumn>
             <SponsorsImageContainer>
-              <SponsorsImageBackground
-                src="/assets/sponsorship/row3-min.png"
-                alt="background"
-                onClick={() => handleClick(3)}
-                width={1000}
-                height={1000}
-                placeholder="blur"
-                blurDataURL="/assets/sponsorship/row3-min.png"
+              <SponsorsImageBackground2
+                aspectRatio={16/6}
               />
               <SponsorsImageLogo
                 mobile={isMobile}
@@ -236,14 +199,8 @@ const Sponsors = () => {
             <SponsorsImageContainer
               style={{ width: "75%", marginRight: "auto" }}
             >
-              <SponsorsImageBackground
-                src="/assets/sponsorship/row4-5-min.png"
-                alt="background"
-                onClick={() => handleClick(14)}
-                width={1000}
-                height={1000}
-                placeholder="blur"
-                blurDataURL="/assets/sponsorship/row4-5-min.png"
+              <SponsorsImageBackground2
+                aspectRatio={16/8}
               />
               <SponsorsImageLogo
                 mobile={isMobile}
@@ -265,14 +222,8 @@ const Sponsors = () => {
             <SponsorsImageContainer
               style={{ width: "75%", marginRight: "auto" }}
             >
-              <SponsorsImageBackground
-                src="/assets/sponsorship/row4-5-min.png"
-                alt="background"
-                onClick={() => handleClick(7)}
-                width={1000}
-                height={1000}
-                placeholder="blur"
-                blurDataURL="/assets/sponsorship/row4-5-min.png"
+              <SponsorsImageBackground2
+                aspectRatio={16/8}
               />
               <SponsorsImageLogo
                 mobile={isMobile}
@@ -289,14 +240,8 @@ const Sponsors = () => {
             <SponsorsImageContainer
               style={{ width: "75%", marginRight: "auto" }}
             >
-              <SponsorsImageBackground
-                src="/assets/sponsorship/row4-5-min.png"
-                alt="background"
-                onClick={() => handleClick(11)}
-                width={1000}
-                height={1000}
-                placeholder="blur"
-                blurDataURL="/assets/sponsorship/row4-5-min.png"
+              <SponsorsImageBackground2
+                aspectRatio={16/8}
               />
               <SponsorsImageLogo
                 mobile={isMobile}
@@ -314,14 +259,8 @@ const Sponsors = () => {
         </SponsorsRow>
         <SponsorsRow style={{ justifyContent: "center" }}>
           <SponsorsImageContainer style={{ width: "30%", height: "30%" }}>
-            <SponsorsImageBackground
-              src="/assets/sponsorship/row6-min.png"
-              alt="test"
-              onClick={() => handleClick(8)}
-              width={1000}
-              height={1000}
-              placeholder="blur"
-              blurDataURL="/assets/sponsorship/row6-min.png"
+            <SponsorsImageBackground2
+              aspectRatio={16/8}
             />
             <SponsorsImageLogo
               mobile={isMobile}
@@ -338,18 +277,12 @@ const Sponsors = () => {
             style={{
               width: "30%",
               height: "30%",
-              marginLeft: "2vh",
+              marginLeft: "2vw",
               marginRight: "0vh",
             }}
           >
-            <SponsorsImageBackground
-              src="/assets/sponsorship/row6-min.png"
-              alt="test"
-              onClick={() => handleClick(9)}
-              width={1000}
-              height={1000}
-              placeholder="blur"
-              blurDataURL="/assets/sponsorship/row6-min.png"
+            <SponsorsImageBackground2
+              aspectRatio={16/8}
             />
             <SponsorsImageLogo
               mobile={isMobile}
@@ -365,14 +298,8 @@ const Sponsors = () => {
         </SponsorsRow>
         <SponsorsRow style={{ justifyContent: "center" }}>
           <SponsorsImageContainer style={{ width: "30%", height: "30%" }}>
-            <SponsorsImageBackground
-              src="/assets/sponsorship/row6-min.png"
-              alt="test"
-              onClick={() => handleClick(12)}
-              width={1000}
-              height={1000}
-              placeholder="blur"
-              blurDataURL="/assets/sponsorship/row6-min.png"
+            <SponsorsImageBackground2
+              aspectRatio={16/8}
             />
             <SponsorsImageLogo
               mobile={isMobile}
@@ -386,16 +313,10 @@ const Sponsors = () => {
             />
           </SponsorsImageContainer>
           <SponsorsImageContainer
-            style={{ width: "30%", height: "30%", marginLeft: "2vh" }}
+            style={{ width: "30%", height: "30%", marginLeft: "2vw" }}
           >
-            <SponsorsImageBackground
-              src="/assets/sponsorship/row6-min.png"
-              alt="test"
-              onClick={() => handleClick(13)}
-              width={1000}
-              height={1000}
-              placeholder="blur"
-              blurDataURL="/assets/sponsorship/row6-min.png"
+            <SponsorsImageBackground2
+              aspectRatio={16/8}
             />
             <SponsorsImageLogo
               mobile={isMobile}
