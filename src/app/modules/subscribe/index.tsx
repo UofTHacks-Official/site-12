@@ -32,7 +32,7 @@ const Subscribe = () => {
     e.preventDefault();
     setResponseMsg(""); // Clear previous messages
 
-    const endpoint = "https://api.uofthacks.com/12/email_list/add";
+    const endpoint = "https://api.uofthacks.com/api/v13/mailing-list";
 
     try {
       const response = await fetch(endpoint, {
@@ -41,7 +41,7 @@ const Subscribe = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          hacker_email: formData.email,
+          email: formData.email,
         }),
       });
       if (response.status === 200) {
@@ -50,13 +50,7 @@ const Subscribe = () => {
         );
       } else if (response.status === 400) {
         const responseData = await response.json();
-        if (responseData.message.includes("invalid")) {
-          setResponseMsg("The email you entered is invalid, please try again.");
-        } else {
-          setResponseMsg(
-            "Your email has already been added to the mailing list."
-          );
-        }
+        setResponseMsg(responseData.detail);
       } else {
         setResponseMsg("Error submitting email.");
       }

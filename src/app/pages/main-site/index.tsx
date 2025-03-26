@@ -32,7 +32,7 @@ const Site12 = ({ children }: Site12Props) => {
       {children}
       <Hero />
       <AboutUsModule />
-      {/* <Subscribe /> */}
+       {/*<Subscribe />*/}
       <Stats />
       <PastHackathons />
       {/* <WhyJoin /> */}
