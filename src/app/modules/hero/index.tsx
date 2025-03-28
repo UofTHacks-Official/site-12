@@ -31,7 +31,7 @@ const Hero = () => {
             </GenericDescription>
             <HeroHeader isMobile={isMobile}>UofTHacks 12</HeroHeader>
             <GenericDescription isMobile={isMobile}>
-              Redefine possibilities—explore new ideas at UofTHacks!
+              UofTHacks 13 Organizer applications coming soon!
             </GenericDescription>
             {/* <ScrollButton
               onClick={() =>
