@@ -34,7 +34,7 @@ const Hero = () => {
               onClick={() => window.open("https://google.com", "_blank")}
               isMobile={isMobile}
             >
-              <ScrollButtonText>Apply Today!</ScrollButtonText>
+              <ScrollButtonText>Organizer Applications Open Now!</ScrollButtonText>
             </ScrollButton>
           </DescriptionContainer>
           <LedgeSVG isMobile={isMobile} />
