@@ -30,17 +30,12 @@ const Hero = () => {
               January 17-19, 2025 &nbsp;&nbsp;|&nbsp;&nbsp; In-person event
             </GenericDescription>
             <HeroHeader isMobile={isMobile}>UofTHacks 12</HeroHeader>
-            <GenericDescription isMobile={isMobile}>
-              UofTHacks 13 Organizer applications coming soon!
-            </GenericDescription>
-            {/* <ScrollButton
-              onClick={() =>
-                window.open("https://portal.uofthacks.com/", "_blank")
-              }
+            <ScrollButton
+              onClick={() => window.open("https://google.com", "_blank")}
               isMobile={isMobile}
             >
               <ScrollButtonText>Apply Today!</ScrollButtonText>
-            </ScrollButton> */}
+            </ScrollButton>
           </DescriptionContainer>
           <LedgeSVG isMobile={isMobile} />
         </HeroContent>
