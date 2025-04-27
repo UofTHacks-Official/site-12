@@ -31,7 +31,7 @@ const Hero = () => {
             </GenericDescription>
             <HeroHeader isMobile={isMobile}>UofTHacks 12</HeroHeader>
             <ScrollButton
-              onClick={() => window.open("https://google.com", "_blank")}
+              onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSc7Ix_tWMlBJemKMN22QrdF43GUWjVDXxLcEcHC72myfj_6sg/viewform?usp=header", "_blank")}
               isMobile={isMobile}
             >
               <ScrollButtonText>Organizer Applications Open Now!</ScrollButtonText>
