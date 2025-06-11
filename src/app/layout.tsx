@@ -1,5 +1,6 @@
 import { Manrope, Space_Grotesk } from "next/font/google";
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -45,7 +46,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="icon" href="/favicon.ico" sizes="any" />
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        {/* Google Analytics script */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-PWQ4PT57QH"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-script" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PWQ4PT57QH');
+          `}
+        </Script>
+      </head>
       <body className={`${manrope.variable} ${spaceGrotesk.variable}`}>
         {children}
       </body>
