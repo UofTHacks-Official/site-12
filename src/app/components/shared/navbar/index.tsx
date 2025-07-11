@@ -156,7 +156,7 @@ const NavBar = () => {
               </NavLinkItem> */}
               <NavLinkItem>
                 <NavLink onClick={() => window.open(XIlink)}>
-                  <Manrope style={navManropeStyle()}>UofTHacks 11</Manrope>
+                  <Manrope style={navManropeStyle()}>2024</Manrope>
                 </NavLink>
               </NavLinkItem>
               <NavLinkItem>
