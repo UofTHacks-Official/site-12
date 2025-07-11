@@ -127,6 +127,8 @@ const NavBar = () => {
     color: "white",
   });
 
+  const XIlink = "https://xi.uofthacks.com/";
+
   return (
     <>
       <NavigationContainer open={isNavBarVisible}>
@@ -152,6 +154,11 @@ const NavBar = () => {
                   <Manrope style={navManropeStyle()}>Why Join?</Manrope>
                 </NavLink>
               </NavLinkItem> */}
+              <NavLinkItem>
+                <NavLink onClick={() => window.open(XIlink)}>
+                  <Manrope style={navManropeStyle()}>UofTHacks 11</Manrope>
+                </NavLink>
+              </NavLinkItem>
               <NavLinkItem>
                 <NavLink onClick={() => scrollToSection("FAQ-module")}>
                   <Manrope style={navManropeStyle()}>FAQ</Manrope>
