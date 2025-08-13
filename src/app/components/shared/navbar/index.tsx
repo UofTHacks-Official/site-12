@@ -138,7 +138,7 @@ const NavBar = () => {
             <Image
               src={NavBarLogo}
               alt="UofTHacks Logo"
-              width={isMobile ? 70 : 100}
+              width={isMobile ? 56 : 80}
               height={isMobile ? 35 : 50}
             />
           </Logo>
